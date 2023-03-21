@@ -6,13 +6,18 @@ using CodeMonkey.Utils;
 /*
  * Planned behavior for echolocation fish:
  * 
- * [ ] Fish swims in predetermined path around the map searching for pray
+ * [X] Fish swims in predetermined path around the map searching for pray
+ *      [X] Update the patrol so it loops endlessly
+ *      [ ] Set states such that fish leaves patrol if spots player
+ *      [ ] Add logic such that fish faces direcction it is moving
+ *          [ ] Ideally make this a gentle turn rather than a snapping movement
+ *      [ ] Set states such that fish returns to patrol after losing player
  * [X] While in this state it casts a ray directly infront of itself
  * [X] If player intersects the ray, a new, longer ray is casted which tracks the player
  * [X] In order to get away, the player must either get out of range of the new ray,
  * [X] or hide behind some obstacle which breaks the fishes line of sight
- * [X] The first option is unlikely as the echolocation fish should be faster than the player
- * [ ] Also, need to create logic so that the fish returns to its patrol path after a chase     
+ * [X] The first option is unlikely as the echolocation fish should be faster than the player 
+ * [X] Comments for the follow path files
  * 
  * Current behavior:
  * 
