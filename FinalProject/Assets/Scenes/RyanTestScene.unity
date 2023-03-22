@@ -1076,6 +1076,7 @@ MonoBehaviour:
   speed: 10
   castPoint: {fileID: 87619242}
   player: {fileID: 1540401844}
+  chasing: 0
 --- !u!212 &1679707199
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1178,14 +1179,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path:
-  - {x: 10.079832, y: -3.1008282}
-  - {x: 7.013713, y: 5.237561}
-  - {x: 5.177991, y: 6.268051}
-  - {x: -6.9827685, y: -6.9436874}
-  - {x: -8.857091, y: -6.2398396}
-  - {x: -11.233778, y: 3.806446}
-  - {x: -9.350707, y: 4.4078803}
-  - {x: 7.94172, y: -4.5473175}
+  - {x: -12.887466, y: -9.556997}
+  - {x: 7.0953465, y: 3.2580674}
+  - {x: 9.9914055, y: -6.5885353}
+  - {x: -14.914705, y: 0.8688183}
+  chaseObject: {fileID: 1679707198}
 --- !u!1 &1961899323
 GameObject:
   m_ObjectHideFlags: 0

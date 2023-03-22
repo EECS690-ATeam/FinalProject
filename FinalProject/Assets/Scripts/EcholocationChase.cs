@@ -8,10 +8,10 @@ using CodeMonkey.Utils;
  * 
  * [X] Fish swims in predetermined path around the map searching for pray
  *      [X] Update the patrol so it loops endlessly
- *      [ ] Set states such that fish leaves patrol if spots player
- *      [ ] Add logic such that fish faces direcction it is moving
+ *      [X] Set states such that fish leaves patrol if spots player
+ *      [X] Add logic such that fish faces direcction it is moving
  *          [ ] Ideally make this a gentle turn rather than a snapping movement
- *      [ ] Set states such that fish returns to patrol after losing player
+ *      [X] Set states such that fish returns to patrol after losing player
  * [X] While in this state it casts a ray directly infront of itself
  * [X] If player intersects the ray, a new, longer ray is casted which tracks the player
  * [X] In order to get away, the player must either get out of range of the new ray,
@@ -37,8 +37,8 @@ public class EcholocationChase : MonoBehaviour
     [SerializeField] Transform castPoint;
     [SerializeField] Transform player;
 
-    Rigidbody2D rb;
-    bool chasing;
+    private Rigidbody2D rb;
+    public bool chasing;
 
     // Start is called before the first frame update
     void Start()
@@ -112,6 +112,9 @@ public class EcholocationChase : MonoBehaviour
         // Create raycast towards player
         RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endOfCast, LayerMask.NameToLayer("Action"));
 
+        // Color of raycast
+        Color castColor = Color.blue;
+
         // If raycast hit something
         if (hit.collider != null)
         {
@@ -119,13 +122,16 @@ public class EcholocationChase : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Player"))
             {
                 returnVal = true;
+                castColor = Color.red;
             }
-            Debug.DrawLine(castPoint.position, hit.point, Color.yellow);
+            else
+            {
+                castColor = Color.yellow;
+            }
         }
-        else
-        {
-            Debug.DrawLine(castPoint.position, endOfCast, Color.blue);
-        }
+
+        // Draw line to visualize cast
+        Debug.DrawLine(castPoint.position, hit.point, castColor);
 
         return returnVal;
     }
