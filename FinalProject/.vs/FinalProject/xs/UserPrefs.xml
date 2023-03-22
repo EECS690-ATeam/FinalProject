@@ -1,7 +1,14 @@
 ﻿<Properties StartupConfiguration="{E1456745-ED92-4EB6-8905-E64DC1E47277}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LeftBorder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Keycard.cs">
     <Files>
-      <File FileName="Assets/Scripts/LeftBorder.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/InventorySlot.cs" Line="27" Column="1" />
+      <File FileName="Assets/Scripts/InventoryManager.cs" Line="10" Column="43" />
+      <File FileName="Assets/Scripts/Inventory.cs" Line="26" Column="43" />
+      <File FileName="Assets/Scripts/Battery.cs" Line="19" Column="6" />
+      <File FileName="Assets/Scripts/Keycard.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/InventoryItem.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ICollectible.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ItemData.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,17 +16,22 @@
           <Node name="FinalProject" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="LeftBorder.cs" selected="True" />
+                <Node name="Keycard.cs" selected="True" />
               </Node>
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="28c52545-48d5-451c-b956-5fff6609f325" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b78830fa-a99b-4c11-a060-1897be9ae81c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
