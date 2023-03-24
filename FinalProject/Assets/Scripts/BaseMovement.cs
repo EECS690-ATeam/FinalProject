@@ -10,11 +10,13 @@ public class BaseMovement : MonoBehaviour
     private SpriteRenderer sr;
     bool facingRight=true;
 
+    public static Vector3 spawnPos;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        this.transform.position += spawnPos;
     }
 
     // Update is called once per frame
@@ -39,20 +41,24 @@ public class BaseMovement : MonoBehaviour
         if (collision.gameObject.name == "RightBorder" && (Input.GetAxisRaw("Horizontal") > 0))
         {
             if (sceneName == "Lab1") {
+                PlayerMovement.spawnPos = new Vector3(-26, 0, 0);
                 SceneManager.LoadScene("Kelp Cavern");
             }
 
             else if (sceneName == "Lab2") {
+                PlayerMovement.labSpawn = 2;
                 SceneManager.LoadScene("Exterior Area");
             }
         }
         if (collision.gameObject.name == ("LeftBorder") && (Input.GetAxisRaw("Horizontal") < 0))
         {
             if (sceneName == "Lab1") {
+                PlayerMovement.labSpawn = 1;
                 SceneManager.LoadScene("Exterior Area");
             }
 
             else if (sceneName == "Lab2") {
+                PlayerMovement.spawnPos = new Vector3(64, 0, 0);
                 SceneManager.LoadScene("Kelp Cavern");
             }
         }

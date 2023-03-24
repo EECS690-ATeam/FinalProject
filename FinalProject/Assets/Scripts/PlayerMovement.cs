@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     LeftBorder lBorder;
     RightBorder rBorder;
     
+    //controlled for each scene transition
+    public static Vector3 spawnPos;
+    public static int labSpawn;
 
     void Start()
     {
@@ -20,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<BoxCollider2D>();
         movement = rb.velocity;
+        if (labSpawn != 0) {
+            spawnAtLab();
+        }
+        else {
+            this.transform.position += spawnPos;
+        }
     }
 
     // Update is called once per frame
@@ -52,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             else if (sceneName == "Kelp Cavern") {
+                BaseMovement.spawnPos = new Vector3(-17, 0, 0);
                 SceneManager.LoadScene("Lab2");
             }
         }
@@ -64,17 +74,47 @@ public class PlayerMovement : MonoBehaviour
             }
 
             else if (sceneName == "Kelp Cavern") {
+                BaseMovement.spawnPos = new Vector3(10, 0, 0);
                 SceneManager.LoadScene("Lab1");
             }
         }
         //exterior area lab entrance colliders
         if (collision.gameObject.name == "Lab1")
         {
+            BaseMovement.spawnPos = new Vector3(-17, 0, 0);
             SceneManager.LoadScene("Lab1");
         }
         if (collision.gameObject.name == "Lab2")
         {
+            BaseMovement.spawnPos = new Vector3(10, 0, 0);
             SceneManager.LoadScene("Lab2");
         }
+    }
+
+    private void spawnAtLab() {
+
+        //there is probably a better way to do this
+        //but this works for now
+        float newX = 0f;
+        float newY = 0f;
+        
+        if (labSpawn == 1) {
+            Lab1 lab = FindObjectOfType<Lab1>();
+            //x has a slight offset to spawn next to the lab
+            newX = lab.transform.position[0] - lab.GetComponent<SpriteRenderer>().bounds.size.x/2 - 5;
+            newY = lab.transform.position[1];
+        }
+
+        else if (labSpawn == 2) {
+            Lab2 lab = FindObjectOfType<Lab2>();
+            //x has a slight offset to spawn next to the lab
+            newX = lab.transform.position[0] - lab.GetComponent<SpriteRenderer>().bounds.size.x/2 - 5;
+            newY = lab.transform.position[1];
+            
+        }
+
+        Vector3 temp = new Vector3(newX - this.transform.position.x, newY - this.transform.position.y, 0f);
+        this.transform.position += temp;
+        labSpawn = 0;
     }
 }
