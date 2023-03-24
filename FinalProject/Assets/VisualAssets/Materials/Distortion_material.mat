@@ -36,6 +36,6 @@ Material:
     m_Floats:
     - _GradientNoiseScale: 5
     m_Colors:
-    - _DistortionPower: {r: 0.1, g: 0.1, b: 0, a: 0}
-    - _DistortionSpeed: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _DistortionPower: {r: 0.05, g: 0.05, b: 0, a: 0}
+    - _DistortionSpeed: {r: 0.05, g: 0.05, b: 0, a: 0}
   m_BuildTextureStacks: []
