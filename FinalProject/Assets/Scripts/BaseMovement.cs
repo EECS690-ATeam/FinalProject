@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BaseMovement : MonoBehaviour
 {
@@ -28,6 +29,32 @@ public class BaseMovement : MonoBehaviour
         if(moveInput>0 && !facingRight) {
             facingRight = !facingRight;
             sr.flipX = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (collision.gameObject.name == "RightBorder" && (Input.GetAxisRaw("Horizontal") > 0))
+        {
+            if (sceneName == "Lab1") {
+                SceneManager.LoadScene("Kelp Cavern");
+            }
+
+            else if (sceneName == "Lab2") {
+                SceneManager.LoadScene("Exterior Area");
+            }
+        }
+        if (collision.gameObject.name == ("LeftBorder") && (Input.GetAxisRaw("Horizontal") < 0))
+        {
+            if (sceneName == "Lab1") {
+                SceneManager.LoadScene("Exterior Area");
+            }
+
+            else if (sceneName == "Lab2") {
+                SceneManager.LoadScene("Kelp Cavern");
+            }
         }
     }
 }

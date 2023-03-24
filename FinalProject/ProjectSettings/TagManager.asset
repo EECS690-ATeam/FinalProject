@@ -44,9 +44,12 @@ TagManager:
   - name: BackGround
     uniqueID: 861679731
     locked: 0
-  - name: DistortionEffect
-    uniqueID: 188106387
+  - name: Midground
+    uniqueID: 1905071315
     locked: 0
   - name: Foreground
     uniqueID: 1769583485
+    locked: 0
+  - name: DistortionEffect
+    uniqueID: 188106387
     locked: 0
