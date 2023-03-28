@@ -19,8 +19,8 @@ public class FlockingFishConfig : MonoBehaviour
     public float alignmentRadius;
     public float alignmentPriority;
 
-    public float seperationRadius;
-    public float seperationPriority;
+    public float separationRadius;
+    public float separationPriority;
 
     public float avoidanceRadius;
     public float avoidancePriority;

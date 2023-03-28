@@ -53,3 +53,6 @@ TagManager:
   - name: DistortionEffect
     uniqueID: 188106387
     locked: 0
+  - name: FlockingFish
+    uniqueID: 1317550403
+    locked: 0
