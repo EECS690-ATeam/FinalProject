@@ -296,19 +296,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxFOV: 120
-  maxAcceleration: 20
-  maxVelocity: 10
-  wanderJitter: 10
-  wanderRadius: 2
+  maxAcceleration: 80
+  maxVelocity: 16
   wanderDistance: 3
-  wanderPriority: 20
+  wanderPriority: 50
   cohesionRadius: 5
-  cohesionPriority: 60
-  alignmentRadius: 2
-  alignmentPriority: 90
+  cohesionPriority: 120
+  alignmentRadius: 13
+  alignmentPriority: 100
   separationRadius: 2
-  separationPriority: 90
-  avoidanceRadius: 5
+  separationPriority: 150
+  avoidanceRadius: 4
   avoidancePriority: 700
 --- !u!114 &138375847
 MonoBehaviour:
@@ -323,11 +321,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FlockingFishPrefab: {fileID: 4484164112709831030, guid: 15d628c9728c11441851f7046ef2ba9d, type: 3}
-  numberOfFish: 100
+  numberOfFish: 300
   flockingFish: []
   enemies: []
-  bounds: 30
-  spawnRadius: 15
+  bounds: 50
+  spawnRadius: 25
 --- !u!4 &138375848
 Transform:
   m_ObjectHideFlags: 0
@@ -852,7 +850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7126899444360893532, guid: 6d43b86aa6a503a4b90c1eb1789d2e6e, type: 3}
       propertyPath: moveSpeed
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7126899444360893533, guid: 6d43b86aa6a503a4b90c1eb1789d2e6e, type: 3}
       propertyPath: m_RootOrder

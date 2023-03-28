@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class FlockingFishConfig : MonoBehaviour
 {
-    public float maxFOV = 180;
+    public float maxFOV = 120;
     public float maxAcceleration;
     public float maxVelocity;
 
-    public float wanderJitter;
-    public float wanderRadius;
-    public float wanderDistance;
     public float wanderPriority;
 
     public float cohesionRadius;
