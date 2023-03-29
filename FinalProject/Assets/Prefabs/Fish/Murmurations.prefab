@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2679727737347822835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2679727737347822846}
+  - component: {fileID: 2679727737347822833}
+  - component: {fileID: 2679727737347822832}
+  m_Layer: 0
+  m_Name: Murmurations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2679727737347822846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2679727737347822835}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.0380793, y: -2.1749423, z: -0.2720662}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2679727737347822833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2679727737347822835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ccc8470aca7754fa720fa6e57e826c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlockingFishPrefab: {fileID: 4484164112709831030, guid: 15d628c9728c11441851f7046ef2ba9d, type: 3}
+  numberOfFish: 300
+  flockingFish: []
+  enemies: []
+  bounds: 50
+  spawnRadius: 25
+--- !u!114 &2679727737347822832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2679727737347822835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e17a36fbb870c4cadb50a9c82a5f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxFOV: 120
+  maxAcceleration: 80
+  maxVelocity: 16
+  wanderPriority: 50
+  cohesionRadius: 5
+  cohesionPriority: 120
+  alignmentRadius: 13
+  alignmentPriority: 100
+  separationRadius: 2
+  separationPriority: 150
+  avoidanceRadius: 4
+  avoidancePriority: 700
