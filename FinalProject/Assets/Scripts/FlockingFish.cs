@@ -1,3 +1,9 @@
+/********************************************************************
+* CODE ADAPTED FROM "Renaissance Coders" ON YOUTUBE
+* CHANNEL: https://www.youtube.com/@RenaissanceCoders1
+* TUTORIAL: https://www.youtube.com/playlist?list=PL4CCSwmU04MhfoJTJWA7n2AIB4dq6umeu
+********************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -127,7 +133,8 @@ public class FlockingFish : MonoBehaviour
             // If neighbor is in front of you, wihtin your FOV
             if (isInFOV(member.position))
             {
-                // Add their position vector to your average
+                // Add their position vector, this will create a very large vector which when
+                // divided by the count of neighbors will describe their average position
                 cohesionVector += member.position;
 
                 // Bump count
@@ -142,70 +149,102 @@ public class FlockingFish : MonoBehaviour
             return cohesionVector;
         }
 
+        // Divide massive vector by member count to get average position
         cohesionVector /= countMembers;
+
+        // Subtract your position from average neighbor position to get a vector from your location to average position
         cohesionVector = cohesionVector - this.position;
+
+        // Convert vector into directional vector
         cohesionVector = Vector3.Normalize(cohesionVector);
+
+        // Return vector to later be multiplied by priority
         return cohesionVector;
     }
 
     // Returns a directional vector pointing towards the average vecloity vector of neighbors
     Vector3 Alignment()
     {
+        // Create vector that will hold the average velocity of neighbors
         Vector3 alignVector = new Vector3();
+
+        // Array of all neighbors within a given range
         var members = level.GetNeighbors(this, conf.alignmentRadius);
+
+        // If no neighbors within given range
         if(members.Count == 0)
         {
+            // Return a zero vector
             return alignVector;
         }
 
+        // Loop through all neighbors in range
         foreach(var member in members)
         {
+            // If neigbors is within defined FOV in front of you
             if (isInFOV(member.position))
             {
+                // Add velocity vector, this will create a massive vector pointing in the average direction of all neighbors
                 alignVector += member.velocity;
             }
         }
 
+        // Convert vector into a directional vector, which will be multiplied by priority
         return alignVector.normalized;
     }
 
     // Returns a directional vector pointing away from the average position of neighbors
     Vector3 Separation()
     {
+        // Vector which will point away from the average position of neighbors within a given range
         Vector3 seperateVector = new Vector3();
+
+        // Array of all neighbors wihtin a given range
         var members = level.GetNeighbors(this, conf.separationRadius);
+
+        // If no neighbors within the given range
         if (members.Count == 0)
         {
+            // Return a zero vector
             return seperateVector;
         }
 
+        // Loop through all neighbors within the given range
         foreach(var member in members)
         {
+            // If neighbor is within a given FOV in front of you
             if(isInFOV(member.position))
             {
-                Vector3 movingTowards = this.position - member.position;
-                if(movingTowards.magnitude > 0)
-                {
-                    seperateVector += movingTowards.normalized / movingTowards.magnitude;
-                }
+                // Add vector away from neighbor, this will create a very large vector in the direction away from the average neighbor
+                seperateVector += this.position - member.position;
             }
         }
 
+        // Convert vector to a directional vector, to be later multiplied by priority
         return seperateVector.normalized;
     }
 
     // Returns a directional vector pointing away from the average position of nearby enemies
     Vector3 Avoidance()
     {
+        // Vector to hold direction away from average enemy within range
         Vector3 avoidVector = new Vector3();
+
+        // Array of all enemies within a given range
         var enemyList = level.GetEnemies(this, conf.avoidanceRadius);
+
+        // If no enemies within a given range
         if (enemyList.Count == 0)
         {
+            // Return a zero vector
             return avoidVector;
         }
+
+        // Loop through all enemies within range
         foreach (var enemy in enemyList)
         {
-            avoidVector += RunAway(enemy.position);
+            // Add vector
+            avoidVector += this.position - enemy.position;
         }
 
         return avoidVector.normalized;
@@ -215,19 +254,14 @@ public class FlockingFish : MonoBehaviour
     * HELPER METHODS
     ********************************************************************/
 
-    Vector3 RunAway(Vector3 target)
-    {
-        Vector3 neededVelocity = (position - target).normalized * conf.maxVelocity;
-        return neededVelocity - velocity;
-    }
-
+    // Takes a vector by reference and wraps its x and y values if needed
     void WrapAround(ref Vector3 vector, float min, float max)
     {
         vector.x = WrapAroundFloat(vector.x, min, max);
         vector.y = WrapAroundFloat(vector.y, min, max);
-        vector.z = WrapAroundFloat(vector.z, min, max);
     }
 
+    // Takes a value and returns a wrapped value if it is too low or high
     float WrapAroundFloat(float value, float min, float max)
     {
         if (value > max)
@@ -241,11 +275,13 @@ public class FlockingFish : MonoBehaviour
         return value;
     }
 
+    // Returns a random float from -1 to 1
     float RandomBinomial()
     {
         return Random.Range(0f, 1f) - Random.Range(0f, 1f);
     }
 
+    // Checks whether the angle of a target position is within a given range
     bool isInFOV(Vector3 vec)
     {
         return Vector3.Angle(this.velocity, vec - this.position) <= conf.maxFOV;

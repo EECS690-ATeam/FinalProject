@@ -1,3 +1,9 @@
+/********************************************************************
+* CODE ADAPTED FROM "Code Monkey" ON YOUTUBE
+* CHANNEL: https://www.youtube.com/@CodeMonkeyUnity
+* TUTORIAL: https://www.youtube.com/watch?v=CSeUMTaNFYk
+********************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

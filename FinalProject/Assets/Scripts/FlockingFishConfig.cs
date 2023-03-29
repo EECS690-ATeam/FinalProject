@@ -1,3 +1,9 @@
+/********************************************************************
+* CODE ADAPTED FROM "Renaissance Coders" ON YOUTUBE
+* CHANNEL: https://www.youtube.com/@RenaissanceCoders1
+* TUTORIAL: https://www.youtube.com/playlist?list=PL4CCSwmU04MhfoJTJWA7n2AIB4dq6umeu
+********************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

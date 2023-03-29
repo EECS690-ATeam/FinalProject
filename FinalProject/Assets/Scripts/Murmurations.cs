@@ -1,9 +1,18 @@
+/********************************************************************
+* CODE ADAPTED FROM "Renaissance Coders" ON YOUTUBE
+* CHANNEL: https://www.youtube.com/@RenaissanceCoders1
+* TUTORIAL: https://www.youtube.com/playlist?list=PL4CCSwmU04MhfoJTJWA7n2AIB4dq6umeu
+********************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Murmurations : MonoBehaviour
 {
+    /********************************************************************
+    * VARIABLE DECLARATIONS
+    ********************************************************************/
     public Transform FlockingFishPrefab;
     public int numberOfFish;
     public List<FlockingFish> flockingFish;
@@ -14,15 +23,22 @@ public class Murmurations : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /********************************************************************
+        * VARIABLE INITIALIZATIONS
+        ********************************************************************/
         flockingFish = new List<FlockingFish>();
         enemies = new List<Avoidance>();
 
+        /********************************************************************
+        * INSTANTIATING FISH
+        ********************************************************************/
         Spawn(FlockingFishPrefab, numberOfFish);
 
         flockingFish.AddRange(FindObjectsOfType<FlockingFish>());
         enemies.AddRange(FindObjectsOfType<Avoidance>());
     }
 
+    // Method that instantiates several flocking fish, depending on the given count
     void Spawn(Transform prefab, int count)
     {
         for(int i = 0; i < count; i++)
@@ -31,6 +47,7 @@ public class Murmurations : MonoBehaviour
         }
     }
 
+    // Method that Returns a List of neighbors of a given fish, based on a given radius
     public List<FlockingFish> GetNeighbors(FlockingFish fish, float radius)
     {
         List<FlockingFish> neighborsFound = new List<FlockingFish>();
@@ -50,6 +67,7 @@ public class Murmurations : MonoBehaviour
         return neighborsFound;
     }
 
+    // Method that Returns a List of nearby enemies of a given fish, based on a given radius
     public List<Avoidance> GetEnemies(FlockingFish fish, float radius)
     {
         List<Avoidance> returnEnemies = new List<Avoidance>();
