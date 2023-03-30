@@ -26,7 +26,6 @@ public class Swim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(orientation);
         var horizontalMovement = Input.GetAxis("Horizontal");
         var verticalMovement = Input.GetAxis("Vertical");
         if(horizontalMovement != 0) animator.SetBool("IsIdle", false);
@@ -54,7 +53,7 @@ public class Swim : MonoBehaviour
                 transform.Rotate(new Vector3(0,0,verticalMovement));
             }
             if(GameObject.eulerAngles.z<225) inc = true;
-            if(GameObject.eulerAngles.z>320) {
+            if(GameObject.eulerAngles.z>320 && horizontalMovement == 0) {
                 if(horizontalMovement==0) orientation = false;
                 animator.SetBool("IsIdle", true);
             }
