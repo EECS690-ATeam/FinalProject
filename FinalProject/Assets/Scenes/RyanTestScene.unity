@@ -883,6 +883,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2679727737347822832, guid: 3dbd65aa70e3fd7408e47e44a9180ffa, type: 3}
+      propertyPath: wanderPriority
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2679727737347822833, guid: 3dbd65aa70e3fd7408e47e44a9180ffa, type: 3}
+      propertyPath: numberOfFish
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2679727737347822835, guid: 3dbd65aa70e3fd7408e47e44a9180ffa, type: 3}
       propertyPath: m_Name
       value: Murmurations

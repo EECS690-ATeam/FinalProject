@@ -64,14 +64,18 @@ public class FlockingFish : MonoBehaviour
         // Velocity is clamped to whatever value we set as the maximum (prevents infinite speed)
         velocity = Vector3.ClampMagnitude(velocity, conf.maxVelocity);
 
+        // This is a temporary fix, because z values were being introduced and breaking the distance() function
+        velocity.z = 0;
+
+        // Set rotation to the direction unit is moving - this ruins movement, I believe because velocity is in local space and causes a bunch of problems
+        //Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, velocity.normalized);
+        //transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 1000 * Time.deltaTime);
+
         // Position is updated based on current position and velocity, as normal
         position = position + velocity * Time.deltaTime;
 
         // If fish crosses boundary range, wrap to other side
         WrapAround(ref position, -level.bounds, level.bounds);
-
-        // This is a temporary fix, because z values were being introduced and breaking the distance() function
-        position.z = 0;
 
         // Set current position to the position variable
         transform.position = position;
