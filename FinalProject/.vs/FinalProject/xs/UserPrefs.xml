@@ -1,14 +1,8 @@
 ﻿<Properties StartupConfiguration="{E1456745-ED92-4EB6-8905-E64DC1E47277}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Keycard.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CutScene.cs">
     <Files>
-      <File FileName="Assets/Scripts/InventorySlot.cs" Line="27" Column="1" />
-      <File FileName="Assets/Scripts/InventoryManager.cs" Line="10" Column="43" />
-      <File FileName="Assets/Scripts/Inventory.cs" Line="26" Column="43" />
-      <File FileName="Assets/Scripts/Battery.cs" Line="19" Column="6" />
-      <File FileName="Assets/Scripts/Keycard.cs" Line="26" Column="1" />
-      <File FileName="Assets/Scripts/InventoryItem.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ICollectible.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ItemData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="14" Column="36" />
+      <File FileName="Assets/Scripts/CutScene.cs" Line="3" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,22 +10,17 @@
           <Node name="FinalProject" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Keycard.cs" selected="True" />
+                <Node name="CutScene.cs" selected="True" />
               </Node>
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Unity" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b78830fa-a99b-4c11-a060-1897be9ae81c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e1d91f17-2767-466c-8d93-53570b0edfd5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
