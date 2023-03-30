@@ -11,17 +11,11 @@ public class CutScene : MonoBehaviour
 
     public void Start()
     {
-        vid.Play();
+        Invoke("TransitionToGame", 50);
     }
 
-    public void Update()
+    public void TransitionToGame()
     {
-   
-
-        if (!vid.isPlaying)
-        {
-            SceneManager.LoadScene(3);
-        }
-        
+        SceneManager.LoadScene(5);
     }
 }

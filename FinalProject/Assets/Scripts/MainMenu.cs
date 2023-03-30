@@ -16,11 +16,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        visualsScreen.SetActive(false);
-        buttonsScreen.SetActive(false);
-        videoCanvas.SetActive(true);
-        //videoPlayer.PlayCutscene();
-        vp.SetActive(true);
+        SceneManager.LoadScene(3);
     }
 
     
