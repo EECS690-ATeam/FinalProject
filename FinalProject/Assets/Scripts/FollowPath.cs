@@ -10,6 +10,9 @@ public class FollowPath : MonoBehaviour
     // currently this is just for echolocation fish
     [SerializeField] private EcholocationChase chaseObject;
 
+    [SerializeField] public float patrolSpeed;
+    [SerializeField] public float rotationSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +39,14 @@ public class FollowPath : MonoBehaviour
                 {
                     if (!chaseObject.chasing)
                     {
+                        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, (point - (Vector2)transform.position));
+                        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
                         // Set rotation to the direction unit is moving
-                        transform.right = point - (Vector2)transform.position;
+                        //transform.right = point - (Vector2)transform.position;
 
                         // Move towards current target position
-                        transform.position = Vector3.MoveTowards(transform.position, point, Time.deltaTime * 10);
+                        transform.position = Vector3.MoveTowards(transform.position, point, Time.deltaTime * patrolSpeed);
 
                         // Update position each frame, similar to how Update() works
                         yield return new WaitForEndOfFrame();

@@ -48,7 +48,7 @@ public class EcholocationChase : MonoBehaviour
         bool returnVal = false;
 
         // Get point for end of raycast, depending on current facing direction
-        Vector2 endOfCast = castPoint.position + (transform.right * searchRange);
+        Vector2 endOfCast = castPoint.position + (transform.up * searchRange);
 
         // Create raycast towards facing direction
         RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endOfCast, LayerMask.NameToLayer("Action"));
@@ -117,7 +117,7 @@ public class EcholocationChase : MonoBehaviour
         float playerAngle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
 
         // Set rotation towards player
-        rb.rotation = playerAngle;
+        rb.rotation = playerAngle - 90;
 
         // Move directly toward player based on given speed value
         rb.MovePosition((Vector2)transform.position + ((Vector2)playerDirection * speed * Time.deltaTime));

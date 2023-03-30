@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
 
-        rb.velocity = new Vector2(movement.x * moveSpeed, movement.y * moveSpeed);
+        rb.velocity = new Vector2(movement.x, movement.y).normalized * moveSpeed;
     }
 
     //// Not tied to the frame rate like Update() is

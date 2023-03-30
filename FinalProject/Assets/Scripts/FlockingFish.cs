@@ -75,7 +75,7 @@ public class FlockingFish : MonoBehaviour
         position = position + velocity * Time.deltaTime;
 
         // If fish crosses boundary range, wrap to other side
-        WrapAround(ref position, -level.bounds, level.bounds);
+        WrapAround(ref position, -level.boundsX, level.boundsX, -level.boundsY, level.boundsY);
 
         // Set current position to the position variable
         transform.position = position;
@@ -259,10 +259,10 @@ public class FlockingFish : MonoBehaviour
     ********************************************************************/
 
     // Takes a vector by reference and wraps its x and y values if needed
-    void WrapAround(ref Vector3 vector, float min, float max)
+    void WrapAround(ref Vector3 vector, float minX, float maxX, float minY, float maxY)
     {
-        vector.x = WrapAroundFloat(vector.x, min, max);
-        vector.y = WrapAroundFloat(vector.y, min, max);
+        vector.x = WrapAroundFloat(vector.x, minX, maxX);
+        vector.y = WrapAroundFloat(vector.y, minY, maxY);
     }
 
     // Takes a value and returns a wrapped value if it is too low or high
