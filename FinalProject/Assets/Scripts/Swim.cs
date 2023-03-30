@@ -45,7 +45,7 @@ public class Swim : MonoBehaviour
         }
         else if(horizontalMovement==0) {
             if(GameObject.eulerAngles.z>220 && GameObject.eulerAngles.z<359) {
-                transform.Rotate(new Vector3(0,0,.25f));
+                transform.Rotate(new Vector3(0,0,.45f));
             }
         }
 
