@@ -63,6 +63,7 @@
     <Compile Include="Assets/Utilities/CodeMonkey/MonoBehaviours/CameraFollowSetup.cs" />
     <Compile Include="Assets/Utilities/CodeMonkey/MonoBehaviours/CameraFollow.cs" />
     <Compile Include="Assets/Scripts/Collector.cs" />
+    <Compile Include="Assets/Scripts/SoundManagerScript.cs" />
     <Compile Include="Assets/Scripts/CameraFollow.cs" />
     <Compile Include="Assets/Scripts/InventoryManager.cs" />
     <Compile Include="Assets/Scripts/Parallax.cs" />
