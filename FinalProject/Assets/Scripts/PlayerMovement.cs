@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         var verticalMovement = Input.GetAxis("Vertical");
         if(horizontalMovement != 0) animator.SetBool("IsIdle", false);
         else animator.SetBool("IsIdle", true);
-        transform.position += new Vector3(horizontalMovement, verticalMovement, 0) * Time.deltaTime * MovementSpeed;
+        transform.position += new Vector3(horizontalMovement, verticalMovement, 0).normalized * Time.deltaTime * MovementSpeed;
 
 
         if(!orientation && horizontalMovement!=0) { 

@@ -10,6 +10,8 @@ public class EcholocationChase : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] Transform castPoint;
     [SerializeField] Transform player;
+    [SerializeField] float patrolClickProbability;
+    [SerializeField] float chaseClickProbability;
 
     private Rigidbody2D rb;
     public bool chasing;
@@ -30,15 +32,30 @@ public class EcholocationChase : MonoBehaviour
         {
             chasing = true;
             ChasePlayer();
+            float randomNum = Random.Range(0f, 100f);
+            if(randomNum < chaseClickProbability)
+            {
+                SoundManagerScript.PlaySound("click_2_");
+            }
         }
         else if (chasing && CanStillSeePlayer(chaseRange))
         {
             ChasePlayer();
+            float randomNum = Random.Range(0f, 100f);
+            if (randomNum < chaseClickProbability)
+            {
+                SoundManagerScript.PlaySound("click_2_");
+            }
         }
         else
         {
             chasing = false;
             StopChasingPlayer();
+            float randomNum = Random.Range(0f, 100f);
+            if (randomNum < patrolClickProbability)
+            {
+                SoundManagerScript.PlaySound("click_2_");
+            }
         }
     }
 

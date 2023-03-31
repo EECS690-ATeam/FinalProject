@@ -302,6 +302,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553017, guid: 0c50fc6e414da0d40a4dc1d68cd9bb5d, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1514598622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c50fc6e414da0d40a4dc1d68cd9bb5d, type: 3}
 --- !u!1 &517606576
@@ -946,6 +950,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553017, guid: 0c50fc6e414da0d40a4dc1d68cd9bb5d, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1514598622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c50fc6e414da0d40a4dc1d68cd9bb5d, type: 3}
 --- !u!1001 &1472553765
@@ -955,6 +963,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3937262748455813588, guid: 14216a80b4d8dae44ac88b816ee5fbe5, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1514598622}
     - target: {fileID: 3937262748455813589, guid: 14216a80b4d8dae44ac88b816ee5fbe5, type: 3}
       propertyPath: m_Name
       value: Battery (1)
@@ -1299,6 +1311,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553017, guid: 0c50fc6e414da0d40a4dc1d68cd9bb5d, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1514598622}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c50fc6e414da0d40a4dc1d68cd9bb5d, type: 3}
 --- !u!1 &1727874510
@@ -1468,6 +1484,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3937262748455813588, guid: 14216a80b4d8dae44ac88b816ee5fbe5, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1514598622}
     - target: {fileID: 3937262748455813589, guid: 14216a80b4d8dae44ac88b816ee5fbe5, type: 3}
       propertyPath: m_Name
       value: Battery (2)
@@ -1525,6 +1545,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3937262748455813588, guid: 14216a80b4d8dae44ac88b816ee5fbe5, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1514598622}
     - target: {fileID: 3937262748455813589, guid: 14216a80b4d8dae44ac88b816ee5fbe5, type: 3}
       propertyPath: m_Name
       value: Battery
