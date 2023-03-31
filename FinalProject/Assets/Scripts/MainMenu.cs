@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Intro Cut Scene");
     }
 
     
