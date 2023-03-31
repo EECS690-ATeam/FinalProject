@@ -123,6 +123,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
+        if(collision.gameObject.name == "EcholocationFish")
+        {
+            spawnPos = new Vector3(-26, 0, 0);
+            SceneManager.LoadScene("Kelp Cavern");
+        }
         if (collision.gameObject.name == "RightBorder" && (Input.GetAxisRaw("Horizontal") > 0))
         {
             if (sceneName == "Exterior Area") {
