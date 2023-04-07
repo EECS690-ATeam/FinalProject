@@ -1,0 +1,18 @@
+File Organization
+-----------------
+
+Editor - Unity keyword folder, allows scripts to be ran as editor scripts rather than runtime
+
+Packages - Any Unity or 3rd party packages
+
+Resources - Unity keyword folder, allows access of assets via the "Resources" object (Useful for loading audio files)
+
+Scenes - Scene objects
+
+Scriptable Obejcts - Scriptable objects (Memory friendly alternative to prefabs, for unchanging data)
+
+Scripts - All scripts
+
+Settings - Rendering objects
+
+VisualAssets - All visual assets
