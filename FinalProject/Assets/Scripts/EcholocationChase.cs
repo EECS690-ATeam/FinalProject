@@ -15,6 +15,7 @@ public class EcholocationChase : MonoBehaviour
 
     private Rigidbody2D rb;
     public bool chasing;
+    public Transform EchoPingPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,7 @@ public class EcholocationChase : MonoBehaviour
             if(randomNum < chaseClickProbability)
             {
                 SoundManagerScript.PlaySound("click_2_");
+                Instantiate(EchoPingPrefab, transform.position, Quaternion.identity);
             }
         }
         else if (chasing && CanStillSeePlayer(chaseRange))
@@ -45,6 +47,7 @@ public class EcholocationChase : MonoBehaviour
             if (randomNum < chaseClickProbability)
             {
                 SoundManagerScript.PlaySound("click_2_");
+                Instantiate(EchoPingPrefab, transform.position, Quaternion.identity);
             }
         }
         else
@@ -55,6 +58,7 @@ public class EcholocationChase : MonoBehaviour
             if (randomNum < patrolClickProbability)
             {
                 SoundManagerScript.PlaySound("click_2_");
+                Instantiate(EchoPingPrefab, transform.position, Quaternion.identity);
             }
         }
     }

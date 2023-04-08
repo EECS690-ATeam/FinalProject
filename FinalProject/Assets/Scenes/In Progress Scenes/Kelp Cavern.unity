@@ -3060,6 +3060,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7126899443732704865}
   smoothTime: 0.1
+  swayAmplitude: 1
+  swayFrequency: 0.5
 --- !u!1 &1570858940
 GameObject:
   m_ObjectHideFlags: 0
@@ -19378,6 +19380,10 @@ PrefabInstance:
       propertyPath: noticeRange
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1147612199726747820, guid: 439ba25b8ca33834e9d05a96d10f3162, type: 3}
+      propertyPath: EchoPingPrefab
+      value: 
+      objectReference: {fileID: 6759499344408666382, guid: 90f464a295c45e946877cb3e2abf6e58, type: 3}
     - target: {fileID: 1147612199726747823, guid: 439ba25b8ca33834e9d05a96d10f3162, type: 3}
       propertyPath: m_Name
       value: EcholocationFish
