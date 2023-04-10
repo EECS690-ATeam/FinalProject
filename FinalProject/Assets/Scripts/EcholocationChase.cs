@@ -14,6 +14,8 @@ public class EcholocationChase : MonoBehaviour
     [SerializeField] float chaseClickProbability;
 
     private Rigidbody2D rb;
+    private Material material;
+
     public bool chasing;
     public Transform EchoPingPrefab;
 
@@ -22,6 +24,7 @@ public class EcholocationChase : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         chasing = false;
+        material = null;
     }
 
     // Update is called once per frame
@@ -38,6 +41,18 @@ public class EcholocationChase : MonoBehaviour
             {
                 SoundManagerScript.PlaySound("click_2_");
                 Instantiate(EchoPingPrefab, transform.position, Quaternion.identity);
+            }
+            for(int i = 0; i < gameObject.transform.childCount; i++)
+            {
+                if (gameObject.transform.GetChild(i).name == "BaseSprite")
+                {
+                    material = gameObject.transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().material;
+                    Debug.Log("Material : " + material);
+                }
+            }
+            if(material != null)
+            {
+                material.SetColor("_Color", new Color(36f, 0f, 0f));
             }
         }
         else if (chasing && CanStillSeePlayer(chaseRange))
@@ -59,6 +74,18 @@ public class EcholocationChase : MonoBehaviour
             {
                 SoundManagerScript.PlaySound("click_2_");
                 Instantiate(EchoPingPrefab, transform.position, Quaternion.identity);
+            }
+            for (int i = 0; i < gameObject.transform.childCount; i++)
+            {
+                if (gameObject.transform.GetChild(i).name == "BaseSprite")
+                {
+                    material = gameObject.transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().material;
+                    Debug.Log("Material : " + material);
+                }
+            }
+            if(material != null)
+            {
+                material.SetColor("_Color", new Color(0.5f, 0f, 0f));
             }
         }
     }

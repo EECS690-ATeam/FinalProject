@@ -33,7 +33,6 @@ public class EchoPing : MonoBehaviour
     IEnumerator FadeOut()
     {
         tmpColor.a -= .01f;
-        Debug.Log(Time.deltaTime);
         sprite.color = tmpColor;
         yield return null;
     }

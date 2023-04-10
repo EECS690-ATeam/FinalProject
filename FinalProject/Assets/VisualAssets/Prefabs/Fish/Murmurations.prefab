@@ -49,8 +49,10 @@ MonoBehaviour:
   numberOfFish: 300
   flockingFish: []
   enemies: []
-  bounds: 50
-  spawnRadius: 25
+  boundsX: 0
+  boundsY: 0
+  spawnRadiusX: 0
+  spawnRadiusY: 0
 --- !u!114 &2679727737347822832
 MonoBehaviour:
   m_ObjectHideFlags: 0
