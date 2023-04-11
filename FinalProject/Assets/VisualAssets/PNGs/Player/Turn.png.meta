@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 803c4d3a5e484fb459c7ed146908d9cb
+guid: b046b35b5030a1b4cb0840c30064f9b5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: My project_0
+      name: Turn_0
       rect:
         serializedVersion: 2
         x: 272
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 587276a873e6af04c98b8bff2685ac7d
-      internalID: 1639077016
+      spriteID: f2e1a534f7f16894e8bd9d9cdd940555
+      internalID: 614244647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: My project_1
+      name: Turn_1
       rect:
         serializedVersion: 2
         x: 1179
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c22f0e85e35974bb225f9fdfd4a06c
-      internalID: 1652089754
+      spriteID: ebb1f63b01d0f604b97f01f77d297e5a
+      internalID: -2025856458
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      My project_0: 1639077016
-      My project_1: 1652089754
+      Turn_0: 614244647
+      Turn_1: -2025856458
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
