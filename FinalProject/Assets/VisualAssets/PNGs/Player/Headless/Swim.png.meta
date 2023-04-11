@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 803c4d3a5e484fb459c7ed146908d9cb
+guid: 664a70645a66eeb4b9d7d3f6a1c8e9fd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: My project_0
+      name: Swim_0
       rect:
         serializedVersion: 2
-        x: 272
-        y: 280
-        width: 545
-        height: 481
+        x: 84
+        y: 342
+        width: 797
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 587276a873e6af04c98b8bff2685ac7d
-      internalID: 1639077016
+      spriteID: 50f43def9637f4741a20480574b1d037
+      internalID: -70847022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: My project_1
+      name: Swim_2
       rect:
         serializedVersion: 2
-        x: 1179
-        y: 281
-        width: 534
-        height: 482
+        x: 1060
+        y: 250
+        width: 825
+        height: 458
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c22f0e85e35974bb225f9fdfd4a06c
-      internalID: 1652089754
+      spriteID: b20b6493bd9c321459b15278c81a29e6
+      internalID: -543382095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Swim_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 333
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ae904d9ef92744db7c9d9c1c01db95
+      internalID: 506986849
       vertices: []
       indices: 
       edges: []
@@ -157,8 +178,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      My project_0: 1639077016
-      My project_1: 1652089754
+      Swim_0: -70847022
+      Swim_1: -387905360
+      Swim_2: -543382095
+      Swim_3: 506986849
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 803c4d3a5e484fb459c7ed146908d9cb
+guid: af8874181a5ac8e43a0fd0ef5a8fbe63
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: My project_0
+      name: stop (2)_0
       rect:
         serializedVersion: 2
-        x: 272
-        y: 280
-        width: 545
-        height: 481
+        x: 120
+        y: 165
+        width: 800
+        height: 590
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 587276a873e6af04c98b8bff2685ac7d
-      internalID: 1639077016
+      spriteID: f8daee13bd325854c8893ae25d1caa12
+      internalID: 1409858801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: My project_1
+      name: stop (2)_1
       rect:
         serializedVersion: 2
-        x: 1179
-        y: 281
-        width: 534
-        height: 482
+        x: 1281
+        y: 27
+        width: 482
+        height: 841
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c22f0e85e35974bb225f9fdfd4a06c
-      internalID: 1652089754
+      spriteID: de709fd0925f4784eb56e5076b168cf5
+      internalID: 76909232
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      My project_0: 1639077016
-      My project_1: 1652089754
+      stop (2)_1: 76909232
+      stop (2)_0: 1409858801
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

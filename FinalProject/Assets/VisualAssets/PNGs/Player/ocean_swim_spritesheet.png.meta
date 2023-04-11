@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 803c4d3a5e484fb459c7ed146908d9cb
+guid: a57f54c41a2f60a498d1e6b6ec5ba19e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: My project_0
+      name: ocean_swim_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 272
-        y: 280
-        width: 545
-        height: 481
+        x: 54
+        y: 255
+        width: 901
+        height: 458
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 587276a873e6af04c98b8bff2685ac7d
-      internalID: 1639077016
+      spriteID: d2854d7d93b541545b1e13f339d1f099
+      internalID: -2116212526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: My project_1
+      name: ocean_swim_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1179
-        y: 281
-        width: 534
-        height: 482
+        x: 1045
+        y: 347
+        width: 910
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c22f0e85e35974bb225f9fdfd4a06c
-      internalID: 1652089754
+      spriteID: 00098f8ca7c73c54fb015fcebd60bc36
+      internalID: 69740914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ocean_swim_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 338
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112afd56ab0c2134389c2f31ab9965ad
+      internalID: -1363018270
       vertices: []
       indices: 
       edges: []
@@ -157,8 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      My project_0: 1639077016
-      My project_1: 1652089754
+      ocean_swim_spritesheet_0: -2116212526
+      ocean_swim_spritesheet_2: -1363018270
+      ocean_swim_spritesheet_1: 69740914
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
