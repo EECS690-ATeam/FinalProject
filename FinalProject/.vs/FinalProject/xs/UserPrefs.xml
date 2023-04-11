@@ -1,8 +1,11 @@
 ﻿<Properties StartupConfiguration="{E1456745-ED92-4EB6-8905-E64DC1E47277}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CutScene.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/JsonDataService.cs">
     <Files>
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="14" Column="36" />
-      <File FileName="Assets/Scripts/CutScene.cs" Line="3" Column="19" />
+      <File FileName="Assets/Scripts/Inventory.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Keycard.cs" />
+      <File FileName="Assets/Scripts/PauseMenu.cs" Line="11" Column="33" />
+      <File FileName="Assets/Scripts/IDataService.cs" Line="5" Column="56" />
+      <File FileName="Assets/Scripts/JsonDataService.cs" Line="5" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -10,7 +13,7 @@
           <Node name="FinalProject" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="CutScene.cs" selected="True" />
+                <Node name="JsonDataService.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -20,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e1d91f17-2767-466c-8d93-53570b0edfd5" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="320412c0-fccf-4690-a3db-ff1e198daefa" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

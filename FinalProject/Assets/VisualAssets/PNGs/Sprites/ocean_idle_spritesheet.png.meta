@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ef4b5e7a24698dc45990450d3a2c39f0
+guid: 45a96711223468d40b0cf08595c868bf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ocean_idle_spritesheet_0
+      name: My project_0
       rect:
         serializedVersion: 2
-        x: 307
-        y: 36
-        width: 250
-        height: 928
+        x: 272
+        y: 280
+        width: 545
+        height: 481
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee1681861f9d89c45b5a9bfcdd7e1231
-      internalID: -713451541
+      spriteID: 587276a873e6af04c98b8bff2685ac7d
+      internalID: 1639077016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ocean_idle_spritesheet_1
+      name: My project_1
       rect:
         serializedVersion: 2
-        x: 1253
-        y: 45
-        width: 306
-        height: 916
+        x: 1179
+        y: 281
+        width: 534
+        height: 482
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7f03e3a6f7f9a2408678ce8f6e9c42e
-      internalID: -553008162
+      spriteID: 00c22f0e85e35974bb225f9fdfd4a06c
+      internalID: 1652089754
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ocean_idle_spritesheet_0: -713451541
-      ocean_idle_spritesheet_1: -553008162
+      My project_0: 1639077016
+      My project_1: 1652089754
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

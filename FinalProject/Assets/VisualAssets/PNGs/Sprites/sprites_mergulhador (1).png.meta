@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 51accc7eaf3a71f41b79467887ae0236
+guid: c4345f57c0996134ca9ace17836efa2f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprites_mergulhador (1)_0
+      name: Idle_0
       rect:
         serializedVersion: 2
-        x: 96
-        y: 1774
-        width: 665
-        height: 217
+        x: 267
+        y: 31
+        width: 276
+        height: 843
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba2c5687b50330e4dad982e05ba710df
-      internalID: 686917248
+      spriteID: 5f2f5775da59ce849be6047051913120
+      internalID: 1465796996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_mergulhador (1)_1
+      name: Idle_1
       rect:
         serializedVersion: 2
-        x: 922
-        y: 1757
-        width: 660
-        height: 234
+        x: 1306
+        y: 82
+        width: 6
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4868679b20b07f42924d99d4d28f0c0
-      internalID: 740346703
+      spriteID: 39e88da42ab02e446b37959f69a5940f
+      internalID: -1021542611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_mergulhador (1)_2
+      name: Idle_2
       rect:
         serializedVersion: 2
-        x: 1734
-        y: 1762
-        width: 662
-        height: 229
+        x: 1316
+        y: 41
+        width: 229
+        height: 833
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d92c9adbf5f62fa4cbf665de9d38016a
-      internalID: -1923883533
+      spriteID: 5fa0463153feafe4cbfa7579bb2e2b6d
+      internalID: -1643360493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_mergulhador (1)_3
+      name: Idle_3
       rect:
         serializedVersion: 2
-        x: 2539
-        y: 1761
-        width: 667
-        height: 230
+        x: 2314
+        y: 20
+        width: 232
+        height: 854
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8816d2ebb86eeb4ab5e4a007bbc9e40
-      internalID: 350244800
+      spriteID: 70dd14c8c7ff7b54fa67276c04b7c6ca
+      internalID: -1033445116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_mergulhador (1)_4
+      name: Idle_4
       rect:
         serializedVersion: 2
-        x: 99
-        y: 1346
-        width: 636
-        height: 244
+        x: 3312
+        y: 34
+        width: 253
+        height: 840
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d56438c7797869e479e65688248fcc76
-      internalID: -777353073
+      spriteID: 81306664c2cfd27478ebd198bed6a047
+      internalID: 1971758540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_mergulhador (1)_5
+      name: Idle_5
       rect:
         serializedVersion: 2
-        x: 915
-        y: 1382
-        width: 673
-        height: 225
+        x: 4317
+        y: 34
+        width: 232
+        height: 840
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1362dab08d5a4264b9965908106b2a27
-      internalID: -1452217933
+      spriteID: 0e0871dfbb587b748bcf213413902847
+      internalID: -1322036150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_mergulhador (1)_6
+      name: Idle_6
       rect:
         serializedVersion: 2
-        x: 1723
-        y: 1371
-        width: 673
-        height: 236
+        x: 5318
+        y: 27
+        width: 229
+        height: 847
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7fe5dce4fe74284a925e9a6d3a94f00
-      internalID: 2134822585
+      spriteID: b1a9d8ff98ca081428ce028459d2e887
+      internalID: -2024575815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprites_mergulhador (1)_7
+      name: Idle_7
       rect:
         serializedVersion: 2
-        x: 2542
-        y: 1395
-        width: 668
-        height: 231
+        x: 6258
+        y: 38
+        width: 294
+        height: 836
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,50 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e138b0109b2cc54b926a0e5285cd372
-      internalID: -945420848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_mergulhador (1)_8
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 922
-        width: 683
-        height: 257
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2267176851d41a34bb2161e327dbe7fd
-      internalID: -1822841974
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprites_mergulhador (1)_9
-      rect:
-        serializedVersion: 2
-        x: 921
-        y: 934
-        width: 645
-        height: 243
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8840bb5ae945844b8d385f4a2a2f978
-      internalID: -1237154863
+      spriteID: c9bbf6a1e94c6d240a745f615388b464
+      internalID: -763587753
       vertices: []
       indices: 
       edges: []
@@ -325,16 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprites_mergulhador (1)_1: 740346703
-      sprites_mergulhador (1)_7: -945420848
-      sprites_mergulhador (1)_0: 686917248
-      sprites_mergulhador (1)_8: -1822841974
-      sprites_mergulhador (1)_2: -1923883533
-      sprites_mergulhador (1)_3: 350244800
-      sprites_mergulhador (1)_6: 2134822585
-      sprites_mergulhador (1)_4: -777353073
-      sprites_mergulhador (1)_5: -1452217933
-      sprites_mergulhador (1)_9: -1237154863
+      Idle_4: 1971758540
+      Idle_1: -1021542611
+      Idle_3: -1033445116
+      Idle_5: -1322036150
+      Idle_0: 1465796996
+      Idle_6: -2024575815
+      Idle_7: -763587753
+      Idle_2: -1643360493
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
