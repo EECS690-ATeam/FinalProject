@@ -18,12 +18,14 @@ public class Inventory : MonoBehaviour
     {
         Keycard.OnKeycardCollected += Add;
         Battery.OnBatteryCollected += Add;
+        Syringe.OnSyringeCollected += Add;
     }
 
     private void OnDisable()
     {
         Keycard.OnKeycardCollected -= Add;
         Battery.OnBatteryCollected -= Add;
+        Syringe.OnSyringeCollected -= Add;
     }
 
     public void Add(ItemData itemData)
