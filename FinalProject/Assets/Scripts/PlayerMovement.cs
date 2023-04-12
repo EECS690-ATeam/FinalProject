@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     LeftBorder lBorder;
     RightBorder rBorder;
+    public AudioSource oofSound;
 
     private SpriteRenderer sr;
     public float verticalRot = 30;
@@ -109,6 +110,8 @@ public class PlayerMovement : MonoBehaviour
         string sceneName = currentScene.name;
         if(collision.gameObject.name == "EcholocationFish")
         {
+            Debug.Log("Swag");
+            oofSound.PlayOneShot(oofSound.clip, 1.0f);
             spawnPos = new Vector3(-26, 0, 0);
             SceneManager.LoadScene("Kelp Cavern");
         }
