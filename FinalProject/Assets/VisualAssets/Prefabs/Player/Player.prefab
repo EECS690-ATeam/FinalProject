@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 6849676741706647827}
   m_LocalRotation: {x: 0, y: 0, z: -0.008726465, w: 0.999962}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2716416039674177453}
@@ -81,12 +81,12 @@ SpriteRenderer:
   m_SortingLayerID: 1905071315
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: -713451541, guid: ef4b5e7a24698dc45990450d3a2c39f0, type: 3}
+  m_Sprite: {fileID: 24296339, guid: 76fe76b4fa60b4b45822d6cc4cecbc65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6, y: 5.100586}
+  m_Size: {x: 3.07, y: 9.223491}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -125,11 +125,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  GameObject: {fileID: 6849676741706647830}
-  animator: {fileID: 6849676741706647838}
-  MovementSpeed: 10
   verticalRot: 30
   horizontalRot: 180
+  MovementSpeed: 10
+  GameObject: {fileID: 6849676741706647830}
+  animator: {fileID: 6849676741706647838}
+  topAngleLimit: 35
+  bottomAngleLimit: -20
+  mouseWorldPos: {x: 0, y: 0}
 --- !u!114 &7299993297916822662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,8 +184,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 9.28}
-    newSize: {x: 6, y: 5.100586}
+    oldSize: {x: 3.07, y: 9.223491}
+    newSize: {x: 3.07, y: 9.223491}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
