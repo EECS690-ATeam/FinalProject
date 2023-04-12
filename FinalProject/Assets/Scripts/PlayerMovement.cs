@@ -12,17 +12,21 @@ public class PlayerMovement : MonoBehaviour
     LeftBorder lBorder;
     RightBorder rBorder;
 
-    public Transform GameObject;
-    public Animator animator;
-    public float MovementSpeed = 1;
-    bool facingRight = true;
     private SpriteRenderer sr;
     public float verticalRot = 30;
     public float horizontalRot = 180;
-    bool inc = false;
-    bool dec = false;
 
-    bool orientation = false; //false = vertical -> true = horizontal
+    public float MovementSpeed = 15;
+    public Transform GameObject;
+
+    public Animator animator;
+    //public Animator headAnimator;
+
+    //public Transform headWrapper;
+    public float topAngleLimit = 35;
+    public float bottomAngleLimit = -20f;
+    public Vector2 mouseWorldPos;
+    bool facingRight = true;
     
     //controlled for each scene transition
     public static Vector3 spawnPos;
@@ -45,72 +49,52 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void LookAtMouse() 
+    {
+        //var dir = (mouseWorldPos - (Vector2) headWrapper.position).normalized;
+        //headWrapper.right = (dir * Mathf.Sign(transform.localScale.x));
+        //var eulerDir = headWrapper.localEulerAngles;
+        //eulerDir.z = Mathf.Clamp(eulerDir.z - (eulerDir.z > 180 ? 360 : 0), bottomAngleLimit, topAngleLimit);
+        //headWrapper.localEulerAngles = eulerDir; 
+    }
+
+    private void FlipX(float x) {
+        if(facingRight && x<0) {
+            animator.SetBool("SetTurnL", true);
+            animator.SetBool("Flip", true);
+            facingRight = !facingRight;
+        }
+        if(!facingRight && x>0) {
+            animator.SetBool("SetTurnR", true);
+            animator.SetBool("Flip", true);
+            facingRight = !facingRight;
+        }
+         if (x!=0) {
+            if(animator.GetBool("SetTurnL") == false) transform.localScale = new Vector3(Mathf.Sign(x), 1, 1);
+            if(animator.GetBool("SetTurnR") == false) transform.localScale = new Vector3(Mathf.Sign(x), 1, 1);
+         }
+    }
+
     // Update is called once per frame
     void Update()
     {
+        var horizontalMovement = Input.GetAxis("Horizontal");
+        var verticalMovement = Input.GetAxis("Vertical");
+        mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        FlipX(horizontalMovement);
+        if(horizontalMovement != 0) animator.SetBool("IsIdle", false);
+        else animator.SetBool("IsIdle", true);
+        //if(horizontalMovement != 0) headAnimator.SetBool("IsIdle", false);
+        //else headAnimator.SetBool("IsIdle", true);
+        transform.position += new Vector3(horizontalMovement, verticalMovement, 0) * Time.deltaTime * MovementSpeed;
+        LookAtMouse();  
         // // Input
         // movement.x = Input.GetAxisRaw("Horizontal");
         // movement.y = Input.GetAxisRaw("Vertical");
 
 
         // rb.velocity = new Vector2(movement.x, movement.y).normalized * moveSpeed;
-        var horizontalMovement = Input.GetAxis("Horizontal");
-        var verticalMovement = Input.GetAxis("Vertical");
-        if(horizontalMovement != 0) animator.SetBool("IsIdle", false);
-        else animator.SetBool("IsIdle", true);
-        transform.position += new Vector3(horizontalMovement, verticalMovement, 0).normalized * Time.deltaTime * MovementSpeed;
 
-
-        if(!orientation && horizontalMovement!=0) { 
-            if((GameObject.eulerAngles.z>270 && GameObject.eulerAngles.z<=360)) {
-                if(facingRight) transform.Rotate(new Vector3(0,0,-horizontalMovement)); //Right angle
-                else transform.Rotate(new Vector3(0,0,-1));
-            }
-            if(GameObject.eulerAngles.z<270 && GameObject.eulerAngles.z > 90) {
-                orientation = true;
-            }
-        }
-        else if(horizontalMovement==0) {
-            if(GameObject.eulerAngles.z>220 && GameObject.eulerAngles.z<359) {
-                transform.Rotate(new Vector3(0,0,.45f));
-            }
-        }
-
-        if(orientation) {
-            if(GameObject.eulerAngles.z>225 && GameObject.eulerAngles.z<320) {
-                transform.Rotate(new Vector3(0,0,verticalMovement));
-            }
-            if(GameObject.eulerAngles.z<225) inc = true;
-            if(GameObject.eulerAngles.z>320) {
-                if(horizontalMovement==0) orientation = false;
-                if(horizontalMovement==0) animator.SetBool("IsIdle", true);
-            }
-        }
-
-        if(inc) {
-            transform.Rotate(new Vector3(0,0,2));
-            inc = false;
-        }
-        if(dec) {
-            transform.Rotate(new Vector3(0,0,2));
-            dec = false;
-        }
-
-        //Y Axis 180 Rotation when switching sides
-        if(transform.rotation.y >0 && transform.rotation.y < 180 && horizontalMovement < 0) {
-            transform.Rotate(new Vector3(0,Time.deltaTime,0) * horizontalRot*2, Space.World);
-        }
-        if(horizontalMovement<0 && facingRight) {
-            facingRight = !facingRight;
-            transform.Rotate(new Vector3(0,Time.deltaTime,0) * horizontalRot);
-        }
-        if(transform.rotation.y > -180 && transform.rotation.y < 0 && horizontalMovement >0) {
-            transform.Rotate(new Vector3(0,Time.deltaTime,0)*horizontalRot*2, Space.World);
-        }
-        if(horizontalMovement>0 && !facingRight) {
-            facingRight = !facingRight;
-            transform.Rotate(new Vector3(0,Time.deltaTime,0) * horizontalRot);
-        }
     }
 
     //// Not tied to the frame rate like Update() is
