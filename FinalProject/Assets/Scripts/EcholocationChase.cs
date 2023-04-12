@@ -47,7 +47,6 @@ public class EcholocationChase : MonoBehaviour
                 if (gameObject.transform.GetChild(i).name == "BaseSprite")
                 {
                     material = gameObject.transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().material;
-                    Debug.Log("Material : " + material);
                 }
             }
             if(material != null)
@@ -80,7 +79,6 @@ public class EcholocationChase : MonoBehaviour
                 if (gameObject.transform.GetChild(i).name == "BaseSprite")
                 {
                     material = gameObject.transform.GetChild(i).gameObject.GetComponent<SpriteRenderer>().material;
-                    Debug.Log("Material : " + material);
                 }
             }
             if(material != null)
