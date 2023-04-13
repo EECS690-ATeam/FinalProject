@@ -49,6 +49,11 @@ public class BaseMovement : MonoBehaviour
                 PlayerMovement.labSpawn = 2;
                 SceneManager.LoadScene("Exterior Area");
             }
+
+            else if (sceneName == "Lab3") {
+                PlayerMovement.labSpawn = 2;
+                SceneManager.LoadScene("Exterior Area");
+            }
         }
         if (collision.gameObject.name == ("LeftBorder") && (Input.GetAxisRaw("Horizontal") < 0))
         {
@@ -60,6 +65,11 @@ public class BaseMovement : MonoBehaviour
             else if (sceneName == "Lab2") {
                 PlayerMovement.spawnPos = new Vector3(64, 0, 0);
                 SceneManager.LoadScene("Kelp Cavern");
+            }
+
+            else if (sceneName == "Lab3") {
+                PlayerMovement.spawnPos = new Vector3(64, 0, 0);
+                SceneManager.LoadScene("Dark Cavern");
             }
         }
     }

@@ -169,6 +169,13 @@ public class PlayerMovement : MonoBehaviour
                 BaseMovement.spawnPos = new Vector3(-7, 0, 0);
                 SceneManager.LoadScene("Lab2");
             }
+            /*
+            else if (sceneName == "Dark Cavern") {
+                BaseMovement.spawnPos = new Vector3(-7, 0, 0);
+                SceneManager.LoadScene("Lab4");
+            }
+            */
+            //leaving here until we have another lab
         }
         if (collision.gameObject.name == ("LeftBorder") && (Input.GetAxisRaw("Horizontal") < 0))
         {
@@ -182,6 +189,11 @@ public class PlayerMovement : MonoBehaviour
                 BaseMovement.spawnPos = new Vector3(10, 0, 0);
                 SceneManager.LoadScene("Lab1");
             }
+
+            else if (sceneName == "Dark Cavern") {
+                BaseMovement.spawnPos = new Vector3(10, 0, 0);
+                SceneManager.LoadScene("Lab3");
+            }
         }
         //exterior area lab entrance colliders
         if (collision.gameObject.name == "Lab1")
@@ -193,6 +205,11 @@ public class PlayerMovement : MonoBehaviour
         {
             BaseMovement.spawnPos = new Vector3(28, 0, 0);
             SceneManager.LoadScene("Lab2");
+        }
+        if (collision.gameObject.name == "Lab3")
+        {
+            BaseMovement.spawnPos = new Vector3(28, 0, 0);
+            SceneManager.LoadScene("Lab3");
         }
     }
 

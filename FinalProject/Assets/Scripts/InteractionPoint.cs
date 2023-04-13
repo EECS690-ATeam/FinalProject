@@ -10,10 +10,12 @@ public class InteractionPoint : MonoBehaviour
     private Player p;
     private bool beenSeen;
     private int distance;
+    private AudioSource a;
     // Start is called before the first frame update
     void Start()
     {
         p = FindObjectOfType<Player>();
+        a = GetComponent<AudioSource>();
         beenSeen = false;
         distance = 10;
     }
@@ -22,6 +24,7 @@ public class InteractionPoint : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("e") && !beenSeen) {
+            a.Play(0);
             float diff = Vector3.Distance(this.transform.position, p.transform.position);
             if (diff < distance) {
                 this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
