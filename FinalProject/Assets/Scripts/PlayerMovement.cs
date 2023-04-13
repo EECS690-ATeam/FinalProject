@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
     public float MovementSpeed = 15;
     public Transform GameObject;
 
+    [SerializeField] private Image redTinge = null;
+    [SerializeField] private float hurtTimer = 0.1f;
+    
     public Animator animator;
     //public Animator headAnimator;
 
@@ -32,6 +36,34 @@ public class PlayerMovement : MonoBehaviour
     //controlled for each scene transition
     public static Vector3 spawnPos;
     public static int labSpawn;
+
+
+    public void PlayerTakeDmg(int dmg) 
+    {
+        GameManager.gameManager._playerHealth.DmgUnit(dmg);
+        UpdateHealth();
+        StartCoroutine(HurtFlash());
+        Debug.Log(GameManager.gameManager._playerHealth.Health);
+    }
+
+    private void PlayerHeal(int healing) 
+    {
+        GameManager.gameManager._playerHealth.HealUnit(healing);
+    }
+
+    void UpdateHealth() 
+    {
+        Color tingeAlpha = redTinge.color;
+        tingeAlpha.a = 1 - (GameManager.gameManager._playerHealth.Health / GameManager.gameManager._playerHealth.MaxHealth);
+        redTinge.color = tingeAlpha;
+    }
+
+    IEnumerator HurtFlash() 
+    {
+        redTinge.enabled = true;
+        yield return new WaitForSeconds(hurtTimer);
+        redTinge.enabled = false;
+    }
 
     void Start()
     {
@@ -104,17 +136,27 @@ public class PlayerMovement : MonoBehaviour
     //    rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     //}
 
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.gameObject.name == "EcholocationFish")
+        {
+            PlayerTakeDmg(25);
+            oofSound.Play();
+            spawnPos = new Vector3(-26, 0, 0);
+            if(GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if(collision.gameObject.name == "EcholocationFish")
-        {
-            Debug.Log("Swag");
-            oofSound.PlayOneShot(oofSound.clip, 1.0f);
-            spawnPos = new Vector3(-26, 0, 0);
-            SceneManager.LoadScene("Kelp Cavern");
-        }
+        // if(collision.gameObject.name == "EcholocationFish")
+        // {
+        //     PlayerTakeDmg(25);
+        //     oofSound.Play();
+        //     spawnPos = new Vector3(-26, 0, 0);
+        //     if(GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
+        // }
         if (collision.gameObject.name == "RightBorder" && (Input.GetAxisRaw("Horizontal") > 0))
         {
             if (sceneName == "Exterior Area") {
