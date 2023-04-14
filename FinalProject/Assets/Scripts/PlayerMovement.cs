@@ -139,11 +139,18 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.name == "EcholocationFish")
         {
-            PlayerTakeDmg(25);
+            PlayerTakeDmg(100);
             oofSound.Play();
             spawnPos = new Vector3(-26, 0, 0);
-            if(GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
+            if(GameManager.gameManager._playerHealth.Health == 0) 
+            {
+                Invoke("resetScene", .4f);
+            }
         }
+    }
+
+    private void resetScene() {
+        SceneManager.LoadScene("Kelp Cavern");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

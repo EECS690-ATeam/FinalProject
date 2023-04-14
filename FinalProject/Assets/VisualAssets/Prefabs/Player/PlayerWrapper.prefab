@@ -127,6 +127,10 @@ PrefabInstance:
       propertyPath: hurtTimer
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6849676741706647831, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7299993297916822662, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: fieldOfView
       value: 

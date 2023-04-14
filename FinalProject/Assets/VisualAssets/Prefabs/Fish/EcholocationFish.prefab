@@ -60,6 +60,7 @@ MonoBehaviour:
   chaseClickProbability: 20
   chasing: 0
   EchoPingPrefab: {fileID: 6759499344408666382, guid: 90f464a295c45e946877cb3e2abf6e58, type: 3}
+  anim: {fileID: 22667296}
 --- !u!50 &1147612199726747859
 Rigidbody2D:
   serializedVersion: 4
@@ -126,7 +127,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 8.89332, y: -3.077167}
+  m_Offset: {x: -0.010000229, y: -0.7885909}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -137,7 +138,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.8791847, y: 9.556317}
+  m_Size: {x: 9.027847, y: 8.544906}
   m_EdgeRadius: 0
 --- !u!1 &1147612200282139195
 GameObject:
@@ -418,11 +419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3196330990793024955, guid: 2f1d1ad67bb711c4c93a872601545754, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.92
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3196330990793024955, guid: 2f1d1ad67bb711c4c93a872601545754, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3196330990793024955, guid: 2f1d1ad67bb711c4c93a872601545754, type: 3}
       propertyPath: m_LocalPosition.z
