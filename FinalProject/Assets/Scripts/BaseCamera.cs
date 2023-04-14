@@ -20,11 +20,8 @@ public class BaseCamera : MonoBehaviour
     {
         if(player != null)
         {
-            if(player.position.x < 27.28 && player.position.x > -20.69) 
-            {
-                Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, transform.position.z);
-                transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
-            }
+            Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, transform.position.z);
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
         }
     }
 }
