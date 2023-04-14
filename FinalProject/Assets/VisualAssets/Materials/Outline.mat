@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Danger
+  m_Name: Outline
   m_Shader: {fileID: -6465566751694194690, guid: e7b514bcf59efa14db1825d880156acc, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
