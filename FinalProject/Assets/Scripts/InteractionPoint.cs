@@ -7,17 +7,21 @@ public class InteractionPoint : MonoBehaviour
 {
     public string message;
     public TMP_Text thought;
-    private Player p;
+    public bool isStory;
+    public Transform p;
     private bool beenSeen;
     private int distance;
     private AudioSource a;
     // Start is called before the first frame update
     void Start()
     {
-        p = FindObjectOfType<Player>();
         a = GetComponent<AudioSource>();
         beenSeen = false;
         distance = 10;
+        if (isStory) {
+            this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 140, 0, 255);
+            this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(255, 140, 0, 255);
+        }
     }
 
     // Update is called once per frame
@@ -25,7 +29,7 @@ public class InteractionPoint : MonoBehaviour
     {
         if (Input.GetKeyDown("e") && !beenSeen) {
             a.Play(0);
-            float diff = Vector3.Distance(this.transform.position, p.transform.position);
+            float diff = Vector3.Distance(this.transform.position, p.position);
             if (diff < distance) {
                 this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
                 this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);

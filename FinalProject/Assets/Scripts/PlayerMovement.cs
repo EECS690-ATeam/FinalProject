@@ -218,6 +218,7 @@ public class PlayerMovement : MonoBehaviour
             BaseMovement.spawnPos = new Vector3(28, 0, 0);
             SceneManager.LoadScene("Lab3");
         }
+
     }
 
     private void spawnAtLab() {
