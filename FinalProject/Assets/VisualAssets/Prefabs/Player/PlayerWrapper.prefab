@@ -39,6 +39,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4282627518449172218}
     m_Modifications:
+    - target: {fileID: 6849676741706647825, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 614244647, guid: b046b35b5030a1b4cb0840c30064f9b5, type: 3}
     - target: {fileID: 6849676741706647827, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_Name
       value: Player
@@ -62,6 +66,14 @@ PrefabInstance:
     - target: {fileID: 6849676741706647829, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_Offset.y
       value: 0.005297661
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849676741706647829, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849676741706647829, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.81
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647830, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_RootOrder
@@ -93,19 +105,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647830, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.999962
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647830, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647830, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647830, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.008726465
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647830, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -117,7 +129,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647830, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849676741706647830, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647831, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: oofSound
