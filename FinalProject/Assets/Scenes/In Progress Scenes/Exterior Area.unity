@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 246393305}
   - component: {fileID: 246393304}
   - component: {fileID: 246393303}
-  - component: {fileID: 246393302}
+  - component: {fileID: 246393306}
   m_Layer: 0
   m_Name: Lab3
   m_TagString: Untagged
@@ -226,18 +226,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &246393302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 246393301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1c0a1f1bf46e1f46a4a929b02e7679b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &246393303
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -331,6 +319,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &246393306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246393301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a705c1fbe33314c88f0f06f1b72224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &363459997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1106,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d7f82eea2abea449a3411f8c997f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Looks like an old research base, I wonder if there are more...
+  message1: 
+  message2: 
+  message3: 
+  message4: 
   thought: {fileID: 0}
   isStory: 0
   p: {fileID: 0}
@@ -1432,7 +1435,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d7f82eea2abea449a3411f8c997f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: I wonder if all the fish in this ocean are .png's...
+  message1: 
+  message2: 
+  message3: 
+  message4: 
   thought: {fileID: 0}
   isStory: 0
   p: {fileID: 0}

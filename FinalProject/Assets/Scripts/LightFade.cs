@@ -22,6 +22,6 @@ public class LightFade : MonoBehaviour
     {
         currentFade = (float)Mathf.Sin(Time.time * fadeFrequency) * fadeAmplitude;
 
-        lightSR.material.SetColor("_Color", new Color(Mathf.Clamp(Mathf.Abs(currentFade) * 5f, 1f, 5f), Mathf.Clamp(Mathf.Abs(currentFade) * 5f, 1f, 5f), Mathf.Clamp(Mathf.Abs(currentFade) * 5f, 1f, 5f), Mathf.Abs(currentFade)));
+        lightSR.material.SetColor("_Color", new Color(Mathf.Clamp(Mathf.Abs(currentFade) * 5f, 1f, 5f), Mathf.Clamp(Mathf.Abs(currentFade) * 5f, 1f, 5f), Mathf.Clamp(Mathf.Abs(currentFade) * 5f, 1f, 5f), Mathf.Clamp(Mathf.Abs(currentFade), 0.3f, 1f)));
     }
 }

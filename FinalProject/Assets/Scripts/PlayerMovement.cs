@@ -190,12 +190,12 @@ public class PlayerMovement : MonoBehaviour
             }
 
             else if (sceneName == "Kelp Cavern") {
-                BaseMovement.spawnPos = new Vector3(0, 24, 0);
+                BaseMovement.spawnPos = new Vector3(0, 0, 0);
                 SceneManager.LoadScene("Lab2");
             }
             
             else if (sceneName == "Dark Cavern") {
-                BaseMovement.spawnPos = new Vector3(4, -15, 0);
+                BaseMovement.spawnPos = new Vector3(0, 0, 0);
                 SceneManager.LoadScene("Lab3");
             }
             
@@ -215,7 +215,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             else if (sceneName == "Dark Cavern") {
-                BaseMovement.spawnPos = new Vector3(70, 24, 0);
+                BaseMovement.spawnPos = new Vector3(70, 0, 0);
                 SceneManager.LoadScene("Lab2");
             }
         }
@@ -229,6 +229,11 @@ public class PlayerMovement : MonoBehaviour
         {
             BaseMovement.spawnPos = new Vector3(28, 0, 0);
             SceneManager.LoadScene("Lab2");
+        }
+        if (collision.gameObject.name == "Lab3")
+        {
+            BaseMovement.spawnPos = new Vector3(0, 0, 0);
+            SceneManager.LoadScene("Lab3");
         }
 
     }

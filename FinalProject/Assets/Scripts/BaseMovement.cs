@@ -54,7 +54,7 @@ public class BaseMovement : MonoBehaviour
             }
 
             else if (sceneName == "Lab2") {
-                PlayerMovement.spawnPos = new Vector3(-150, 86, 0);
+                PlayerMovement.spawnPos = new Vector3(0, 0, 0);
                 SceneManager.LoadScene("Dark Cavern");
             }
 
