@@ -190,15 +190,15 @@ public class PlayerMovement : MonoBehaviour
             }
 
             else if (sceneName == "Kelp Cavern") {
-                BaseMovement.spawnPos = new Vector3(-7, 0, 0);
+                BaseMovement.spawnPos = new Vector3(0, 24, 0);
                 SceneManager.LoadScene("Lab2");
             }
-            /*
+            
             else if (sceneName == "Dark Cavern") {
-                BaseMovement.spawnPos = new Vector3(-7, 0, 0);
-                SceneManager.LoadScene("Lab4");
+                BaseMovement.spawnPos = new Vector3(4, -15, 0);
+                SceneManager.LoadScene("Lab3");
             }
-            */
+            
             //leaving here until we have another lab
         }
         if (collision.gameObject.name == ("LeftBorder") && (Input.GetAxisRaw("Horizontal") < 0))
@@ -215,8 +215,8 @@ public class PlayerMovement : MonoBehaviour
             }
 
             else if (sceneName == "Dark Cavern") {
-                BaseMovement.spawnPos = new Vector3(10, 0, 0);
-                SceneManager.LoadScene("Lab3");
+                BaseMovement.spawnPos = new Vector3(70, 24, 0);
+                SceneManager.LoadScene("Lab2");
             }
         }
         //exterior area lab entrance colliders
@@ -249,6 +249,14 @@ public class PlayerMovement : MonoBehaviour
 
         else if (labSpawn == 2) {
             Lab2 lab = FindObjectOfType<Lab2>();
+            //x has a slight offset to spawn next to the lab
+            newX = lab.transform.position[0] - lab.GetComponent<SpriteRenderer>().bounds.size.x/2 - 5;
+            newY = lab.transform.position[1];
+            
+        }
+
+        else if (labSpawn == 3) {
+            Lab3 lab = FindObjectOfType<Lab3>();
             //x has a slight offset to spawn next to the lab
             newX = lab.transform.position[0] - lab.GetComponent<SpriteRenderer>().bounds.size.x/2 - 5;
             newY = lab.transform.position[1];

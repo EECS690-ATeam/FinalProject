@@ -23,7 +23,14 @@ public class BaseMovement : MonoBehaviour
     void Update()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+        float newspeed = speed;
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "Lab2") {
+            newspeed = speed * 7;
+        }
+        rb.velocity = new Vector2(moveInput * newspeed, rb.velocity.y);
         if(moveInput<0 && facingRight) {
             facingRight = !facingRight;
             sr.flipX = false;
@@ -36,6 +43,7 @@ public class BaseMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.name);
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         if (collision.gameObject.name == "RightBorder" && (Input.GetAxisRaw("Horizontal") > 0))
@@ -46,12 +54,12 @@ public class BaseMovement : MonoBehaviour
             }
 
             else if (sceneName == "Lab2") {
-                PlayerMovement.labSpawn = 2;
-                SceneManager.LoadScene("Exterior Area");
+                PlayerMovement.spawnPos = new Vector3(-150, 86, 0);
+                SceneManager.LoadScene("Dark Cavern");
             }
 
             else if (sceneName == "Lab3") {
-                PlayerMovement.labSpawn = 2;
+                PlayerMovement.labSpawn = 3;
                 SceneManager.LoadScene("Exterior Area");
             }
         }
@@ -68,7 +76,7 @@ public class BaseMovement : MonoBehaviour
             }
 
             else if (sceneName == "Lab3") {
-                PlayerMovement.spawnPos = new Vector3(64, 0, 0);
+                PlayerMovement.spawnPos = new Vector3(170, -51, 0);
                 SceneManager.LoadScene("Dark Cavern");
             }
         }
