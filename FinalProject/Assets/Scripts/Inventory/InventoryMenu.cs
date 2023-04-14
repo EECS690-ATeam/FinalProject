@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class InventoryMenu : MonoBehaviour
 {
-    //public GameObject inventoryMenu;
+    public GameObject inventoryMenu;
     public GameObject inventoryGrid;
     // Use global bool to check if game is paused across all scenes
     public static bool isOpen;
-
     // Start is called before the first frame update
     void Start()
     {
-        //inventoryMenu.SetActive(false);
+        inventoryMenu.SetActive(false);
         inventoryGrid.SetActive(false);
     }
 
@@ -34,14 +33,14 @@ public class InventoryMenu : MonoBehaviour
 
     public void OpenInventory()
     {
-        //inventoryMenu.SetActive(true);
+        inventoryMenu.SetActive(true);
         inventoryGrid.SetActive(true);
         isOpen = true;
     }
 
     public void CloseInventory()
     {
-        //inventoryMenu.SetActive(false);
+        inventoryMenu.SetActive(false);
         inventoryGrid.SetActive(false);
         isOpen = false;
     }
