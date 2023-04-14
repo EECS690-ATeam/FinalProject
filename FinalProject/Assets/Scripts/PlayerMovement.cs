@@ -123,23 +123,23 @@ public class PlayerMovement : MonoBehaviour
         LookAtMouse();  
 
         if(horizontalMovement!=0 && verticalMovement>0 && GameObject.eulerAngles.z > 180) {
-            transform.Rotate(new Vector3(0,0,1));
+            transform.Rotate(new Vector3(0,0,.3f));
         }
         if(horizontalMovement!=0 && verticalMovement>0 && GameObject.eulerAngles.z < 25) {
-            transform.Rotate(new Vector3(0,0,1));
+            transform.Rotate(new Vector3(0,0,.3f));
         }
         if(!(verticalMovement>0) && GameObject.eulerAngles.z > 0 && GameObject.eulerAngles.z < 30) {
-            transform.Rotate(new Vector3(0,0,-1));
+            transform.Rotate(new Vector3(0,0,-.3f));
         }
 
-        // if(horizontalMovement!=0 && verticalMovement<0 && GameObject.eulerAngles.z < 180) {
-        //     transform.Rotate(new Vector3(0,0,-1));
-        // }
-        if(horizontalMovement!=0 && verticalMovement<0 && (GameObject.eulerAngles.z > 325 || GameObject.eulerAngles.z == 0))  {
-            transform.Rotate(new Vector3(0,0,-1));
+        if(horizontalMovement!=0 && verticalMovement<0 && GameObject.eulerAngles.z < 180) {
+            transform.Rotate(new Vector3(0,0,-.3f));
+        }
+        if(horizontalMovement!=0 && verticalMovement<0 && (GameObject.eulerAngles.z > 310 || GameObject.eulerAngles.z == 0))  {
+            transform.Rotate(new Vector3(0,0,-.3f));
         }
         if(!(verticalMovement<0)  && GameObject.eulerAngles.z < 357 && GameObject.eulerAngles.z > 30) {
-            transform.Rotate(new Vector3(0,0,1));
+            transform.Rotate(new Vector3(0,0,.3f));
         }
         // if(!(verticalMovement>0) && GameObject.eulerAngles.z > 0 && GameObject.eulerAngles.z < 40 && GameObject.eulerAngles.z>1) {
         //     transform.Rotate(new Vector3(0,0,-1));
