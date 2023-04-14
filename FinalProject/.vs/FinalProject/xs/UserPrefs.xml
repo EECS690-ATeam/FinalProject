@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{E1456745-ED92-4EB6-8905-E64DC1E47277}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Inventory/InventoryMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Inventory/InventorySlot.cs">
     <Files>
-      <File FileName="Assets/Scripts/Inventory/ICollectible.cs" Line="2" Column="2" />
-      <File FileName="Assets/Scripts/Inventory/Collector.cs" Line="12" Column="30" />
-      <File FileName="Assets/Scripts/Inventory/Items/Battery.cs" Line="16" Column="28" />
-      <File FileName="Assets/Scripts/Inventory/Inventory.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Inventory/ICollectible.cs" Line="3" Column="8" />
+      <File FileName="Assets/Scripts/Inventory/Collector.cs" Line="15" Column="13" />
+      <File FileName="Assets/Scripts/Inventory/Inventory.cs" Line="30" Column="43" />
       <File FileName="Assets/Scripts/Inventory/InventoryItem.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Inventory/ItemData.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Inventory/InventoryManager.cs" Line="30" Column="10" />
-      <File FileName="Assets/Scripts/Inventory/InventoryMenu.cs" Line="7" Column="25" />
+      <File FileName="Assets/Scripts/Inventory/InventoryManager.cs" Line="27" Column="45" />
+      <File FileName="Assets/Scripts/Inventory/InventoryMenu.cs" Line="24" Column="14" />
+      <File FileName="Assets/Scripts/Inventory/Items/Tourniquet.cs" Line="15" Column="23" />
+      <File FileName="Assets/Scripts/Inventory/InventorySlot.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,9 +17,8 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Inventory" expanded="True">
-                  <Node name="Data Persistence" expanded="True" />
                   <Node name="Items" expanded="True" />
-                  <Node name="InventoryMenu.cs" selected="True" />
+                  <Node name="InventorySlot.cs" selected="True" />
                 </Node>
               </Node>
             </Node>

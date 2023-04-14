@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
         Keycard.OnKeycardCollected += Add;
         Battery.OnBatteryCollected += Add;
         Syringe.OnSyringeCollected += Add;
+        Tourniquet.OnTourniquetCollected += Add;
     }
 
     private void OnDisable()
@@ -26,6 +27,7 @@ public class Inventory : MonoBehaviour
         Keycard.OnKeycardCollected -= Add;
         Battery.OnBatteryCollected -= Add;
         Syringe.OnSyringeCollected -= Add;
+        Tourniquet.OnTourniquetCollected -= Add;
     }
 
     public void Add(ItemData itemData)

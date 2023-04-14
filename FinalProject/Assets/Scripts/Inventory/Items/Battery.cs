@@ -13,7 +13,6 @@ public class Battery : MonoBehaviour, ICollectible
     public void Collect()
     {
         Debug.Log("Battery Collected");
-        Debug.Log("Battery ");
         Destroy(gameObject);
         OnBatteryCollected?.Invoke(batteryData);
 

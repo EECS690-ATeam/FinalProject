@@ -84,6 +84,7 @@
     <Compile Include="Assets/Scripts/PlayerAimDirection.cs" />
     <Compile Include="Assets/Scripts/Inventory/Data Persistence/IDataService.cs" />
     <Compile Include="Assets/Scripts/BaseMovement.cs" />
+    <Compile Include="Assets/Scripts/CameraBoundary.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/UI_Bar.cs" />
     <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/Scripts/Inventory/ItemData.cs" />
@@ -112,7 +113,7 @@
     <Compile Include="Assets/Packages/CodeMonkey/Utils/UI_Sprite.cs" />
     <Compile Include="Assets/Scripts/FlockingFish.cs" />
     <Compile Include="Assets/Scripts/Lab1.cs" />
-    <Compile Include="Assets/Scripts/Inventory/Items/Torniquet.cs" />
+    <Compile Include="Assets/Scripts/Inventory/Items/Tourniquet.cs" />
     <Compile Include="Assets/Scripts/Inventory/Inventory.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Assets.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/World_Sprite.cs" />
@@ -130,7 +131,6 @@
     <Compile Include="Assets/Scripts/Inventory/Data Persistence/GameData.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/CMDebug.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/FunctionPeriodic.cs" />
-    <Compile Include="Assets/Scripts/CameraBoundary.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Packages/TextMesh Pro/Shaders/TMPro.cginc" />
