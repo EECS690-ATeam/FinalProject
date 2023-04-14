@@ -14,8 +14,16 @@ public class CutScene : MonoBehaviour
         Invoke("TransitionToGame", 50);
     }
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene("Lab1");
+        }
+    }
+
     public void TransitionToGame()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("Lab1");
     }
 }
