@@ -181,6 +181,7 @@ public class PlayerMovement : MonoBehaviour
         //     spawnPos = new Vector3(-26, 0, 0);
         //     if(GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
         // }
+
         if (collision.gameObject.name == "RightBorder" && (Input.GetAxisRaw("Horizontal") > 0))
         {
             if (sceneName == "Exterior Area") {

@@ -1020,7 +1020,6 @@ GameObject:
   m_Component:
   - component: {fileID: 794110248}
   - component: {fileID: 794110247}
-  - component: {fileID: 794110249}
   m_Layer: 0
   m_Name: Midground
   m_TagString: Untagged
@@ -1095,20 +1094,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &794110249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794110246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4198d41f3b9e5b84ea5513a4f17eb5b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1514598622}
-  parallaxEffect: 0.4
 --- !u!1 &899781075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,7 +1608,7 @@ RectTransform:
   m_GameObject: {fileID: 1142125674}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1053792160}
@@ -1631,8 +1616,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -90}
-  m_SizeDelta: {x: 1000, y: 150}
+  m_AnchoredPosition: {x: 0, y: -400}
+  m_SizeDelta: {x: 1500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142125676
 MonoBehaviour:
@@ -2765,7 +2750,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2012876689}
   - component: {fileID: 2012876688}
-  - component: {fileID: 2012876690}
   m_Layer: 0
   m_Name: Foreground
   m_TagString: Untagged
@@ -2840,20 +2824,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2012876690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012876687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4198d41f3b9e5b84ea5513a4f17eb5b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1514598622}
-  parallaxEffect: 0.2
 --- !u!1 &2026274033 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6250024534842603744, guid: 9eee109311118437ea52034dafeeb271, type: 3}
