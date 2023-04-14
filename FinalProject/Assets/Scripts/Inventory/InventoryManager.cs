@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryManager : MonoBehaviour
 {
     public GameObject slotPrefab;
-    public List<InventorySlot> inventorySlots = new List<InventorySlot>(7);
+    public List<InventorySlot> inventorySlots = new List<InventorySlot>(24);
 
     // Register to OnInventoryChange Event
     private void OnEnable()
@@ -28,8 +28,7 @@ public class InventoryManager : MonoBehaviour
         {
             Destroy(childTransform.gameObject);
         }
-
-        inventorySlots = new List<InventorySlot>(7);
+        inventorySlots = new List<InventorySlot>(24);
     }
 
     void DrawInventory(List<InventoryItem> inventory)
@@ -49,7 +48,6 @@ public class InventoryManager : MonoBehaviour
 
     void CreateInventorySlot()
     {
-        
         GameObject newSlot = Instantiate(slotPrefab);
         // make sure new game object is nested under InventoryPanel as a child
         newSlot.transform.SetParent(transform, false);
@@ -59,7 +57,5 @@ public class InventoryManager : MonoBehaviour
         newSlotComponent.ClearSlot();
 
         inventorySlots.Add(newSlotComponent);
-
     }
-
 }
