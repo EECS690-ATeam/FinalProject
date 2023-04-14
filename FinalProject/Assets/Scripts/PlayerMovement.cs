@@ -230,11 +230,6 @@ public class PlayerMovement : MonoBehaviour
             BaseMovement.spawnPos = new Vector3(28, 0, 0);
             SceneManager.LoadScene("Lab2");
         }
-        if (collision.gameObject.name == "Lab3")
-        {
-            BaseMovement.spawnPos = new Vector3(28, 0, 0);
-            SceneManager.LoadScene("Lab3");
-        }
 
     }
 
