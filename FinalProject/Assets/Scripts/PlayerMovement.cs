@@ -174,6 +174,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
+        Debug.Log(collision.gameObject.name);
         // if(collision.gameObject.name == "EcholocationFish")
         // {
         //     PlayerTakeDmg(25);
@@ -231,11 +232,14 @@ public class PlayerMovement : MonoBehaviour
             BaseMovement.spawnPos = new Vector3(28, 0, 0);
             SceneManager.LoadScene("Lab2");
         }
+        /*
         if (collision.gameObject.name == "Lab3")
         {
             BaseMovement.spawnPos = new Vector3(0, 0, 0);
             SceneManager.LoadScene("Lab3");
         }
+        */
+        //currently disabled
 
     }
 

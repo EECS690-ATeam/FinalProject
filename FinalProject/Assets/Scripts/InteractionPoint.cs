@@ -19,6 +19,7 @@ public class InteractionPoint : MonoBehaviour
     void Start()
     {
         a = GetComponent<AudioSource>();
+        a.volume = 0.18F;
         beenSeen = false;
         distance = 7;
         if (isStory) {
