@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
     public GameObject slotPrefab;
     public List<InventorySlot> inventorySlots = new List<InventorySlot>(24);
+    public InventoryMenu inventoryMenu;
 
     // Register to OnInventoryChange Event
     private void OnEnable()
@@ -43,6 +46,15 @@ public class InventoryManager : MonoBehaviour
         for (int i = 0; i < inventory.Count; i++)
         {
             inventorySlots[i].DrawSlot(inventory[i]);
+        }
+        if (!inventoryMenu.isOpen)
+        {
+            for (int i = 0; i < inventoryMenu.inventoryGrid.transform.childCount; i++)
+            {
+                inventoryMenu.inventoryGrid.transform.GetChild(i).transform.GetChild(0).GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+                inventoryMenu.inventoryGrid.transform.GetChild(i).transform.GetChild(1).transform.GetChild(0).GetComponent<TMP_Text>().color = new Color(1f, 1f, 1f, 0f);
+                inventoryMenu.inventoryGrid.transform.GetChild(i).transform.GetChild(2).GetComponent<TMP_Text>().color = new Color(1f, 1f, 1f, 0f);
+            }
         }
     }
 
