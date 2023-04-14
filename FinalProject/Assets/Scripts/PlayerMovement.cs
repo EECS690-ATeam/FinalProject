@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     LeftBorder lBorder;
     RightBorder rBorder;
+    public AudioSource oofSound;
 
     private SpriteRenderer sr;
     public float verticalRot = 30;
@@ -19,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
     public float MovementSpeed = 15;
     public Transform GameObject;
 
+    [SerializeField] private Image redTinge = null;
+    [SerializeField] private float hurtTimer = 0.1f;
+    
     public Animator animator;
     //public Animator headAnimator;
 
@@ -31,6 +36,34 @@ public class PlayerMovement : MonoBehaviour
     //controlled for each scene transition
     public static Vector3 spawnPos;
     public static int labSpawn;
+
+
+    public void PlayerTakeDmg(int dmg) 
+    {
+        GameManager.gameManager._playerHealth.DmgUnit(dmg);
+        UpdateHealth();
+        StartCoroutine(HurtFlash());
+        Debug.Log(GameManager.gameManager._playerHealth.Health);
+    }
+
+    private void PlayerHeal(int healing) 
+    {
+        GameManager.gameManager._playerHealth.HealUnit(healing);
+    }
+
+    void UpdateHealth() 
+    {
+        Color tingeAlpha = redTinge.color;
+        tingeAlpha.a = 1 - (GameManager.gameManager._playerHealth.Health / GameManager.gameManager._playerHealth.MaxHealth);
+        redTinge.color = tingeAlpha;
+    }
+
+    IEnumerator HurtFlash() 
+    {
+        redTinge.enabled = true;
+        yield return new WaitForSeconds(hurtTimer);
+        redTinge.enabled = false;
+    }
 
     void Start()
     {
@@ -63,16 +96,14 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("SetTurnL", true);
             animator.SetBool("Flip", true);
             facingRight = !facingRight;
+            transform.eulerAngles += new Vector3(0,180,0);
         }
         if(!facingRight && x>0) {
             animator.SetBool("SetTurnR", true);
             animator.SetBool("Flip", true);
             facingRight = !facingRight;
+            transform.eulerAngles += new Vector3(0,-180,0);
         }
-         if (x!=0) {
-            if(animator.GetBool("SetTurnL") == false) transform.localScale = new Vector3(Mathf.Sign(x), 1, 1);
-            if(animator.GetBool("SetTurnR") == false) transform.localScale = new Vector3(Mathf.Sign(x), 1, 1);
-         }
     }
 
     // Update is called once per frame
@@ -80,6 +111,8 @@ public class PlayerMovement : MonoBehaviour
     {
         var horizontalMovement = Input.GetAxis("Horizontal");
         var verticalMovement = Input.GetAxis("Vertical");
+        Debug.Log(horizontalMovement);
+        Debug.Log(verticalMovement);
         mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         FlipX(horizontalMovement);
         if(horizontalMovement != 0) animator.SetBool("IsIdle", false);
@@ -88,13 +121,30 @@ public class PlayerMovement : MonoBehaviour
         //else headAnimator.SetBool("IsIdle", true);
         transform.position += new Vector3(horizontalMovement, verticalMovement, 0) * Time.deltaTime * MovementSpeed;
         LookAtMouse();  
-        // // Input
-        // movement.x = Input.GetAxisRaw("Horizontal");
-        // movement.y = Input.GetAxisRaw("Vertical");
 
+        if(horizontalMovement!=0 && verticalMovement>0 && GameObject.eulerAngles.z > 180) {
+            transform.Rotate(new Vector3(0,0,1));
+        }
+        if(horizontalMovement!=0 && verticalMovement>0 && GameObject.eulerAngles.z < 25) {
+            transform.Rotate(new Vector3(0,0,1));
+        }
+        if(!(verticalMovement>0) && GameObject.eulerAngles.z > 0 && GameObject.eulerAngles.z < 30) {
+            transform.Rotate(new Vector3(0,0,-1));
+        }
 
-        // rb.velocity = new Vector2(movement.x, movement.y).normalized * moveSpeed;
-
+        // if(horizontalMovement!=0 && verticalMovement<0 && GameObject.eulerAngles.z < 180) {
+        //     transform.Rotate(new Vector3(0,0,-1));
+        // }
+        if(horizontalMovement!=0 && verticalMovement<0 && (GameObject.eulerAngles.z > 325 || GameObject.eulerAngles.z == 0))  {
+            transform.Rotate(new Vector3(0,0,-1));
+        }
+        if(!(verticalMovement<0)  && GameObject.eulerAngles.z < 357 && GameObject.eulerAngles.z > 30) {
+            transform.Rotate(new Vector3(0,0,1));
+        }
+        // if(!(verticalMovement>0) && GameObject.eulerAngles.z > 0 && GameObject.eulerAngles.z < 40 && GameObject.eulerAngles.z>1) {
+        //     transform.Rotate(new Vector3(0,0,-1));
+        // }
+        
     }
 
     //// Not tied to the frame rate like Update() is
@@ -103,15 +153,34 @@ public class PlayerMovement : MonoBehaviour
     //    rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     //}
 
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.gameObject.name == "EcholocationFish")
+        {
+            PlayerTakeDmg(100);
+            oofSound.Play();
+            spawnPos = new Vector3(-26, 0, 0);
+            if(GameManager.gameManager._playerHealth.Health == 0) 
+            {
+                Invoke("resetScene", .4f);
+            }
+        }
+    }
+
+    private void resetScene() {
+        SceneManager.LoadScene("Kelp Cavern");
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if(collision.gameObject.name == "EcholocationFish")
-        {
-            spawnPos = new Vector3(-26, 0, 0);
-            SceneManager.LoadScene("Kelp Cavern");
-        }
+        // if(collision.gameObject.name == "EcholocationFish")
+        // {
+        //     PlayerTakeDmg(25);
+        //     oofSound.Play();
+        //     spawnPos = new Vector3(-26, 0, 0);
+        //     if(GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
+        // }
         if (collision.gameObject.name == "RightBorder" && (Input.GetAxisRaw("Horizontal") > 0))
         {
             if (sceneName == "Exterior Area") {
@@ -124,6 +193,13 @@ public class PlayerMovement : MonoBehaviour
                 BaseMovement.spawnPos = new Vector3(-7, 0, 0);
                 SceneManager.LoadScene("Lab2");
             }
+            /*
+            else if (sceneName == "Dark Cavern") {
+                BaseMovement.spawnPos = new Vector3(-7, 0, 0);
+                SceneManager.LoadScene("Lab4");
+            }
+            */
+            //leaving here until we have another lab
         }
         if (collision.gameObject.name == ("LeftBorder") && (Input.GetAxisRaw("Horizontal") < 0))
         {
@@ -137,6 +213,11 @@ public class PlayerMovement : MonoBehaviour
                 BaseMovement.spawnPos = new Vector3(10, 0, 0);
                 SceneManager.LoadScene("Lab1");
             }
+
+            else if (sceneName == "Dark Cavern") {
+                BaseMovement.spawnPos = new Vector3(10, 0, 0);
+                SceneManager.LoadScene("Lab3");
+            }
         }
         //exterior area lab entrance colliders
         if (collision.gameObject.name == "Lab1")
@@ -149,6 +230,12 @@ public class PlayerMovement : MonoBehaviour
             BaseMovement.spawnPos = new Vector3(28, 0, 0);
             SceneManager.LoadScene("Lab2");
         }
+        if (collision.gameObject.name == "Lab3")
+        {
+            BaseMovement.spawnPos = new Vector3(28, 0, 0);
+            SceneManager.LoadScene("Lab3");
+        }
+
     }
 
     private void spawnAtLab() {

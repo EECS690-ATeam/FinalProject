@@ -1,5 +1,15 @@
 ﻿<Properties StartupConfiguration="{E1456745-ED92-4EB6-8905-E64DC1E47277}|">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Inventory/InventoryMenu.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Inventory/ICollectible.cs" Line="2" Column="2" />
+      <File FileName="Assets/Scripts/Inventory/Collector.cs" Line="12" Column="30" />
+      <File FileName="Assets/Scripts/Inventory/Items/Battery.cs" Line="16" Column="28" />
+      <File FileName="Assets/Scripts/Inventory/Inventory.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Inventory/InventoryItem.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Inventory/ItemData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Inventory/InventoryManager.cs" Line="30" Column="10" />
+      <File FileName="Assets/Scripts/Inventory/InventoryMenu.cs" Line="7" Column="25" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -9,8 +19,8 @@
                 <Node name="Inventory" expanded="True">
                   <Node name="Data Persistence" expanded="True" />
                   <Node name="Items" expanded="True" />
+                  <Node name="InventoryMenu.cs" selected="True" />
                 </Node>
-                <Node name="MainMenu.cs" selected="True" />
               </Node>
             </Node>
           </Node>

@@ -18,6 +18,7 @@ public class EcholocationChase : MonoBehaviour
 
     public bool chasing;
     public Transform EchoPingPrefab;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -158,6 +159,7 @@ public class EcholocationChase : MonoBehaviour
 
     void ChasePlayer()
     {
+        anim.SetBool("IsChase", true);
         // Get angle towards player
         Vector3 playerDirection = (player.position - transform.position).normalized;
         float playerAngle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
@@ -171,6 +173,7 @@ public class EcholocationChase : MonoBehaviour
 
     void StopChasingPlayer()
     {
+        anim.SetBool("IsChase", false);
         rb.velocity = new Vector2(0, 0);
     }
 }

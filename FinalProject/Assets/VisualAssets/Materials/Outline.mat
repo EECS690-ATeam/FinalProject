@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outline
+  m_Name: Patrol
   m_Shader: {fileID: -6465566751694194690, guid: e7b514bcf59efa14db1825d880156acc, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -38,7 +38,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Thickness: 0.0075
+    - _Thickness: 0.008
     m_Colors:
-    - _Color: {r: 0, g: 12.291744, b: 24.766634, a: 1}
+    - _Color: {r: 0.5, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
