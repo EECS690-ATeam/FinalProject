@@ -5,7 +5,10 @@ using TMPro;
 
 public class InteractionPoint : MonoBehaviour
 {
-    public string message;
+    public string message1;
+    public string message2;
+    public string message3;
+    public string message4;
     public TMP_Text thought;
     public bool isStory;
     public Transform p;
@@ -17,7 +20,7 @@ public class InteractionPoint : MonoBehaviour
     {
         a = GetComponent<AudioSource>();
         beenSeen = false;
-        distance = 10;
+        distance = 7;
         if (isStory) {
             this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 140, 0, 255);
             this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(255, 140, 0, 255);
@@ -28,11 +31,12 @@ public class InteractionPoint : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("e") && !beenSeen) {
-            a.Play(0);
             float diff = Vector3.Distance(this.transform.position, p.position);
             if (diff < distance) {
+                a.Play(0);
                 this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
                 this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+                Destroy(GetComponent<BoxCollider2D>());
                 beenSeen = true;
                 StartCoroutine(adjustMessage());
             }
@@ -41,8 +45,26 @@ public class InteractionPoint : MonoBehaviour
     }
 
     IEnumerator adjustMessage() {
-        thought.text = message;
-        yield return new WaitForSeconds(5);
+        if (message1 != "") {
+            Debug.Log("Message 1");
+            thought.text = message1;
+            yield return new WaitForSeconds(6);
+        }
+        if (message2 != "") {
+            Debug.Log("Message 2");
+            thought.text = message2;
+            yield return new WaitForSeconds(6);
+        }
+        if (message3 != "") {
+            Debug.Log("Message 3");
+            thought.text = message3;
+            yield return new WaitForSeconds(6);
+        }
+        if (message4 != "") {
+            Debug.Log("Message 4");
+            thought.text = message4;
+            yield return new WaitForSeconds(6);
+        }
         thought.text = "";
     }
 }
