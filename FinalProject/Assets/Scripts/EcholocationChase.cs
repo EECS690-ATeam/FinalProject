@@ -20,6 +20,9 @@ public class EcholocationChase : MonoBehaviour
     public Transform EchoPingPrefab;
     public Animator anim;
 
+    public Transform GameObject;
+    public SpriteRenderer sr;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,11 @@ public class EcholocationChase : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(GameObject.eulerAngles.z>0 && GameObject.eulerAngles.z < 160) {
+            sr.flipY = true;
+        }
+        else sr.flipY = false;
+
 
         // Chase player only if within range
         if (CanSeePlayer(noticeRange))
