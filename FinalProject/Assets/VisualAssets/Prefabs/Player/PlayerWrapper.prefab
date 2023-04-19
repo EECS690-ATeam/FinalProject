@@ -42,7 +42,7 @@ PrefabInstance:
     - target: {fileID: 6849676741706647825, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 614244647, guid: b046b35b5030a1b4cb0840c30064f9b5, type: 3}
+      objectReference: {fileID: 24296339, guid: 76fe76b4fa60b4b45822d6cc4cecbc65, type: 3}
     - target: {fileID: 6849676741706647827, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_Name
       value: Player
@@ -53,27 +53,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647829, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_Size.x
-      value: 4.234088
+      value: 2.34
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647829, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_Size.y
-      value: 9.466602
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647829, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_Offset.x
-      value: 0.09639931
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647829, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_Offset.y
-      value: 0.005297661
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647829, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 5.45
+      value: 3.07
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647829, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 4.81
+      value: 9.223491
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647830, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_RootOrder
@@ -268,7 +268,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 94f5d6b024ea9384889ca0c4e3b1f8ad, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.383
+  m_Volume: 0.061
   m_Pitch: 1
   Loop: 1
   Mute: 0

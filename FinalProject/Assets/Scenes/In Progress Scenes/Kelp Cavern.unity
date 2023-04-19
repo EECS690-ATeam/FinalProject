@@ -21073,6 +21073,18 @@ PrefabInstance:
       propertyPath: redTinge
       value: 
       objectReference: {fileID: 1801760038}
+    - target: {fileID: 6451730003265565125, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451730003265565125, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451730003265565125, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6451730003265565126, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: m_Size.x
       value: 2.34
@@ -21094,12 +21106,16 @@ PrefabInstance:
       value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 6451730003265565126, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451730003265565126, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 3.07
+      value: 9.01
       objectReference: {fileID: 0}
     - target: {fileID: 6451730003265565126, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 9.223491
+      value: 4.58
       objectReference: {fileID: 0}
     - target: {fileID: 7126899443732704876, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: m_Volume

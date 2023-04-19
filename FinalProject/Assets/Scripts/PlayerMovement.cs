@@ -82,6 +82,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void UpdateCollider() {
+        if(animator.GetBool("IsIdle") == false) {
+            playerCollider.size = new Vector3(8.5f,4);
+        }
+        else {
+            playerCollider.size = new Vector3(2.34f,8);
+        }
+    }
+
     private void LookAtMouse() 
     {
         //var dir = (mouseWorldPos - (Vector2) headWrapper.position).normalized;
@@ -109,10 +118,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateCollider();
         var horizontalMovement = Input.GetAxis("Horizontal");
         var verticalMovement = Input.GetAxis("Vertical");
-        Debug.Log(horizontalMovement);
-        Debug.Log(verticalMovement);
         mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         FlipX(horizontalMovement);
         if(horizontalMovement != 0) animator.SetBool("IsIdle", false);
