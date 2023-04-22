@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
             playerCollider.size = new Vector3(8.5f,4);
         }
         else {
-            playerCollider.size = new Vector3(2.34f,8);
+            playerCollider.size = new Vector3(2.34f,8.97f);
         }
     }
 
@@ -115,8 +115,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         UpdateCollider();
         var horizontalMovement = Input.GetAxis("Horizontal");
@@ -129,7 +130,6 @@ public class PlayerMovement : MonoBehaviour
         //else headAnimator.SetBool("IsIdle", true);
         transform.position += new Vector3(horizontalMovement, verticalMovement, 0) * Time.deltaTime * MovementSpeed;
         LookAtMouse();  
-
         if(horizontalMovement!=0 && verticalMovement>0 && GameObject.eulerAngles.z > 180) {
             transform.Rotate(new Vector3(0,0,.3f));
         }
