@@ -56,6 +56,7 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Compile Include="Assets/Packages/CodeMonkey/Utils/Button_UI.cs" />
     <Compile Include="Assets/Scripts/Inventory/ICollectible.cs" />
     <Compile Include="Assets/Scripts/FlashlightAnimation.cs" />
@@ -136,6 +137,88 @@
     <Compile Include="Assets/Scripts/Inventory/Data Persistence/FileDataHandler.cs" />
     <Compile Include="Assets/Map.cs" />
     <Compile Include="Assets/Scripts/DontDestroy.cs" />
+=======
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\Button_UI.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ICollectible.cs" />
+    <Compile Include="Assets\Scripts\FlashlightAnimation.cs" />
+    <Compile Include="Assets\Scripts\CutScene.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Data Persistence\DataPersistenceManager.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\MonoBehaviours\CameraFollowSetup.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\MonoBehaviours\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Lab3.cs" />
+    <Compile Include="Assets\Scripts\NearItem.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Collector.cs" />
+    <Compile Include="Assets\Scripts\SoundManagerScript.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryManager.cs" />
+    <Compile Include="Assets\Scripts\Parallax.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryItem.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryMenu.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Data Persistence\IDataPersistence.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Items\Syringe.cs" />
+    <Compile Include="Assets\Scripts\Murmurations.cs" />
+    <Compile Include="Assets\Scripts\BaseCamera.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\UI_TextComplex.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\Button_Sprite.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\FlashingLight.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\UtilsClass.cs" />
+    <Compile Include="Assets\Scripts\Lab2.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\PlayerAimDirection.cs" />
+    <Compile Include="Assets\Scripts\LightFade.cs" />
+    <Compile Include="Assets\Scripts\BaseMovement.cs" />
+    <Compile Include="Assets\Scripts\CameraBoundary.cs" />
+    <Compile Include="Assets\Scripts\Elevator.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\UI_Bar.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ItemData.cs" />
+    <Compile Include="Assets\Scripts\InteractionPoint.cs" />
+    <Compile Include="Assets\Scripts\EcholocationChase.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\UI_BarMultiple.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Avoidance.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\World_Mesh.cs" />
+    <Compile Include="Assets\Scripts\Swim.cs" />
+    <Compile Include="Assets\Scripts\RightBorder.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\World_Bar.cs" />
+    <Compile Include="Assets\Scripts\HeadMovement.cs" />
+    <Compile Include="Assets\Scripts\Note.cs" />
+    <Compile Include="Assets\Scripts\Thought.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\FunctionUpdater.cs" />
+    <Compile Include="Assets\Scripts\SharkChase.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Items\Keycard.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\FunctionTimer.cs" />
+    <Compile Include="Assets\Scripts\Health System\UnitHealth.cs" />
+    <Compile Include="Assets\Scripts\ExteriorLabs.cs" />
+    <Compile Include="Assets\Scripts\CameraMotion.cs" />
+    <Compile Include="Assets\Scripts\FollowPath.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\UI_Sprite.cs" />
+    <Compile Include="Assets\Scripts\FlockingFish.cs" />
+    <Compile Include="Assets\Scripts\Lab1.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Items\Tourniquet.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Assets.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\World_Sprite.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\MonoBehaviours\PositionRendererSorter.cs" />
+    <Compile Include="Assets\Scripts\LeftBorder.cs" />
+    <Compile Include="Assets\Map.cs" />
+    <Compile Include="Assets\Scripts\PlayMovieVP.cs" />
+    <Compile Include="Assets\Scripts\EchoPing.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Items\Battery.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\MonoBehaviours\ComponentActions.cs" />
+    <Compile Include="Assets\Scripts\FieldOfView.cs" />
+    <Compile Include="Assets\Scripts\FlockingFishConfig.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventorySlot.cs" />
+    <Compile Include="Assets\Scripts\ParallaxBackground.cs" />
+    <Compile Include="Assets\Scripts\ResetTurn.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Data Persistence\GameData.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\CMDebug.cs" />
+    <Compile Include="Assets\Packages\CodeMonkey\Utils\FunctionPeriodic.cs" />
+    <Compile Include="Assets\Scripts\DontDestroy.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Data Persistence\FileDataHandler.cs" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Packages/TextMesh Pro/Shaders/TMPro.cginc" />
