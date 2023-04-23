@@ -5,14 +5,32 @@ using System;
 
 // Doesn't need to be monobehavior
 // Here I have it assigned because we can assign events to it
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour, IDataPersistence
 {
     public static event Action<List<InventoryItem>> OnInventoryChange;
 
     // need list of inventory items
     public List<InventoryItem> inventory = new  List<InventoryItem>();
+
     // dictionary to handle stacking items
-    private Dictionary<ItemData, InventoryItem> itemDictionary = new Dictionary<ItemData, InventoryItem>();
+    public Dictionary<ItemData, InventoryItem> itemDictionary = new Dictionary<ItemData, InventoryItem>();
+
+    public void LoadData(GameData data)
+    {
+        this.itemDictionary = data.itemDictionary;
+        Debug.Log("Inventory: LoadData");
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.itemDictionary = this.itemDictionary;
+        Debug.Log("Inventory: SaveData");
+    }
+
+    public Dictionary<ItemData, InventoryItem> getInventory()
+    {
+        return itemDictionary;
+    }
 
     private void OnEnable()
     {

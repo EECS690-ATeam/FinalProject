@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BaseMovement : MonoBehaviour
+public class BaseMovement : MonoBehaviour, IDataPersistence
 {
     public float speed;
     private Rigidbody2D rb;
@@ -11,13 +11,35 @@ public class BaseMovement : MonoBehaviour
     bool facingRight=true;
 
     public static Vector3 spawnPos;
+
+ 
+    public Dictionary<ItemData, InventoryItem> playerInventory;
+    
+    // For Save
+    public string Scene = "";
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         this.transform.position += spawnPos;
+        this.playerInventory = new Dictionary<ItemData, InventoryItem>();
     }
+
+
+    public void LoadData(GameData data)
+    {
+        //this.transform.position = data.playerPosition;
+        this.Scene = data.Scene;
+    }
+
+    public void SaveData(GameData data)
+    {
+        //data.playerPosition = this.transform.position;
+        data.Scene = this.Scene;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -27,6 +49,9 @@ public class BaseMovement : MonoBehaviour
         float newspeed = speed;
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
+
+        //playerInventory = 
+
         if (sceneName == "Lab2") {
             newspeed = speed * 7;
         }
@@ -39,6 +64,7 @@ public class BaseMovement : MonoBehaviour
             facingRight = !facingRight;
             sr.flipX = true;
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -50,16 +76,19 @@ public class BaseMovement : MonoBehaviour
         {
             if (sceneName == "Lab1") {
                 PlayerMovement.spawnPos = new Vector3(-26, 0, 0);
+                Scene = "Kelp Cavern";
                 SceneManager.LoadScene("Kelp Cavern");
             }
 
             else if (sceneName == "Lab2") {
                 PlayerMovement.spawnPos = new Vector3(0, 0, 0);
+                Scene = "Dark Cavern";
                 SceneManager.LoadScene("Dark Cavern");
             }
 
             else if (sceneName == "Lab3") {
                 PlayerMovement.labSpawn = 3;
+                Scene = "Exterior Area";
                 SceneManager.LoadScene("Exterior Area");
             }
         }
@@ -67,16 +96,19 @@ public class BaseMovement : MonoBehaviour
         {
             if (sceneName == "Lab1") {
                 PlayerMovement.labSpawn = 1;
+                Scene = "Exterior Area";
                 SceneManager.LoadScene("Exterior Area");
             }
 
             else if (sceneName == "Lab2") {
                 PlayerMovement.spawnPos = new Vector3(64, 0, 0);
+                Scene = "Kelp Cavern";
                 SceneManager.LoadScene("Kelp Cavern");
             }
 
             else if (sceneName == "Lab3") {
                 PlayerMovement.spawnPos = new Vector3(170, -51, 0);
+                Scene = "Dark Area";
                 SceneManager.LoadScene("Dark Cavern");
             }
         }

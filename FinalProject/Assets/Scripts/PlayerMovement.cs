@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
     public float moveSpeed = 150f;
     private Rigidbody2D rb;
@@ -37,6 +37,18 @@ public class PlayerMovement : MonoBehaviour
     public static Vector3 spawnPos;
     public static int labSpawn;
 
+    // For Save
+    public string Scene = "";
+
+    public void LoadData(GameData data)
+    {
+        //this.transform.position = data.playerPosition;
+    }
+
+    public void SaveData(GameData data)
+    {
+        //data.playerPosition = this.transform.position;
+    }
 
     public void PlayerTakeDmg(int dmg) 
     {
@@ -201,11 +213,13 @@ public class PlayerMovement : MonoBehaviour
 
             else if (sceneName == "Kelp Cavern") {
                 BaseMovement.spawnPos = new Vector3(0, 0, 0);
+                Scene = "Lab2";
                 SceneManager.LoadScene("Lab2");
             }
             
             else if (sceneName == "Dark Cavern") {
                 BaseMovement.spawnPos = new Vector3(0, 0, 0);
+                Scene = "Lab3";
                 SceneManager.LoadScene("Lab3");
             }
             
@@ -221,11 +235,13 @@ public class PlayerMovement : MonoBehaviour
 
             else if (sceneName == "Kelp Cavern") {
                 BaseMovement.spawnPos = new Vector3(10, 0, 0);
+                Scene = "Lab1";
                 SceneManager.LoadScene("Lab1");
             }
 
             else if (sceneName == "Dark Cavern") {
                 BaseMovement.spawnPos = new Vector3(70, 0, 0);
+                Scene = "Lab2";
                 SceneManager.LoadScene("Lab2");
             }
         }
@@ -233,11 +249,13 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.name == "Lab1")
         {
             BaseMovement.spawnPos = new Vector3(-17, 0, 0);
+            Scene = "Lab1";
             SceneManager.LoadScene("Lab1");
         }
         if (collision.gameObject.name == "Lab2")
         {
             BaseMovement.spawnPos = new Vector3(28, 0, 0);
+            Scene = "Lab2";
             SceneManager.LoadScene("Lab2");
         }
         /*

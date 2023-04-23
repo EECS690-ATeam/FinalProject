@@ -1,14 +1,18 @@
 ﻿<Properties StartupConfiguration="{E1456745-ED92-4EB6-8905-E64DC1E47277}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Inventory/InventorySlot.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Inventory/Collector.cs">
     <Files>
-      <File FileName="Assets/Scripts/Inventory/ICollectible.cs" Line="3" Column="8" />
-      <File FileName="Assets/Scripts/Inventory/Collector.cs" Line="15" Column="13" />
-      <File FileName="Assets/Scripts/Inventory/Inventory.cs" Line="30" Column="43" />
-      <File FileName="Assets/Scripts/Inventory/InventoryItem.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Inventory/InventoryManager.cs" Line="27" Column="45" />
-      <File FileName="Assets/Scripts/Inventory/InventoryMenu.cs" Line="24" Column="14" />
-      <File FileName="Assets/Scripts/Inventory/Items/Tourniquet.cs" Line="15" Column="23" />
+      <File FileName="Assets/Scripts/Inventory/Data Persistence/GameData.cs" Line="34" Column="68" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="25" Column="26" />
+      <File FileName="Assets/Scripts/Inventory/Data Persistence/DataPersistenceManager.cs" Line="74" Column="36" />
+      <File FileName="Assets/Scripts/PauseMenu.cs" Line="72" Column="1" />
+      <File FileName="Assets/Scripts/Inventory/InventoryManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="34" Column="29" />
+      <File FileName="Assets/Scripts/BaseMovement.cs" Line="53" Column="29" />
+      <File FileName="Assets/Scripts/Inventory/Inventory.cs" Line="32" Column="31" />
+      <File FileName="Assets/Scripts/Player.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Inventory/Data Persistence/FileDataHandler.cs" Line="43" Column="27" />
       <File FileName="Assets/Scripts/Inventory/InventorySlot.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Inventory/Collector.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,8 +21,9 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Inventory" expanded="True">
+                  <Node name="Data Persistence" expanded="True" />
                   <Node name="Items" expanded="True" />
-                  <Node name="InventorySlot.cs" selected="True" />
+                  <Node name="Collector.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
@@ -29,7 +34,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="320412c0-fccf-4690-a3db-ff1e198daefa" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d830ef32-b41f-432a-af41-ea1e0cddfd06" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

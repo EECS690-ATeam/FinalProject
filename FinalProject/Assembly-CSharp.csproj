@@ -63,6 +63,7 @@
     <Compile Include="Assets/Scripts/Inventory/Data Persistence/DataPersistenceManager.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/MonoBehaviours/CameraFollowSetup.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/MonoBehaviours/CameraFollow.cs" />
+    <Compile Include="Assets/Scripts/Lab3.cs" />
     <Compile Include="Assets/Scripts/NearItem.cs" />
     <Compile Include="Assets/Scripts/Inventory/Collector.cs" />
     <Compile Include="Assets/Scripts/SoundManagerScript.cs" />
@@ -78,13 +79,15 @@
     <Compile Include="Assets/Packages/CodeMonkey/Utils/UI_TextComplex.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/Button_Sprite.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
+    <Compile Include="Assets/Scripts/FlashingLight.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/UtilsClass.cs" />
     <Compile Include="Assets/Scripts/Lab2.cs" />
     <Compile Include="Assets/Scripts/PauseMenu.cs" />
     <Compile Include="Assets/Scripts/PlayerAimDirection.cs" />
-    <Compile Include="Assets/Scripts/Inventory/Data Persistence/IDataService.cs" />
+    <Compile Include="Assets/Scripts/LightFade.cs" />
     <Compile Include="Assets/Scripts/BaseMovement.cs" />
     <Compile Include="Assets/Scripts/CameraBoundary.cs" />
+    <Compile Include="Assets/Scripts/Elevator.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/UI_Bar.cs" />
     <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/Scripts/Inventory/ItemData.cs" />
@@ -93,7 +96,6 @@
     <Compile Include="Assets/Packages/CodeMonkey/Utils/UI_BarMultiple.cs" />
     <Compile Include="Assets/Scripts/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/Avoidance.cs" />
-    <Compile Include="Assets/Scripts/Inventory/Data Persistence/JsonDataService.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/World_Mesh.cs" />
     <Compile Include="Assets/Scripts/Swim.cs" />
     <Compile Include="Assets/Scripts/RightBorder.cs" />
@@ -131,6 +133,8 @@
     <Compile Include="Assets/Scripts/Inventory/Data Persistence/GameData.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/CMDebug.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/FunctionPeriodic.cs" />
+    <Compile Include="Assets/Scripts/Inventory/Data Persistence/FileDataHandler.cs" />
+    <Compile Include="Assets/Map.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Packages/TextMesh Pro/Shaders/TMPro.cginc" />

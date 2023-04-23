@@ -53,6 +53,18 @@ public class PauseMenu : MonoBehaviour
         //SceneManager.LoadScene("TitleScreen");
     }
 
+    public void SaveGame()
+    {
+        DataPersistenceManager.instance.SaveGame();
+    }
+
+    public void SaveAndExitGame()
+    {
+        DataPersistenceManager.instance.SaveGame();
+        Debug.Log("Quitting....");
+        //Application.Quit();
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quitting....");
