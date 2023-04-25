@@ -3,8 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class InteractionPoint : MonoBehaviour
+public class InteractionPoint : MonoBehaviour, IDataPersistence
 {
+    [SerializeField] private string id;
+    [ContextMenu("Create guid for id")]
+
+    private void GenerateGiud()
+    {
+        id = System.Guid.NewGuid().ToString();
+    }
+
+    private SpriteRenderer circle;
+    private SpriteRenderer letter;
     public string message1;
     public string message2;
     public string message3;
@@ -61,6 +71,25 @@ public class InteractionPoint : MonoBehaviour
             }
         }
 
+    }
+
+    public void LoadData(GameData data)
+    {
+        data.ipsVisited.TryGetValue(id, out beenSeen);
+        if (beenSeen)
+        {
+            this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+        }
+    }
+
+    public void SaveData(GameData data)
+    {
+        if (data.ipsVisited.ContainsKey(id))
+        {
+            data.ipsVisited.Remove(id);
+        }
+        data.ipsVisited.Add(id, beenSeen);
     }
 
     IEnumerator adjustMessage() {

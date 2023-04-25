@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
+    
     public float moveSpeed = 150f;
     private Rigidbody2D rb;
     private BoxCollider2D playerCollider;
@@ -43,11 +44,14 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         //this.transform.position = data.playerPosition;
+        this.Scene = data.scene;
     }
 
     public void SaveData(GameData data)
     {
-        //data.playerPosition = this.transform.position;
+        // Problem with scenes having different position
+        data.playerPosition = this.transform.position;
+        data.scene = this.Scene;
     }
 
     public void PlayerTakeDmg(int dmg) 
@@ -246,7 +250,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
             }
 
             else if (sceneName == "Kelp Cavern") {
-                BaseMovement.spawnPos = new Vector3(10, 0, 0);
+                BaseMovement.spawnPos = new Vector3(6, 0, 0);
                 Scene = "Lab1";
                 SceneManager.LoadScene("Lab1");
             }
@@ -312,6 +316,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         }
 
         Vector3 temp = new Vector3(newX - this.transform.position.x, newY - this.transform.position.y, 0f);
+        //Debug.Log(temp);
         this.transform.position += temp;
         labSpawn = 0;
     }

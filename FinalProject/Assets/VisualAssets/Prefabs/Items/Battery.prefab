@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3937262748455813592}
   - component: {fileID: 3937262748455813593}
   - component: {fileID: 3937262748455813594}
-  - component: {fileID: 3937262748455813595}
   - component: {fileID: 3937262748455813588}
+  - component: {fileID: 5711925729575364111}
   m_Layer: 0
   m_Name: Battery
   m_TagString: Untagged
@@ -113,19 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3937262748455813595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3937262748455813589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5998d06da582a4a62a7912a9df38aad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  batteryData: {fileID: 11400000, guid: adde24a84d2c44145b2f6aeea94e7d3f, type: 2}
 --- !u!114 &3937262748455813588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,3 +127,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   parallaxEffect: 0.15
+--- !u!114 &5711925729575364111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937262748455813589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5998d06da582a4a62a7912a9df38aad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryData: {fileID: 11400000, guid: adde24a84d2c44145b2f6aeea94e7d3f, type: 2}
