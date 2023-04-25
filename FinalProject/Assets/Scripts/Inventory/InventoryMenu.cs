@@ -11,13 +11,16 @@ public class InventoryMenu : MonoBehaviour
     // Use global bool to check if game is paused across all scenes
     public bool isOpen;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         isOpen = false;
 
         inventoryMenu.SetActive(true);
         inventoryGrid.SetActive(true);
+    }
 
+    void Start()
+    {
         inventoryMenu.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
         for(int i = 0; i < inventoryGrid.transform.childCount; i++)
         {

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8508233160435553013}
   - component: {fileID: 8508233160435553014}
   - component: {fileID: 8508233160435553015}
-  - component: {fileID: 8508233160435553017}
   - component: {fileID: 1930345130}
   m_Layer: 0
   m_Name: Keycard LVL1
@@ -116,21 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c847d2c197a4e1ea211fb95dd842ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 49809f8f-034b-4980-8145-22080c00c47c
   keycardData: {fileID: 11400000, guid: cf6a079164366423e9874e61ba73964a, type: 2}
---- !u!114 &8508233160435553017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8508233160435553010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4198d41f3b9e5b84ea5513a4f17eb5b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  parallaxEffect: 0.15
+  beenCollected: 0
 --- !u!114 &1930345130
 MonoBehaviour:
   m_ObjectHideFlags: 0

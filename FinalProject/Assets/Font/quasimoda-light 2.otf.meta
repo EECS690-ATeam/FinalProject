@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7cea164e8540ffb4b8f5331f93805d54
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Quasimoda
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a3f52b95fc361444595e1d5e4ba766d0, type: 3}
+  - {fileID: 12800000, guid: 80708c640e53b4600ad979798dca5ab1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

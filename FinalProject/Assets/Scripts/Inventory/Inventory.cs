@@ -86,6 +86,10 @@ public class Inventory : MonoBehaviour, IDataPersistence
     {
         foreach (KeyValuePair<string, int> pair in simpleDictionary)
         {
+            if (data.simpleDictionary.ContainsKey(pair.Key))
+            {
+                data.simpleDictionary.Remove(pair.Key);
+            }
             data.simpleDictionary.Add(pair.Key, pair.Value);
         }
         

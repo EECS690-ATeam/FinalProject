@@ -27,6 +27,7 @@ public class Battery : MonoBehaviour, ICollectible, IDataPersistence
 
     public void SaveData(GameData data)
     {
+        Debug.Log("Battery save");
         if (data.itemsCollected.ContainsKey(id))
         {
             data.itemsCollected.Remove(id);
