@@ -29,14 +29,14 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
 
     public void LoadData(GameData data)
     {
-        this.transform.position = data.playerPosition;
+        //this.transform.position = data.playerPosition;
         this.Scene = data.scene;
     }
 
     public void SaveData(GameData data)
     {
-        //data.playerPosition = this.transform. position;
-        //data.scene = this.Scene;
+        data.playerPosition = this.transform. position;
+        data.scene = this.Scene;
     }
 
 

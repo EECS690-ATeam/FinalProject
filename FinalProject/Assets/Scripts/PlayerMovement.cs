@@ -44,14 +44,14 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         //this.transform.position = data.playerPosition;
-        //this.Scene = data.scene;
+        this.Scene = data.scene;
     }
 
     public void SaveData(GameData data)
     {
         // Problem with scenes having different position
-        //data.playerPosition = this.transform.position;
-        //data.scene = this.Scene;
+        data.playerPosition = this.transform.position;
+        data.scene = this.Scene;
     }
 
     public void PlayerTakeDmg(int dmg) 
@@ -238,7 +238,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
             }
 
             else if (sceneName == "Kelp Cavern") {
-                BaseMovement.spawnPos = new Vector3(10, 0, 0);
+                BaseMovement.spawnPos = new Vector3(6, 0, 0);
                 Scene = "Lab1";
                 SceneManager.LoadScene("Lab1");
             }
