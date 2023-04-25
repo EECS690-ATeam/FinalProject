@@ -7,17 +7,21 @@ using System.IO;
 public class FileDataHandler
 {
     private string dataDirPath = "";
+    // name of file to save to
     private string dataFileName = "";
 
+    // constructor
     public FileDataHandler(string dataDirPath, string dataFileName)
     {
         this.dataDirPath = dataDirPath;
         this.dataFileName = dataFileName;
     }
 
+
     public GameData Load()
     {
         string fullPath = Path.Combine(dataDirPath, dataFileName);
+        // variable to load into 
         GameData loadedData = null;
         if (File.Exists(fullPath))
         {
@@ -46,8 +50,10 @@ public class FileDataHandler
     public void Save(GameData data)
     {
 
+        // Path.combine to account for different OS's having different path separators
         //string fullPath = dataDirPath + "/" + dataFileName;
         string fullPath = Path.Combine(dataDirPath, dataFileName);
+
         try
         {
             // creating directory file will be written to if doesn't already exist
@@ -57,6 +63,7 @@ public class FileDataHandler
             string dataToStore = JsonUtility.ToJson(data, true);
 
             // write data to file
+            // "using" ensure filestream is closed once done writing
             using (FileStream stream = new FileStream(fullPath, FileMode.Create))
             {
                 using (StreamWriter writer = new StreamWriter(stream))

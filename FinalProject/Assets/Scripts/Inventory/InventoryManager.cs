@@ -10,25 +10,30 @@ public class InventoryManager : MonoBehaviour
     public List<InventorySlot> inventorySlots = new List<InventorySlot>(24);
     public InventoryMenu inventoryMenu;
 
-    // Register to OnInventoryChange Event
+    //Register to OnInventoryChange Event
     private void OnEnable()
     {
+        Debug.Log("IM Enable");
         Inventory.OnInventoryChange += DrawInventory;
     }
 
     private void OnDisable()
     {
+        Debug.Log("IM Disbale");
         Inventory.OnInventoryChange -= DrawInventory;
     }
 
+   
     // DISADVANTAGE TO THIS APPROACH
     // When adding a new item or even incrementing the count of an existing item,
     // we have to delete entire inventory and recreate it. Can be very slow with large inventory systems
     // I believe this won't affect our game too much as it's not heavily focused on inventory 
     void ResetInventory()
     {
+        Debug.Log("Reset Inventory");
         foreach (Transform childTransform in transform)
         {
+            Debug.Log("Destroying slot");
             Destroy(childTransform.gameObject);
         }
         inventorySlots = new List<InventorySlot>(24);
@@ -36,6 +41,7 @@ public class InventoryManager : MonoBehaviour
 
     void DrawInventory(List<InventoryItem> inventory)
     {
+        Debug.Log("Drawing Inventory");
         ResetInventory();
         // create new empty inventory
         for (int i = 0; i < inventorySlots.Capacity; i++)
@@ -60,6 +66,7 @@ public class InventoryManager : MonoBehaviour
 
     void CreateInventorySlot()
     {
+        Debug.Log("Creating Inventory Slots...");
         GameObject newSlot = Instantiate(slotPrefab);
         // make sure new game object is nested under InventoryPanel as a child
         newSlot.transform.SetParent(transform, false);

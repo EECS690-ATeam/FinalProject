@@ -12,8 +12,6 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
 
     public static Vector3 spawnPos;
 
- 
-    public Dictionary<ItemData, InventoryItem> playerInventory;
     
     // For Save
     public string Scene = "";
@@ -24,20 +22,21 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         this.transform.position += spawnPos;
-        this.playerInventory = new Dictionary<ItemData, InventoryItem>();
+        Debug.Log(this.transform.position += spawnPos);
+        //this.playerInventory = new Dictionary<ItemData, InventoryItem>();
     }
 
 
     public void LoadData(GameData data)
     {
-        //this.transform.position = data.playerPosition;
-        this.Scene = data.Scene;
+        this.transform.position = data.playerPosition;
+        this.Scene = data.scene;
     }
 
     public void SaveData(GameData data)
     {
-        //data.playerPosition = this.transform.position;
-        data.Scene = this.Scene;
+        //data.playerPosition = this.transform. position;
+        //data.scene = this.Scene;
     }
 
 
@@ -50,7 +49,7 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
-        //playerInventory = 
+        
 
         if (sceneName == "Lab2") {
             newspeed = speed * 7;
@@ -72,6 +71,7 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
         Debug.Log(collision.gameObject.name);
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
+        
         if (collision.gameObject.name == "RightBorder" && (Input.GetAxisRaw("Horizontal") > 0))
         {
             if (sceneName == "Lab1") {
