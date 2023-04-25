@@ -1255,7 +1255,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 66603e2ea5a009e46b20231835a96ac8, type: 2}
+  - {fileID: 2100000, guid: 5652f27a94de3b84b8b983e0e75df04f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2637,37 +2637,37 @@ ParticleSystem:
   UVModule:
     serializedVersion: 2
     enabled: 1
-    mode: 1
+    mode: 0
     timeMode: 0
-    fps: 30
+    fps: 80
     frameOverTime:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 1
       scalar: 0.9999
-      minScalar: 0.9999
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 0
+          inSlope: 1
           outSlope: 1
-          tangentMode: 0
+          tangentMode: 34
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         - serializedVersion: 3
           time: 1
           value: 1
           inSlope: 1
-          outSlope: 0
-          tangentMode: 0
+          outSlope: 1
+          tangentMode: 34
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
-        m_PostInfinity: 2
+        m_PostInfinity: 1
         m_RotationOrder: 4
       minCurve:
         serializedVersion: 2
@@ -2747,16 +2747,22 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedRange: {x: 0, y: 1}
-    tilesX: 2
+    tilesX: 8
     tilesY: 1
     animationType: 0
     rowIndex: 0
-    cycles: 1
+    cycles: 1000
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: -1492637376, guid: de592bbc5a53faa4980c0dc81309ecb3, type: 3}
-    - sprite: {fileID: -257558317, guid: de592bbc5a53faa4980c0dc81309ecb3, type: 3}
+    - sprite: {fileID: -382017385, guid: 5561f710d1c4d594c9d8f071e1526225, type: 3}
+    - sprite: {fileID: -1359143534, guid: 5561f710d1c4d594c9d8f071e1526225, type: 3}
+    - sprite: {fileID: 79723937, guid: 5561f710d1c4d594c9d8f071e1526225, type: 3}
+    - sprite: {fileID: 1788782474, guid: 5561f710d1c4d594c9d8f071e1526225, type: 3}
+    - sprite: {fileID: 1908885666, guid: 5561f710d1c4d594c9d8f071e1526225, type: 3}
+    - sprite: {fileID: 559685542, guid: 5561f710d1c4d594c9d8f071e1526225, type: 3}
+    - sprite: {fileID: -1231510621, guid: 5561f710d1c4d594c9d8f071e1526225, type: 3}
+    - sprite: {fileID: -122602376, guid: 5561f710d1c4d594c9d8f071e1526225, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
