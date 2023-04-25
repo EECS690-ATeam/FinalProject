@@ -14,25 +14,53 @@ public class InteractionPoint : MonoBehaviour
     public Transform p;
     private bool beenSeen;
     private int distance;
+    private int appearDistance;
     private AudioSource a;
+
     // Start is called before the first frame update
     void Start()
     {
         a = GetComponent<AudioSource>();
         a.volume = 0.18F;
         beenSeen = false;
-        distance = 7;
-        if (isStory) {
-            this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 140, 0, 255);
-            this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(255, 140, 0, 255);
-        }
+        distance = 5;
+        appearDistance = 10;
+        this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+        this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
+        float diff = Vector3.Distance(this.transform.position, p.position);
+        if (!beenSeen)
+        {
+            if (diff < appearDistance)
+            {
+                if (isStory)
+                {
+                    this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 140, 0, 255);
+                    this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(255, 140, 0, 255);
+                }
+                else
+                {
+                    this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+                    this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+                }
+            }
+            else
+            {
+                this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+                this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            }
+        }
+        else
+        {
+            this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+        }
+            
         if (Input.GetKeyDown("e") && !beenSeen) {
-            float diff = Vector3.Distance(this.transform.position, p.position);
             if (diff < distance) {
                 a.Play(0);
                 this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
