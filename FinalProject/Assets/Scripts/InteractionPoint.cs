@@ -14,7 +14,6 @@ public class InteractionPoint : MonoBehaviour
     public Transform p;
     private bool beenSeen;
     private int distance;
-    private int appearDistance;
     private AudioSource a;
 
     // Start is called before the first frame update
@@ -24,8 +23,7 @@ public class InteractionPoint : MonoBehaviour
         a.volume = 0.18F;
         beenSeen = false;
         distance = 5;
-        appearDistance = 10;
-        this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+        this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 150);
         this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
     }
 
@@ -35,22 +33,14 @@ public class InteractionPoint : MonoBehaviour
         float diff = Vector3.Distance(this.transform.position, p.position);
         if (!beenSeen)
         {
-            if (diff < appearDistance)
+            if (diff < distance)
             {
-                if (isStory)
-                {
-                    this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 140, 0, 255);
-                    this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(255, 140, 0, 255);
-                }
-                else
-                {
-                    this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
-                    this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
-                }
+                this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+                this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 150);
             }
             else
             {
-                this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+                this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 150);
                 this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
             }
         }
