@@ -173,6 +173,17 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     //    rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     //}
 
+        private void OnParticleCollision(GameObject other) { 
+            PlayerTakeDmg(1);
+            oofSound.Play();
+            spawnPos = new Vector3(-26, 0, 0);
+            if(GameManager.gameManager._playerHealth.Health == 0) 
+            {
+                Invoke("resetScene", .4f);
+            }
+        }
+
+
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.name == "EcholocationFish")
         {
@@ -192,6 +203,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("collision");
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         Debug.Log(collision.gameObject.name);
