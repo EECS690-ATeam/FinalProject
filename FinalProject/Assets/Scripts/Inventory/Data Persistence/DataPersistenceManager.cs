@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class DataPersistenceManager : MonoBehaviour
 {
@@ -22,18 +23,45 @@ public class DataPersistenceManager : MonoBehaviour
         if(instance != null)
         {
             Debug.LogError("Found more than one Data Persistence Manager in the scene.");
+            Destroy(this.gameObject); 
         }
         instance = this;
+        DontDestroyOnLoad(this.gameObject);
 
-    }
-    // Load game on startup
-    private void Start()
-    {
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("OnSceneLoaded Called");
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
+
+        // start up the auto saving coroutine
+        //if (autoSaveCoroutine != null)
+        //{
+        //    StopCoroutine(autoSaveCoroutine);
+        //}
+        //autoSaveCoroutine = StartCoroutine(AutoSave());
     }
 
+    public void OnSceneUnloaded(Scene scene)
+    {
+        Debug.Log("OnSceneUnloaded Called");
+        SaveGame();
+    }
 
     public void NewGame()
     {

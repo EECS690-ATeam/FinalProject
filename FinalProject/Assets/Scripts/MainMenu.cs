@@ -18,25 +18,29 @@ public class MainMenu : MonoBehaviour
     public GameObject vp;
 
  
-    public void PlayGame()
-    {
-        // Start new game
-        Debug.Log("Play game pressed");
-        //DataPersistenceManager.instance.NewGame();
-        SceneManager.LoadScene("Intro Cut Scene");
-    }
+    //public void PlayGame()
+    //{
+    //    // Start new game
+    //    Debug.Log("Play game pressed");
+    //    //DataPersistenceManager.instance.NewGame();
+    //    SceneManager.LoadScene("Intro Cut Scene");
+    //}
 
     public void NewGame()
     {
-        // TODO - Clear contents of file save folder
+        // create a new game - which will initialize our game data
         DataPersistenceManager.instance.NewGame();
+        // load the gameplay scene - which will in turn save the game because of
+        // OnSceneUnloaded() in the DataPersistenceManager
+        SceneManager.LoadScene("Intro Cut Scene");
     }
 
     public void LoadGame()
     {
-        // TODO - If file does not exist debug, 
-
-        // TODO - If save file exists, Load that file
+        // load the next scene - which will in turn load the game because of 
+        // OnSceneLoaded() in the DataPersistenceManager
+        //SceneManager.LoadSceneAsync("Intro Cut Scene");
+        SceneManager.LoadScene("Intro Cut Scene");
     }
     public void OpenOptions()
     {
