@@ -39,8 +39,8 @@ public class MainMenu : MonoBehaviour
     {
         // load the next scene - which will in turn load the game because of 
         // OnSceneLoaded() in the DataPersistenceManager
-        //SceneManager.LoadSceneAsync("Intro Cut Scene");
-        SceneManager.LoadScene("Intro Cut Scene");
+        SceneManager.LoadSceneAsync("Lab1");
+        // SceneManager.LoadScene("Intro Cut Scene");
     }
     public void OpenOptions()
     {

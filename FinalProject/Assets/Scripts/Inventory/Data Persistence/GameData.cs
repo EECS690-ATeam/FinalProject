@@ -7,14 +7,15 @@ public class GameData
 {
     public int Health;
     public Vector3 playerPosition;
-   
+    
     // Game
     public string scene;
+    
     // TODO - List of interaction points visited
     public SerializableDictionary<string, bool> ipsVisited;
 
     // Inventory
-    public SerializableDictionary<string, int> simpleDictionary;
+    public SerializableInventory<string, int> simpleDictionary;
 
     public SerializableDictionary<string, bool> itemsCollected;
 
@@ -30,7 +31,7 @@ public class GameData
         ipsVisited = new SerializableDictionary<string, bool>();
 
         // Inventory Dictionary
-        simpleDictionary = new SerializableDictionary<string, int>();
+        simpleDictionary = new SerializableInventory<string, int>();
 
         itemsCollected = new SerializableDictionary<string, bool>();
 

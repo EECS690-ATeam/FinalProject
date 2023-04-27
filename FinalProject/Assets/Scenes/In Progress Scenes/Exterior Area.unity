@@ -123,64 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &112813715
-GameObject:
+--- !u!1001 &63880832
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 112813718}
-  - component: {fileID: 112813717}
-  - component: {fileID: 112813716}
-  m_Layer: 0
-  m_Name: Inventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &112813716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112813715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48e60e075b83942e2b9cfbacb73252c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: []
---- !u!114 &112813717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112813715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3455b6cacc78146ecab57dd4f499248c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &112813718
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112813715}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.347202, y: -1.7271651, z: -1.0218911}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8508233160435553010, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_Name
+      value: Keycard LVL4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553012, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553012, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -175.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553012, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553012, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553012, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553012, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553012, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553012, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553012, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553012, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553012, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553015, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
+      propertyPath: id
+      value: 82887d4a-1e1b-4c5f-8124-64dc0bf78c6d
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
 --- !u!1 &278498589
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +282,7 @@ GameObject:
   - component: {fileID: 308583364}
   m_Layer: 0
   m_Name: InteractionPoint
-  m_TagString: Untagged
+  m_TagString: ip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d7f82eea2abea449a3411f8c997f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 45cbd34c-ad43-40d1-aeb9-3780db9c6b8e
   message1: 'Research Base: Riverstream Station'
   message2: 
   message3: 
@@ -743,10 +747,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: InvPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 8902422380721378800, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
+      propertyPath: m_TagString
+      value: invPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 8902422380721378802, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: inventoryMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1033883914}
     - target: {fileID: 8902422380721378803, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2117,7 +2125,7 @@ GameObject:
   - component: {fileID: 1042387515}
   m_Layer: 0
   m_Name: InteractionPoint (2)
-  m_TagString: Untagged
+  m_TagString: ip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2273,6 +2281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d7f82eea2abea449a3411f8c997f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 066454c5-5d0d-483a-a226-33d0f1dade2e
   message1: 'Research Base: Stygian Understation'
   message2: Looks like it opens with some sort of keycard, I'm sure someone left
     one lying around...
@@ -3427,7 +3436,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1820679561
@@ -3660,7 +3669,7 @@ GameObject:
   - component: {fileID: 1919873541}
   m_Layer: 0
   m_Name: InteractionPoint (1)
-  m_TagString: Untagged
+  m_TagString: ip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3816,6 +3825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d7f82eea2abea449a3411f8c997f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 98c91c16-5cdd-4772-873f-4e1c7efd3624
   message1: 'Research Base: Outpost 509-A'
   message2: 
   message3: 

@@ -12,9 +12,14 @@ public class DontDestroy : MonoBehaviour
 {
     void Awake()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("Inventory");
+        // GameObject[] objs = GameObject.FindGameObjectsWithTag("Inventory");
+        GameObject[] invPanel = GameObject.FindGameObjectsWithTag("invPanel");
 
-        if (objs.Length > 1)
+        // if (objs.Length > 1)
+        // {
+        //     Destroy(this.gameObject);
+        // }
+        if (invPanel.Length > 1)
         {
             Destroy(this.gameObject);
         }

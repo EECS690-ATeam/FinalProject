@@ -5,7 +5,7 @@ using TMPro;
 
 public class InteractionPoint : MonoBehaviour, IDataPersistence
 {
-    [SerializeField] private string id;
+    [SerializeField] public string id;
     [ContextMenu("Create guid for id")]
 
     private void GenerateGiud()

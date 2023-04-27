@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -13,13 +14,13 @@ public class InventoryManager : MonoBehaviour
     //Register to OnInventoryChange Event
     private void OnEnable()
     {
-        Debug.Log("IM Enable");
+        Debug.Log("Inventory Manager Enable");
         Inventory.OnInventoryChange += DrawInventory;
     }
 
     private void OnDisable()
     {
-        Debug.Log("IM Disbale");
+        Debug.Log("Inventory Manager Disable");
         Inventory.OnInventoryChange -= DrawInventory;
     }
 
@@ -33,7 +34,6 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("Reset Inventory");
         foreach (Transform childTransform in transform)
         {
-            Debug.Log("Destroying slot");
             Destroy(childTransform.gameObject);
         }
         inventorySlots = new List<InventorySlot>(24);
@@ -66,7 +66,6 @@ public class InventoryManager : MonoBehaviour
 
     void CreateInventorySlot()
     {
-        Debug.Log("Creating Inventory Slots...");
         GameObject newSlot = Instantiate(slotPrefab);
         // make sure new game object is nested under InventoryPanel as a child
         newSlot.transform.SetParent(transform, false);

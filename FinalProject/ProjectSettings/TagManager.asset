@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Head
   - Inventory
+  - invPanel
+  - ip
   layers:
   - Default
   - TransparentFX

@@ -37,7 +37,6 @@ public class Inventory : MonoBehaviour, IDataPersistence
         Debug.Log("Loading data...");
         foreach (KeyValuePair<string, int> pair in data.simpleDictionary)
         {
-            
             if(pair.Key == "Battery")
             {
                 for (int i=0; i< pair.Value; i++)
@@ -92,8 +91,6 @@ public class Inventory : MonoBehaviour, IDataPersistence
             }
             data.simpleDictionary.Add(pair.Key, pair.Value);
         }
-        
-        //data.simpleDictionary = this.simpleDictionary;
     }
 
 
@@ -115,7 +112,6 @@ public class Inventory : MonoBehaviour, IDataPersistence
 
     public void Add(ItemData itemData)
     {
-
         itemName = itemData.displayName;
         // Check if item exists
         if (itemDictionary.TryGetValue(itemData, out InventoryItem item))

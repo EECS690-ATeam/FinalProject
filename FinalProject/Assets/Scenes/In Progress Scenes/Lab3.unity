@@ -302,7 +302,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e60e075b83942e2b9cfbacb73252c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  batteryData: {fileID: 0}
+  tourniquetData: {fileID: 0}
+  syringeData: {fileID: 0}
+  KeycardDataLvl1: {fileID: 0}
+  KeycardDataLvl2: {fileID: 0}
+  KeycardDataLvl3: {fileID: 0}
+  KeycardDataLvl4: {fileID: 0}
+  KeycardDataLvl5: {fileID: 0}
   inventory: []
+  newCount: 0
+  itemName: 
 --- !u!4 &299039957
 Transform:
   m_ObjectHideFlags: 0
@@ -815,7 +825,7 @@ GameObject:
   - component: {fileID: 438614441}
   m_Layer: 0
   m_Name: InteractionPoint
-  m_TagString: Untagged
+  m_TagString: ip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -971,6 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d7f82eea2abea449a3411f8c997f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 16922997-36e6-4bea-8880-e6e42207c779
   message1: Looks like somebody forgot to take this note with them.
   message2: '"There is something happening further down. All the Blackwell employees
     are acting like they know nothing."'
@@ -1475,7 +1486,7 @@ GameObject:
   - component: {fileID: 869565534}
   m_Layer: 0
   m_Name: InteractionPoint (1)
-  m_TagString: Untagged
+  m_TagString: ip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1631,6 +1642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d7f82eea2abea449a3411f8c997f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: a0bb3875-9e9d-454f-ab9e-005195c91975
   message1: Account numbers, lots of graphs, more commas than I've ever seen on a
     paycheck.
   message2: '"Blackwell Corporation Shareholder''s Information:"'
@@ -2020,7 +2032,7 @@ GameObject:
   - component: {fileID: 1177572997}
   m_Layer: 0
   m_Name: InteractionPoint
-  m_TagString: Untagged
+  m_TagString: ip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2176,6 +2188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8d7f82eea2abea449a3411f8c997f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: a0415de0-b112-47da-8fc3-9e8ff0f12329
   message1: Ugh, the donor suite. Left a lot behind here too.
   message2: 
   message3: 
