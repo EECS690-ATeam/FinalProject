@@ -17,7 +17,7 @@ public class SharkChase : MonoBehaviour
 
     // Private members
     private Rigidbody2D rb;
-    private Material material;
+    //private Material material;
 
     // Public members
     public bool chasing;
@@ -30,7 +30,7 @@ public class SharkChase : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         chasing = false;
-        material = null;
+        //material = null;
     }
 
     void FixedUpdate()
