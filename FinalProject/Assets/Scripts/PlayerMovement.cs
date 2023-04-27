@@ -26,9 +26,11 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     [SerializeField] private float hurtTimer = 0.1f;
     
     public Animator animator;
-    //public Animator headAnimator;
 
-    //public Transform headWrapper;
+    public Animator headAnimator;
+    public Transform headWrapper;
+    public SpriteRenderer head;
+
     public float topAngleLimit = 35;
     public float bottomAngleLimit = -20f;
     public Vector2 mouseWorldPos;
@@ -109,25 +111,65 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     private void LookAtMouse() 
     {
-        //var dir = (mouseWorldPos - (Vector2) headWrapper.position).normalized;
-        //headWrapper.right = (dir * Mathf.Sign(transform.localScale.x));
-        //var eulerDir = headWrapper.localEulerAngles;
-        //eulerDir.z = Mathf.Clamp(eulerDir.z - (eulerDir.z > 180 ? 360 : 0), bottomAngleLimit, topAngleLimit);
-        //headWrapper.localEulerAngles = eulerDir; 
+        var dir = (mouseWorldPos - (Vector2) headWrapper.position).normalized;
+        headWrapper.right = (dir * Mathf.Sign(transform.localScale.x));
+        var eulerDir = headWrapper.localEulerAngles;
+        eulerDir.z = Mathf.Clamp(eulerDir.z - (eulerDir.z > 180 ? 360 : 0), bottomAngleLimit, topAngleLimit);
+        headWrapper.localEulerAngles = eulerDir; 
     }
 
     private void FlipX(float x) {
         if(facingRight && x<0) {
             animator.SetBool("SetTurnL", true);
+            headAnimator.SetBool("HeadTurn", true);
             animator.SetBool("Flip", true);
             facingRight = !facingRight;
-            transform.eulerAngles += new Vector3(0,180,0);
+            // transform.eulerAngles += new Vector3(0,180,0);
         }
         if(!facingRight && x>0) {
             animator.SetBool("SetTurnR", true);
+            headAnimator.SetBool("HeadTurn", true);
             animator.SetBool("Flip", true);
             facingRight = !facingRight;
-            transform.eulerAngles += new Vector3(0,-180,0);
+            // transform.eulerAngles += new Vector3(0,-180,0);
+        }
+        if(x != 0) 
+        {
+            transform.localScale = new Vector3(Mathf.Sign(x), 1, 1);
+        }
+    }
+
+    void ShowHead() {
+        head.enabled = true;
+    }
+
+
+    void ChangeRotation() {
+        var horizontalMovement = Input.GetAxis("Horizontal");
+        var verticalMovement = Input.GetAxis("Vertical");
+        if(facingRight) {
+            if(horizontalMovement!=0 && verticalMovement>0 && GameObject.eulerAngles.z > 180) {
+                transform.Rotate(new Vector3(0,0,.3f));
+            }
+            if(horizontalMovement!=0 && verticalMovement>0 && GameObject.eulerAngles.z < 25) {
+                transform.Rotate(new Vector3(0,0,.3f));
+            }
+            if(!(verticalMovement>0) && GameObject.eulerAngles.z > 0 && GameObject.eulerAngles.z < 30) {
+                transform.Rotate(new Vector3(0,0,-.3f));
+            }
+
+            if(horizontalMovement!=0 && verticalMovement<0 && GameObject.eulerAngles.z < 180) {
+                transform.Rotate(new Vector3(0,0,-.3f));
+            }
+            if(horizontalMovement!=0 && verticalMovement<0 && (GameObject.eulerAngles.z > 310 || GameObject.eulerAngles.z == 0))  {
+                transform.Rotate(new Vector3(0,0,-.3f));
+            }
+            if(!(verticalMovement<0)  && GameObject.eulerAngles.z < 357 && GameObject.eulerAngles.z > 30) {
+                transform.Rotate(new Vector3(0,0,.3f));
+            }
+        }
+        else {
+
         }
     }
 
@@ -135,6 +177,10 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     // Update is called once per frame
     void FixedUpdate()
     {
+        if((animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) && (animator.GetCurrentAnimatorStateInfo(0).IsName("Swim") || animator.GetCurrentAnimatorStateInfo(0).IsName("stop") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnLeft") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnRight"))) {
+            head.enabled = false;
+            Invoke("ShowHead", 0.35f);
+        }
         UpdateCollider();
         var horizontalMovement = Input.GetAxis("Horizontal");
         var verticalMovement = Input.GetAxis("Vertical");
@@ -142,40 +188,12 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         FlipX(horizontalMovement);
         if(horizontalMovement != 0) animator.SetBool("IsIdle", false);
         else animator.SetBool("IsIdle", true);
-        //if(horizontalMovement != 0) headAnimator.SetBool("IsIdle", false);
-        //else headAnimator.SetBool("IsIdle", true);
+        if(horizontalMovement != 0) headAnimator.SetBool("IsIdle", false);
+        else headAnimator.SetBool("IsIdle", true);
         transform.position += new Vector3(horizontalMovement, verticalMovement, 0) * Time.deltaTime * MovementSpeed;
+        ChangeRotation();
         LookAtMouse();  
-        if(horizontalMovement!=0 && verticalMovement>0 && GameObject.eulerAngles.z > 180) {
-            transform.Rotate(new Vector3(0,0,.3f));
-        }
-        if(horizontalMovement!=0 && verticalMovement>0 && GameObject.eulerAngles.z < 25) {
-            transform.Rotate(new Vector3(0,0,.3f));
-        }
-        if(!(verticalMovement>0) && GameObject.eulerAngles.z > 0 && GameObject.eulerAngles.z < 30) {
-            transform.Rotate(new Vector3(0,0,-.3f));
-        }
-
-        if(horizontalMovement!=0 && verticalMovement<0 && GameObject.eulerAngles.z < 180) {
-            transform.Rotate(new Vector3(0,0,-.3f));
-        }
-        if(horizontalMovement!=0 && verticalMovement<0 && (GameObject.eulerAngles.z > 310 || GameObject.eulerAngles.z == 0))  {
-            transform.Rotate(new Vector3(0,0,-.3f));
-        }
-        if(!(verticalMovement<0)  && GameObject.eulerAngles.z < 357 && GameObject.eulerAngles.z > 30) {
-            transform.Rotate(new Vector3(0,0,.3f));
-        }
-        // if(!(verticalMovement>0) && GameObject.eulerAngles.z > 0 && GameObject.eulerAngles.z < 40 && GameObject.eulerAngles.z>1) {
-        //     transform.Rotate(new Vector3(0,0,-1));
-        // }
-        
     }
-
-    //// Not tied to the frame rate like Update() is
-    //void FixedUpdate()
-    //{
-    //    rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-    //}
 
         private void OnParticleCollision(GameObject other) { 
             PlayerTakeDmg(1);
