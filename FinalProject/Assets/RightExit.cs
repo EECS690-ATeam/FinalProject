@@ -64,12 +64,12 @@ public class RightExit : MonoBehaviour
             SceneManager.LoadScene("Cavern1");
         }
         else if (sceneName == "Lab2") {
-            PlayerMovement.spawnPos = new Vector3(-30, 19, 0);
+            PlayerMovement.spawnPos = new Vector3(-60, 36, 0);
             Scene = "Dark Cavern";
             SceneManager.LoadScene("Dark Cavern");
         }
         else if (sceneName == "Lab3") {
-            PlayerMovement.labSpawn = 3;
+            PlayerMovement.spawnPos = new Vector3(-60, 36, 0);
             Scene = "Jellyfish";
             SceneManager.LoadScene("Jellyfish");
         }
@@ -87,9 +87,9 @@ public class RightExit : MonoBehaviour
         }
 
         else if (sceneName == "Jellyfish") {
-            BaseMovement.spawnPos = new Vector3(0, 0, 0);
-            Scene = "Final Encounter";
-            SceneManager.LoadScene("Final Encounter");
+            BaseMovement.spawnPos = new Vector3(17, -7, 0);
+            Scene = "FinalEncounter";
+            SceneManager.LoadScene("FinalEncounter");
         }
         
 

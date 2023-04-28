@@ -18,8 +18,8 @@ public class Encounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        started = true;
-        decision = true;
+        started = false;
+        decision = false;
         waitCount = 7;
     }
 

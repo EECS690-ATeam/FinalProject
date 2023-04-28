@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LeftExit : MonoBehaviour
 {
     public Transform p;
-    private int distance;
+    private double distance;
     private TextMeshPro popup;
     private bool transitioning;
 
@@ -69,8 +69,8 @@ public class LeftExit : MonoBehaviour
             SceneManager.LoadScene("Cavern1");
         }
         else if (sceneName == "Lab3") {
-            PlayerMovement.spawnPos = new Vector3(0, -51, 0);
-            Scene = "Dark Area";
+            PlayerMovement.spawnPos = new Vector3(52, -10, 0);
+            Scene = "Dark Cavern";
             SceneManager.LoadScene("Dark Cavern");
         }
         //water -> lab transitions
