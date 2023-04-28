@@ -182,7 +182,8 @@ PrefabInstance:
       propertyPath: id
       value: 82887d4a-1e1b-4c5f-8124-64dc0bf78c6d
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8508233160435553017, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 11edde06c6a454121b98ab0bde4aad5e, type: 3}
 --- !u!1 &278498589
 GameObject:
@@ -195,7 +196,7 @@ GameObject:
   - component: {fileID: 278498590}
   - component: {fileID: 278498591}
   m_Layer: 0
-  m_Name: Icon
+  m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,7 +237,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -257,7 +258,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1aea5924e04aed249a3c52bdd2e00d4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75c370ff2318ebc4188f931ec3bc00eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -278,7 +279,6 @@ GameObject:
   m_Component:
   - component: {fileID: 308583363}
   - component: {fileID: 308583366}
-  - component: {fileID: 308583365}
   - component: {fileID: 308583364}
   m_Layer: 0
   m_Name: InteractionPoint
@@ -295,7 +295,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308583362}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -88, y: 18, z: -1.1103373}
+  m_LocalPosition: {x: -180.5, y: 53.6, z: -1.1103373}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -400,32 +400,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!61 &308583365
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 308583362}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &308583366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,7 +728,7 @@ PrefabInstance:
     - target: {fileID: 8902422380721378802, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: inventoryMenu
       value: 
-      objectReference: {fileID: 1033883914}
+      objectReference: {fileID: 1033883922}
     - target: {fileID: 8902422380721378803, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1340,7 +1314,7 @@ GameObject:
   - component: {fileID: 663730940}
   - component: {fileID: 663730941}
   m_Layer: 0
-  m_Name: Icon
+  m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1381,7 +1355,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1402,7 +1376,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1aea5924e04aed249a3c52bdd2e00d4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75c370ff2318ebc4188f931ec3bc00eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1687,7 +1661,7 @@ GameObject:
   - component: {fileID: 784561060}
   - component: {fileID: 784561061}
   m_Layer: 0
-  m_Name: Icon
+  m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1728,7 +1702,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1749,7 +1723,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1aea5924e04aed249a3c52bdd2e00d4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75c370ff2318ebc4188f931ec3bc00eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1915,6 +1889,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 169618524261624471, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: inventoryGrid
+      value: 
+      objectReference: {fileID: 416221411}
     - target: {fileID: 4282627518449172217, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: m_Name
       value: PlayerWrapper
@@ -1975,58 +1953,27 @@ PrefabInstance:
       propertyPath: fieldOfView
       value: 
       objectReference: {fileID: 682575110}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7126899443732704868, guid: ea64eda728be86646a53673063996199, type: 3}
+    - {fileID: 7126899443732704867, guid: ea64eda728be86646a53673063996199, type: 3}
+    - {fileID: 7126899443732704866, guid: ea64eda728be86646a53673063996199, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ea64eda728be86646a53673063996199, type: 3}
 --- !u!4 &1033883912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6451730003265565125, guid: ea64eda728be86646a53673063996199, type: 3}
   m_PrefabInstance: {fileID: 1033883911}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1033883913 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6451730003265565120, guid: ea64eda728be86646a53673063996199, type: 3}
+--- !u!114 &1033883922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 169618524261624471, guid: ea64eda728be86646a53673063996199, type: 3}
   m_PrefabInstance: {fileID: 1033883911}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1033883914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033883913}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f395698c740a4951baa2d209b39714c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryMenu: {fileID: 1127660527}
-  inventoryGrid: {fileID: 416221411}
-  isOpen: 0
---- !u!114 &1033883915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033883913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d606960680fd049619997dd02d2471f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1033883916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033883913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47429e27374041a59da5b7c07ddb0d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 2079145339}
 --- !u!1 &1039193214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2121,7 +2068,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1042387514}
   - component: {fileID: 1042387517}
-  - component: {fileID: 1042387516}
   - component: {fileID: 1042387515}
   m_Layer: 0
   m_Name: InteractionPoint (2)
@@ -2243,32 +2189,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!61 &1042387516
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1042387513}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &1042387517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2301,7 +2221,7 @@ GameObject:
   - component: {fileID: 1080821294}
   - component: {fileID: 1080821295}
   m_Layer: 0
-  m_Name: LetterE
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2316,7 +2236,7 @@ Transform:
   m_GameObject: {fileID: 1080821293}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.1, y: 1, z: -0.20846367}
-  m_LocalScale: {x: 0.5223234, y: 0.49244803, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308583363}
@@ -2342,7 +2262,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2363,7 +2283,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 632f8a98e2ffb6747a9c946938e4fe22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4716fd4e0c4ad5c4dbffb300088e881a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2484,11 +2404,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8186338166384818281, guid: 973b7d00c8c0c9644962d04d6885248d, type: 3}
   m_PrefabInstance: {fileID: 1127660525}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1127660527 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8186338166384818282, guid: 973b7d00c8c0c9644962d04d6885248d, type: 3}
-  m_PrefabInstance: {fileID: 1127660525}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1239933618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,7 +2415,7 @@ GameObject:
   - component: {fileID: 1239933619}
   - component: {fileID: 1239933620}
   m_Layer: 0
-  m_Name: LetterE
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2515,7 +2430,7 @@ Transform:
   m_GameObject: {fileID: 1239933618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.1, y: 1, z: -0.20846367}
-  m_LocalScale: {x: 0.5223234, y: 0.49244803, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1042387514}
@@ -2541,7 +2456,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2562,7 +2477,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 632f8a98e2ffb6747a9c946938e4fe22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4716fd4e0c4ad5c4dbffb300088e881a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2876,7 +2791,7 @@ GameObject:
   - component: {fileID: 1481107564}
   - component: {fileID: 1481107565}
   m_Layer: 0
-  m_Name: LetterE
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2891,7 +2806,7 @@ Transform:
   m_GameObject: {fileID: 1481107563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.1, y: 1, z: -0.20846367}
-  m_LocalScale: {x: 0.5223234, y: 0.49244803, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1919873540}
@@ -2917,7 +2832,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2938,7 +2853,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 632f8a98e2ffb6747a9c946938e4fe22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4716fd4e0c4ad5c4dbffb300088e881a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3665,7 +3580,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1919873540}
   - component: {fileID: 1919873543}
-  - component: {fileID: 1919873542}
   - component: {fileID: 1919873541}
   m_Layer: 0
   m_Name: InteractionPoint (1)
@@ -3787,32 +3701,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!61 &1919873542
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1919873539}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &1919873543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3941,11 +3829,6 @@ PrefabInstance:
 --- !u!224 &2079145338 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6250024534842603745, guid: 9eee109311118437ea52034dafeeb271, type: 3}
-  m_PrefabInstance: {fileID: 2079145337}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2079145339 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6250024534842603744, guid: 9eee109311118437ea52034dafeeb271, type: 3}
   m_PrefabInstance: {fileID: 2079145337}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2101512716
