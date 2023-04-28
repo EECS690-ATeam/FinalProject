@@ -173,13 +173,16 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         }
     }
 
+    void HideHead() {
+        head.enabled = false;
+    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         if((animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) && (animator.GetCurrentAnimatorStateInfo(0).IsName("Swim") || animator.GetCurrentAnimatorStateInfo(0).IsName("stop") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnLeft") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnRight"))) {
             head.enabled = false;
-            Invoke("ShowHead", 0.35f);
+            Invoke("ShowHead", 0.4f);
         }
         UpdateCollider();
         var horizontalMovement = Input.GetAxis("Horizontal");
