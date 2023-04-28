@@ -8098,11 +8098,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8902422380721378803, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
   m_PrefabInstance: {fileID: 1298713281}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1298713283 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8902422380721378800, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
-  m_PrefabInstance: {fileID: 1298713281}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1319288162
 GameObject:
   m_ObjectHideFlags: 0
@@ -10199,6 +10194,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6451730003265565125, guid: ea64eda728be86646a53673063996199, type: 3}
   m_PrefabInstance: {fileID: 4282627519594782628}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!114 &7126899443732704874 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 169618524261624471, guid: ea64eda728be86646a53673063996199, type: 3}
@@ -10210,6 +10206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f395698c740a4951baa2d209b39714c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &8044304852116357892
 PrefabInstance:
   m_ObjectHideFlags: 0

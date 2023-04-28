@@ -83,6 +83,7 @@ public class Inventory : MonoBehaviour, IDataPersistence
 
     public void SaveData(GameData data)
     {
+        Debug.Log("Saving data...");
         foreach (KeyValuePair<string, int> pair in simpleDictionary)
         {
             if (data.simpleDictionary.ContainsKey(pair.Key))
@@ -92,7 +93,6 @@ public class Inventory : MonoBehaviour, IDataPersistence
             data.simpleDictionary.Add(pair.Key, pair.Value);
         }
     }
-
 
     private void OnEnable()
     {

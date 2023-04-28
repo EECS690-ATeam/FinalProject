@@ -20,6 +20,7 @@ public class DataPersistenceManager : MonoBehaviour
     
     private void Awake()
     {
+        Debug.Log("DPM HAS WOKEN");
         if(instance != null)
         {
             Debug.LogError("Found more than one Data Persistence Manager in the scene.");
@@ -48,13 +49,6 @@ public class DataPersistenceManager : MonoBehaviour
         Debug.Log("OnSceneLoaded Called");
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
-
-        // start up the auto saving coroutine
-        //if (autoSaveCoroutine != null)
-        //{
-        //    StopCoroutine(autoSaveCoroutine);
-        //}
-        //autoSaveCoroutine = StartCoroutine(AutoSave());
     }
 
     public void OnSceneUnloaded(Scene scene)
@@ -71,6 +65,7 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void LoadGame()
     {
+
         // Load any saved data from a file using data handler
         this.gameData = dataHandler.Load();
 

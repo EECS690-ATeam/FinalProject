@@ -14,13 +14,13 @@ public class InventoryManager : MonoBehaviour
     //Register to OnInventoryChange Event
     private void OnEnable()
     {
-        Debug.Log("Inventory Manager Enable");
+        // Debug.Log("Inventory Manager Enable");
         Inventory.OnInventoryChange += DrawInventory;
     }
 
     private void OnDisable()
     {
-        Debug.Log("Inventory Manager Disable");
+        // Debug.Log("Inventory Manager Disable");
         Inventory.OnInventoryChange -= DrawInventory;
     }
 

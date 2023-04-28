@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     public void SaveData(GameData data)
     {
         // Problem with scenes having different position
-        data.playerPosition = this.transform.position;
+        // data.playerPosition = this.transform.position;
         data.scene = this.Scene;
     }
 

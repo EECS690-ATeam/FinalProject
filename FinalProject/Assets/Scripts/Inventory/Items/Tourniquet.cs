@@ -13,6 +13,14 @@ public class Tourniquet : MonoBehaviour, ICollectible, IDataPersistence
         id = System.Guid.NewGuid().ToString();
     }
 
+    public static event HandleTourniquetCollected OnTourniquetCollected;
+
+    // delegate is in place of event to allow return types and args
+    public delegate void HandleTourniquetCollected(ItemData itemData);
+
+    // reference to scriptable object
+    public ItemData tourniquetData;
+
     public bool beenCollected = false;
 
     public void LoadData(GameData data)
@@ -26,7 +34,6 @@ public class Tourniquet : MonoBehaviour, ICollectible, IDataPersistence
 
     public void SaveData(GameData data)
     {
-        Debug.Log("Tourniquet save");
         if (data.itemsCollected.ContainsKey(id))
         {
             data.itemsCollected.Remove(id);
@@ -34,18 +41,11 @@ public class Tourniquet : MonoBehaviour, ICollectible, IDataPersistence
         data.itemsCollected.Add(id, beenCollected);
     }
 
-    public static event HandleTourniquetCollected OnTourniquetCollected;
-
-    // delegate is in place of event to allow return types and args
-    public delegate void HandleTourniquetCollected(ItemData itemData);
-
-    // reference to scriptable object
-    public ItemData tourniquetData;
-
     public void Collect()
     {
         Debug.Log("Tourniquet Collected");
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        beenCollected = true;
         OnTourniquetCollected?.Invoke(tourniquetData);
     }
 }

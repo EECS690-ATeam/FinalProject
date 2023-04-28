@@ -17,9 +17,9 @@ public class FileDataHandler
         this.dataFileName = dataFileName;
     }
 
-
     public GameData Load()
     {
+        Debug.Log("FileDataHandler LOAD");
         string fullPath = Path.Combine(dataDirPath, dataFileName);
         // variable to load into 
         GameData loadedData = null;
@@ -35,7 +35,6 @@ public class FileDataHandler
                         dataToLoad = reader.ReadToEnd();
                     }
                 }
-
                 // deserialize
                 loadedData = JsonUtility.FromJson<GameData>(dataToLoad);
             }
@@ -49,21 +48,16 @@ public class FileDataHandler
 
     public void Save(GameData data)
     {
-
+        Debug.Log("FileDataHandler SAVE");
         // Path.combine to account for different OS's having different path separators
-        //string fullPath = dataDirPath + "/" + dataFileName;
         string fullPath = Path.Combine(dataDirPath, dataFileName);
-
         try
         {
             // creating directory file will be written to if doesn't already exist
             Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
-
             // serialize game data object into json
             string dataToStore = JsonUtility.ToJson(data, true);
-
-            // write data to file
-            // "using" ensure filestream is closed once done writing
+            // write data to file; "using" ensure Filestream is closed once done writing
             using (FileStream stream = new FileStream(fullPath, FileMode.Create))
             {
                 using (StreamWriter writer = new StreamWriter(stream))
@@ -71,7 +65,6 @@ public class FileDataHandler
                     writer.Write(dataToStore);
                 }
             }
-
         }
         catch(Exception e)
         {

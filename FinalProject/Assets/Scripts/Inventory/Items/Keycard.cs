@@ -34,7 +34,6 @@ public class Keycard : MonoBehaviour, ICollectible, IDataPersistence
 
     public void SaveData(GameData data)
     {
-        Debug.Log("Keycard save");
         if (data.itemsCollected.ContainsKey(id))
         {
             data.itemsCollected.Remove(id);
