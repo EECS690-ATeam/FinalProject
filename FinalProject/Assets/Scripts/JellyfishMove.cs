@@ -9,6 +9,9 @@ public class JellyfishMove : MonoBehaviour
     [SerializeField] private float boundsXMax;
     [SerializeField] private float boundsYMin;
     [SerializeField] private float boundsYMax;
+    [SerializeField] private PlayerMovement player;
+
+    private GameObject playerObject;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,8 @@ public class JellyfishMove : MonoBehaviour
         boundsXMax = -40;
         boundsYMin = 29;
         boundsYMax = 60;
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -46,5 +51,15 @@ public class JellyfishMove : MonoBehaviour
             value = max;
         }
         return value;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Jellyfish");
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.name == "Player")
+        {
+            player.JellyfishDamage();
+        }
     }
 }

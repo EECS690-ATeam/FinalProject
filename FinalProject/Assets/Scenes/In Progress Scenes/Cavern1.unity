@@ -777,13 +777,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 535887882, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289544277, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 169618524261624471, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: inventoryGrid
       value: 
       objectReference: {fileID: 2145740424}
+    - target: {fileID: 2758914404964881630, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4282627518449172217, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: m_Name
       value: PlayerWrapper
+      objectReference: {fileID: 0}
+    - target: {fileID: 4282627518449172217, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4282627518449172218, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: m_RootOrder
@@ -833,6 +849,14 @@ PrefabInstance:
       propertyPath: redTinge
       value: 
       objectReference: {fileID: 655479822}
+    - target: {fileID: 6451730003265565125, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451730003265565126, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7190313258184686677, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: fieldOfView
       value: 
@@ -1020,63 +1044,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1011664572
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3688000244505364117, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_Name
-      value: Jellyfish
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688000244505364121, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_RootOrder
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688000244505364121, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -18
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688000244505364121, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688000244505364121, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688000244505364121, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688000244505364121, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688000244505364121, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688000244505364121, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688000244505364121, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688000244505364121, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3688000244505364121, guid: 841081e46719de44391513e27ec499f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 841081e46719de44391513e27ec499f6, type: 3}
 --- !u!1 &1354290464
 GameObject:
   m_ObjectHideFlags: 0

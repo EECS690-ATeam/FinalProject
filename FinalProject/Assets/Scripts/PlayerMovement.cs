@@ -236,6 +236,21 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         //     spawnPos = new Vector3(-26, 0, 0);
         //     if(GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
         // }
+        if(collision.gameObject.name == "Jellyfish")
+        {
+            PlayerTakeDmg(25);
+            oofSound.Play();
+            spawnPos = new Vector3(-26, 0, 0);
+            if(GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
+        }
+    }
+
+    public void JellyfishDamage()
+    {
+        PlayerTakeDmg(25);
+        oofSound.Play();
+        spawnPos = new Vector3(-26, 0, 0);
+        if (GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
     }
 
     private void spawnAtLab() {
