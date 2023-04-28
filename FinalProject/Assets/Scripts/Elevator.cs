@@ -86,7 +86,7 @@ public class Elevator : MonoBehaviour
         playerSR.color = new Color(255, 255, 255, 0);
 
         // Move player
-        playerTransform.position = new Vector3(23.8f, -18.97f, -0.1f);
+        playerTransform.position = new Vector3(23.8f, -18.1f, -0.1f);
         var targetCamPos = mainCamera.transform.position;
         var targetZoom = secondCamera.orthographicSize;
 
