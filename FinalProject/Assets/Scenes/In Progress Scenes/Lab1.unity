@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 227779524}
   - component: {fileID: 227779525}
   m_Layer: 0
-  m_Name: Icon
+  m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -393,7 +393,7 @@ Transform:
   m_GameObject: {fileID: 227779523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.180439, y: 1.3997192, z: -0.10989797}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1392260672}
@@ -419,7 +419,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -440,7 +440,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1aea5924e04aed249a3c52bdd2e00d4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75c370ff2318ebc4188f931ec3bc00eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -865,7 +865,7 @@ GameObject:
   - component: {fileID: 634564280}
   - component: {fileID: 634564281}
   m_Layer: 0
-  m_Name: Icon
+  m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -880,7 +880,7 @@ Transform:
   m_GameObject: {fileID: 634564279}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.180439, y: 1.3997192, z: -0.10989797}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1289635441}
@@ -906,7 +906,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -927,7 +927,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1aea5924e04aed249a3c52bdd2e00d4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75c370ff2318ebc4188f931ec3bc00eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -998,7 +998,7 @@ GameObject:
   - component: {fileID: 674695819}
   - component: {fileID: 674695820}
   m_Layer: 0
-  m_Name: LetterE
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1013,7 +1013,7 @@ Transform:
   m_GameObject: {fileID: 674695818}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.1, y: 1, z: -0.20846367}
-  m_LocalScale: {x: 0.5223234, y: 0.49244803, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 190098689}
@@ -1039,7 +1039,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1060,7 +1060,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 632f8a98e2ffb6747a9c946938e4fe22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4716fd4e0c4ad5c4dbffb300088e881a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1188,7 +1188,7 @@ GameObject:
   - component: {fileID: 899781076}
   - component: {fileID: 899781077}
   m_Layer: 0
-  m_Name: LetterE
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1203,7 +1203,7 @@ Transform:
   m_GameObject: {fileID: 899781075}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.1, y: 1, z: -0.20846367}
-  m_LocalScale: {x: 0.5223234, y: 0.49244803, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1289635441}
@@ -1229,7 +1229,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1250,7 +1250,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 632f8a98e2ffb6747a9c946938e4fe22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4716fd4e0c4ad5c4dbffb300088e881a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1282,7 +1282,7 @@ GameObject:
   - component: {fileID: 942287349}
   - component: {fileID: 942287350}
   m_Layer: 0
-  m_Name: Icon
+  m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1297,7 +1297,7 @@ Transform:
   m_GameObject: {fileID: 942287348}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.180439, y: 1.3997192, z: -0.10989797}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 190098689}
@@ -1323,7 +1323,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1344,7 +1344,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1aea5924e04aed249a3c52bdd2e00d4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75c370ff2318ebc4188f931ec3bc00eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1838,7 +1838,7 @@ GameObject:
   - component: {fileID: 1336061661}
   - component: {fileID: 1336061662}
   m_Layer: 0
-  m_Name: LetterE
+  m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1853,7 +1853,7 @@ Transform:
   m_GameObject: {fileID: 1336061660}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 13.1, y: 1, z: -0.20846367}
-  m_LocalScale: {x: 0.5223234, y: 0.49244803, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1392260672}
@@ -1879,7 +1879,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8722c7b7c42a9574aa329ae5443e5f5b, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1900,7 +1900,7 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 632f8a98e2ffb6747a9c946938e4fe22, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4716fd4e0c4ad5c4dbffb300088e881a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
