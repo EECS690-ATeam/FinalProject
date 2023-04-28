@@ -75,9 +75,9 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
         if (collision.gameObject.name == "RightBorder" && (Input.GetAxisRaw("Horizontal") > 0))
         {
             if (sceneName == "Lab1") {
-                PlayerMovement.spawnPos = new Vector3(-26, 0, 0);
-                Scene = "Kelp Cavern";
-                SceneManager.LoadScene("Kelp Cavern");
+                PlayerMovement.spawnPos = new Vector3(0, 0, 0);
+                Scene = "Cavern1";
+                SceneManager.LoadScene("Cavern1");
             }
 
             else if (sceneName == "Lab2") {
@@ -102,12 +102,12 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
 
             else if (sceneName == "Lab2") {
                 PlayerMovement.spawnPos = new Vector3(64, 0, 0);
-                Scene = "Kelp Cavern";
-                SceneManager.LoadScene("Kelp Cavern");
+                Scene = "Cavern1";
+                SceneManager.LoadScene("Cavern1");
             }
 
             else if (sceneName == "Lab3") {
-                PlayerMovement.spawnPos = new Vector3(170, -51, 0);
+                PlayerMovement.spawnPos = new Vector3(0, -51, 0);
                 Scene = "Dark Area";
                 SceneManager.LoadScene("Dark Cavern");
             }
