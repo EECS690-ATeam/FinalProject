@@ -105,6 +105,7 @@
     <Compile Include="Assets/Scripts/HeadMovement.cs" />
     <Compile Include="Assets/Scripts/Note.cs" />
     <Compile Include="Assets/Scripts/Thought.cs" />
+    <Compile Include="Assets/ResetTurnHead.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/FunctionUpdater.cs" />
     <Compile Include="Assets/Scripts/SharkChase.cs" />
     <Compile Include="Assets/Scripts/MainMenu.cs" />

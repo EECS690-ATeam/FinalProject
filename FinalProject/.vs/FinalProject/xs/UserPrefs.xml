@@ -1,30 +1,28 @@
 ﻿<Properties StartupConfiguration="{E1456745-ED92-4EB6-8905-E64DC1E47277}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Inventory/Data Persistence/SerializableTypes/SerializableInventory.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseMovement.cs">
     <Files>
       <File FileName="Assets/Scripts/Inventory/Data Persistence/GameData.cs" Line="26" Column="46" />
-      <File FileName="Assets/Scripts/Inventory/Data Persistence/DataPersistenceManager.cs" Line="34" Column="20" />
-      <File FileName="Assets/Scripts/Inventory/Inventory.cs" Line="147" Column="50" />
-      <File FileName="Assets/Scripts/Inventory/Data Persistence/SerializableTypes/SerializableDisctionary.cs" Line="41" Column="1" />
+      <File FileName="Assets/Scripts/Inventory/Data Persistence/DataPersistenceManager.cs" />
+      <File FileName="Assets/Scripts/Inventory/Inventory.cs" />
+      <File FileName="Assets/Scripts/Inventory/Data Persistence/SerializableTypes/SerializableDisctionary.cs" />
       <File FileName="Assets/Scripts/Inventory/Data Persistence/SerializableTypes/SerializableInventory.cs" Line="20" Column="32" />
-      <File FileName="Assets/Scripts/Inventory/InventoryManager.cs" Line="48" Column="10" />
-      <File FileName="Assets/Scripts/Inventory/Items/Battery.cs" Line="43" Column="5" />
-      <File FileName="Assets/Scripts/Inventory/Items/Keycard.cs" Line="20" Column="37" />
-      <File FileName="Assets/Scripts/Inventory/InventoryItem.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BaseMovement.cs" Line="33" Column="33" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="47" Column="35" />
+      <File FileName="Assets/Scripts/Inventory/InventoryManager.cs" />
+      <File FileName="Assets/Scripts/Inventory/Items/Battery.cs" />
+      <File FileName="Assets/Scripts/Inventory/Items/Keycard.cs" />
+      <File FileName="Assets/Scripts/Inventory/InventoryItem.cs" />
+      <File FileName="Assets/Scripts/BaseMovement.cs" Line="38" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" />
       <File FileName="Assets/Scripts/InteractionPoint.cs" Line="63" Column="10" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FinalProject" expanded="True">
-            <Node name="Assets" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Inventory" expanded="True">
                   <Node name="Data Persistence" expanded="True">
-                    <Node name="SerializableTypes" expanded="True">
-                      <Node name="SerializableInventory.cs" selected="True" />
-                    </Node>
+                    <Node name="SerializableTypes" expanded="True" />
                   </Node>
                   <Node name="Items" expanded="True" />
                 </Node>
@@ -38,7 +36,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="a1d4e4f1-ce9d-4776-bd79-0d704b3f38e9" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a1d4e4f1-ce9d-4776-bd79-0d704b3f38e9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="48eaaeed-ced0-438b-a348-2eeaacd660e4" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

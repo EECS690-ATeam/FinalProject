@@ -682,7 +682,7 @@ PrefabInstance:
     - target: {fileID: 8902422380721378802, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: inventoryMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1727874517}
     - target: {fileID: 8902422380721378803, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

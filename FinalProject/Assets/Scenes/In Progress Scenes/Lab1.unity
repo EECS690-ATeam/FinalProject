@@ -1054,18 +1054,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8902422380721378803, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
   m_PrefabInstance: {fileID: 8902422380112164877}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &745549311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745549309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3455b6cacc78146ecab57dd4f499248c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &794110246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1845,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1370954581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1370954583}
+  - component: {fileID: 1370954582}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1370954582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370954581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e60e075b83942e2b9cfbacb73252c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryData: {fileID: 11400000, guid: adde24a84d2c44145b2f6aeea94e7d3f, type: 2}
+  tourniquetData: {fileID: 11400000, guid: c40436b379a194796856091a89381753, type: 2}
+  syringeData: {fileID: 11400000, guid: ad9c5b87c2fa349b794bc9774636270b, type: 2}
+  KeycardDataLvl1: {fileID: 11400000, guid: cf6a079164366423e9874e61ba73964a, type: 2}
+  KeycardDataLvl2: {fileID: 11400000, guid: 30fccddf831ed45d6ab796b9660827d4, type: 2}
+  KeycardDataLvl3: {fileID: 11400000, guid: 44081c54fb2344a08b3a79507400eeb9, type: 2}
+  KeycardDataLvl4: {fileID: 11400000, guid: b032e85984b2f4f2ea775435600939c3, type: 2}
+  KeycardDataLvl5: {fileID: 11400000, guid: d3f07cd8bfc5c43e7a4076538de97c4b, type: 2}
+  inventory: []
+  newCount: 0
+  itemName: 
+--- !u!4 &1370954583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370954581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.7324877, y: 0.8462184, z: -0.9250817}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1392260671
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,7 +3116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8902422380721378800, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: m_TagString
-      value: invPanel
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8902422380721378802, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: inventoryMenu
