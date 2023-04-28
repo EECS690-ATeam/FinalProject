@@ -11,20 +11,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject optionsScreen;
     public GameObject creditsScreen;
-    public GameObject visualsScreen;
     public GameObject buttonsScreen;
-    public GameObject videoCanvas;
-    public VideoPlayer videoPlayer;
-    public GameObject vp;
-
- 
-    //public void PlayGame()
-    //{
-    //    // Start new game
-    //    Debug.Log("Play game pressed");
-    //    //DataPersistenceManager.instance.NewGame();
-    //    SceneManager.LoadScene("Intro Cut Scene");
-    //}
 
     public void NewGame()
     {

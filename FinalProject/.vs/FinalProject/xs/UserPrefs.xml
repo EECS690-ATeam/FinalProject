@@ -5,7 +5,7 @@
       <File FileName="Assets/Scripts/Inventory/Data Persistence/DataPersistenceManager.cs" />
       <File FileName="Assets/Scripts/Inventory/Inventory.cs" />
       <File FileName="Assets/Scripts/Inventory/Data Persistence/SerializableTypes/SerializableDisctionary.cs" />
-      <File FileName="Assets/Scripts/Inventory/Data Persistence/SerializableTypes/SerializableInventory.cs" Line="20" Column="32" />
+      <File FileName="Assets/Scripts/Inventory/Data Persistence/SerializableTypes/SerializableInventory.cs" />
       <File FileName="Assets/Scripts/Inventory/InventoryManager.cs" />
       <File FileName="Assets/Scripts/Inventory/Items/Battery.cs" />
       <File FileName="Assets/Scripts/Inventory/Items/Keycard.cs" />
@@ -36,7 +36,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="a1d4e4f1-ce9d-4776-bd79-0d704b3f38e9" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="48eaaeed-ced0-438b-a348-2eeaacd660e4" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5d96c056-8d1b-4caf-922b-c0a088637fc9" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

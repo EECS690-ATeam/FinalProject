@@ -1308,11 +1308,7 @@ PrefabInstance:
     - target: {fileID: 8902422380721378802, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: inventoryMenu
       value: 
-<<<<<<< Updated upstream
       objectReference: {fileID: 1033883922}
-=======
-      objectReference: {fileID: 1033883913}
->>>>>>> Stashed changes
     - target: {fileID: 8902422380721378803, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2482,8 +2478,6 @@ PrefabInstance:
       propertyPath: inventoryGrid
       value: 
       objectReference: {fileID: 416221411}
-<<<<<<< Updated upstream
-=======
     - target: {fileID: 169618524261624471, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: inventoryMenu
       value: 
@@ -2492,7 +2486,6 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1167638773}
->>>>>>> Stashed changes
     - target: {fileID: 4282627518449172217, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: m_Name
       value: PlayerWrapper
@@ -2554,13 +2547,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 682575110}
     m_RemovedComponents:
-<<<<<<< Updated upstream
     - {fileID: 7126899443732704868, guid: ea64eda728be86646a53673063996199, type: 3}
     - {fileID: 7126899443732704867, guid: ea64eda728be86646a53673063996199, type: 3}
-=======
-    - {fileID: 7126899443732704867, guid: ea64eda728be86646a53673063996199, type: 3}
-    - {fileID: 7126899443732704868, guid: ea64eda728be86646a53673063996199, type: 3}
->>>>>>> Stashed changes
     - {fileID: 7126899443732704866, guid: ea64eda728be86646a53673063996199, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ea64eda728be86646a53673063996199, type: 3}
 --- !u!4 &1033883912 stripped
@@ -2568,11 +2556,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6451730003265565125, guid: ea64eda728be86646a53673063996199, type: 3}
   m_PrefabInstance: {fileID: 1033883911}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!114 &1033883922 stripped
-=======
---- !u!114 &1033883913 stripped
->>>>>>> Stashed changes
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 169618524261624471, guid: ea64eda728be86646a53673063996199, type: 3}
   m_PrefabInstance: {fileID: 1033883911}
@@ -3013,14 +2997,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8186338166384818281, guid: 973b7d00c8c0c9644962d04d6885248d, type: 3}
   m_PrefabInstance: {fileID: 1127660525}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &1167638773 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6250024534842603744, guid: 9eee109311118437ea52034dafeeb271, type: 3}
   m_PrefabInstance: {fileID: 2079145337}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &1239933618
 GameObject:
   m_ObjectHideFlags: 0

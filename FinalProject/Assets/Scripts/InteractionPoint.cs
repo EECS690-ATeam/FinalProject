@@ -22,7 +22,7 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
     public TMP_Text thought;
     public bool isStory;
     public Transform p;
-    private bool beenSeen;
+    public bool beenSeen;
     private int distance;
     private AudioSource a;
 
@@ -78,8 +78,9 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
         data.ipsVisited.TryGetValue(id, out beenSeen);
         if (beenSeen)
         {
-            this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
-            this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            this.gameObject.SetActive(false);
+            // this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+            // this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
         }
     }
 
