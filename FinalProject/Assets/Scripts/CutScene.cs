@@ -11,7 +11,7 @@ public class CutScene : MonoBehaviour
 
     public void Start()
     {
-        Invoke("TransitionToGame", 50);
+        Invoke("TransitionToGame", 40);
     }
 
     public void Update()
