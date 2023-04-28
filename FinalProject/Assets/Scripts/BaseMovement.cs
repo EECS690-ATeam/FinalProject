@@ -23,8 +23,7 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        this.transform.position += spawnPos;
-        Debug.Log(this.transform.position += spawnPos);
+        this.transform.position = new Vector3(spawnPos[0], spawnPos[1], spawnPos[2]);
         //this.playerInventory = new Dictionary<ItemData, InventoryItem>();
     }
 

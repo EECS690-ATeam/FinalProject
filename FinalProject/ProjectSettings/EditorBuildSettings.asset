@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pause Scene.unity
     guid: a5506a2a403994e4a91ee43312ebc181
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/In Progress Scenes/Kelp Cavern.unity
     guid: 99fea768cd3b1a54fa9958805cbd9362
   - enabled: 1
@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/In Progress Scenes/Jellyfish.unity
     guid: 57cfdf28c9e49fc41a46d0dd332cbc03
+  - enabled: 1
+    path: Assets/Scenes/In Progress Scenes/Lab3.unity
+    guid: e5c4257224d0e564ca997d127443f2fe
   m_configObjects: {}

@@ -134,7 +134,7 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
     IEnumerator noteMessage() {
         noteOverlay.color = new Color(1f, 1f, 1f, 1f);
         noteText.text = message1;
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(10);
         noteText.text = "";
         noteOverlay.color = new Color(1f, 1f, 1f, 0f);
     }

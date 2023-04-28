@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
             spawnAtLab();
         }
         else {
-            this.transform.position += spawnPos;
+            this.transform.position = new Vector3(spawnPos[0], spawnPos[1], spawnPos[2]);
         }
     }
 

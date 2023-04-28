@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class ExitPrompt : MonoBehaviour
 {
     public Transform p;
-    public bool isRightExit;
     private int distance;
     private TextMeshPro popup;
     private bool transitioning;
@@ -52,7 +51,11 @@ public class ExitPrompt : MonoBehaviour
     public void Transition() {
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if (isRightExit) {
+        if (sceneName == "Exterior Area") {
+            SceneManager.LoadScene("Start Menu");
+        }
+        Debug.Log(this.transform.name);
+        if (this.transform.name == "RightExit") {
             //lab -> water transitions
             if (sceneName == "Lab1") {
                 PlayerMovement.spawnPos = new Vector3(0, 0, 0);
@@ -74,7 +77,7 @@ public class ExitPrompt : MonoBehaviour
 
             //water -> lab transitions
             else if (sceneName == "Cavern1") {
-                BaseMovement.spawnPos = new Vector3(0, 0, 0);
+                BaseMovement.spawnPos = new Vector3(-23, -26, 0);
                 Scene = "Lab2";
                 SceneManager.LoadScene("Lab2");
             }
@@ -119,7 +122,6 @@ public class ExitPrompt : MonoBehaviour
                 SceneManager.LoadScene("Lab2");
             }
         }
-
 
     }
 }
