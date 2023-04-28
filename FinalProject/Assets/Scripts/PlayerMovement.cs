@@ -220,15 +220,13 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     }
 
     private void resetScene() {
-        SceneManager.LoadScene("Kelp Cavern");
+        SceneManager.LoadScene("Cavern1");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("collision");
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        Debug.Log(collision.gameObject.name);
         // if(collision.gameObject.name == "EcholocationFish")
         // {
         //     PlayerTakeDmg(25);
@@ -245,7 +243,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
                 this.transform.position -= temp;
             }
 
-            else if (sceneName == "Kelp Cavern") {
+            else if (sceneName == "Cavern1") {
                 BaseMovement.spawnPos = new Vector3(0, 0, 0);
                 Scene = "Lab2";
                 SceneManager.LoadScene("Lab2");
@@ -267,7 +265,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
                 this.transform.position += temp;
             }
 
-            else if (sceneName == "Kelp Cavern") {
+            else if (sceneName == "Cavern1") {
                 BaseMovement.spawnPos = new Vector3(6, 0, 0);
                 Scene = "Lab1";
                 SceneManager.LoadScene("Lab1");
