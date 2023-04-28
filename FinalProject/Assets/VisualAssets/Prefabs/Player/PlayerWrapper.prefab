@@ -470,7 +470,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 94f5d6b024ea9384889ca0c4e3b1f8ad, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.061
+  m_Volume: 0.054
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f395698c740a4951baa2d209b39714c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryMenu: {fileID: 8186338166384818282, guid: 973b7d00c8c0c9644962d04d6885248d, type: 3}
+  inventoryMenu: {fileID: 0}
   inventoryGrid: {fileID: 0}
   isOpen: 0
 --- !u!114 &2930071006580583921
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47429e27374041a59da5b7c07ddb0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 6250024534842603744, guid: 9eee109311118437ea52034dafeeb271, type: 3}
+  pauseMenu: {fileID: 0}
 --- !u!114 &5196136800945658292
 MonoBehaviour:
   m_ObjectHideFlags: 0

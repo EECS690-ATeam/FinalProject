@@ -125,6 +125,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
             animator.SetBool("Flip", true);
             facingRight = !facingRight;
             // transform.eulerAngles += new Vector3(0,180,0);
+            transform.rotation = Quaternion.Euler(0,0,0);
         }
         if(!facingRight && x>0) {
             animator.SetBool("SetTurnR", true);
@@ -132,6 +133,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
             animator.SetBool("Flip", true);
             facingRight = !facingRight;
             // transform.eulerAngles += new Vector3(0,-180,0);
+            transform.rotation = Quaternion.Euler(0,0,0);
         }
         if(x != 0) 
         {
@@ -169,7 +171,25 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
             }
         }
         else {
+            if(horizontalMovement!=0 && verticalMovement<0 && GameObject.eulerAngles.z > 180) {
+                transform.Rotate(new Vector3(0,0,.3f));
+            }
+            if(horizontalMovement!=0 && verticalMovement<0 && GameObject.eulerAngles.z < 40) {
+                transform.Rotate(new Vector3(0,0,.3f));
+            }
+            if(!(verticalMovement<0) && GameObject.eulerAngles.z > 0 && GameObject.eulerAngles.z < 44) {
+                transform.Rotate(new Vector3(0,0,-.3f));
+            }
 
+            if(horizontalMovement!=0 && verticalMovement>0 && GameObject.eulerAngles.z < 180) {
+                transform.Rotate(new Vector3(0,0,-.3f));
+            }
+            if(horizontalMovement!=0 && verticalMovement>0 && (GameObject.eulerAngles.z > 335 || GameObject.eulerAngles.z == 0))  {
+                transform.Rotate(new Vector3(0,0,-.3f));
+            }
+            if(!(verticalMovement>0)  && GameObject.eulerAngles.z < 357 && GameObject.eulerAngles.z > 44) {
+                transform.Rotate(new Vector3(0,0,.3f));
+            }
         }
     }
 
@@ -180,10 +200,10 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     // Update is called once per frame
     void FixedUpdate()
     {
-        if((animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) && (animator.GetCurrentAnimatorStateInfo(0).IsName("Swim") || animator.GetCurrentAnimatorStateInfo(0).IsName("stop") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnLeft") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnRight"))) {
-            head.enabled = false;
-            Invoke("ShowHead", 0.4f);
-        }
+        // if((animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) && (animator.GetCurrentAnimatorStateInfo(0).IsName("Swim") || animator.GetCurrentAnimatorStateInfo(0).IsName("stop") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnLeft") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnRight"))) {
+        //     head.enabled = false;
+        //     Invoke("ShowHead", 0.4f);
+        // }
         UpdateCollider();
         var horizontalMovement = Input.GetAxis("Horizontal");
         var verticalMovement = Input.GetAxis("Vertical");

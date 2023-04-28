@@ -2364,10 +2364,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerWrapper
       objectReference: {fileID: 0}
-    - target: {fileID: 4282627518449172217, guid: ea64eda728be86646a53673063996199, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4282627518449172218, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2412,18 +2408,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7126899443732704876, guid: ea64eda728be86646a53673063996199, type: 3}
-      propertyPath: m_Volume
-      value: 0.054
-      objectReference: {fileID: 0}
     - target: {fileID: 7190313258184686677, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: fieldOfView
       value: 
       objectReference: {fileID: 682575110}
-    m_RemovedComponents:
-    - {fileID: 7126899443732704868, guid: ea64eda728be86646a53673063996199, type: 3}
-    - {fileID: 7126899443732704867, guid: ea64eda728be86646a53673063996199, type: 3}
-    - {fileID: 7126899443732704866, guid: ea64eda728be86646a53673063996199, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea64eda728be86646a53673063996199, type: 3}
 --- !u!4 &1033883912 stripped
 Transform:
@@ -3143,7 +3132,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 1033883913}
-  isRightExit: 1
   Scene: 
 --- !u!224 &1647224596
 RectTransform:
