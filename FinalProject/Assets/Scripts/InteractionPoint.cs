@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class InteractionPoint : MonoBehaviour, IDataPersistence
 {
@@ -20,7 +21,9 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
     public string message3;
     public string message4;
     public TMP_Text thought;
-    public bool isStory;
+    public TMP_Text noteText;
+    public Image noteOverlay;
+    public bool isNote;
     public Transform p;
     public bool beenSeen;
     private int distance;
@@ -67,7 +70,12 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
                 this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
                 Destroy(GetComponent<BoxCollider2D>());
                 beenSeen = true;
-                StartCoroutine(adjustMessage());
+                if (isNote) {
+                    StartCoroutine(noteMessage());
+                }
+                else {
+                    StartCoroutine(subtitleMessage());
+                }
             }
         }
 
@@ -93,7 +101,7 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
         data.ipsVisited.Add(id, beenSeen);
     }
 
-    IEnumerator adjustMessage() {
+    IEnumerator subtitleMessage() {
         if (message1 != "") {
             Debug.Log("Message 1");
             thought.text = message1;
@@ -115,5 +123,13 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
             yield return new WaitForSeconds(6);
         }
         thought.text = "";
+    }
+
+    IEnumerator noteMessage() {
+        noteOverlay.color = new Color(1f, 1f, 1f, 1f);
+        noteText.text = message1;
+        yield return new WaitForSeconds(7);
+        noteText.text = "";
+        noteOverlay.color = new Color(1f, 1f, 1f, 0f);
     }
 }
