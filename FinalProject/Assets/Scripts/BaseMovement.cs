@@ -14,6 +14,7 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
     public Animator anim;
 
     
+    private Collision2D currentCollision;
     // For Save
     public string Scene = "";
 
@@ -72,48 +73,5 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log(collision.gameObject.name);
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
-        
-        if (collision.gameObject.name == "RightBorder" && (Input.GetAxisRaw("Horizontal") > 0))
-        {
-            if (sceneName == "Lab1") {
-                PlayerMovement.spawnPos = new Vector3(0, 0, 0);
-                Scene = "Cavern1";
-                SceneManager.LoadScene("Cavern1");
-            }
-
-            else if (sceneName == "Lab2") {
-                PlayerMovement.spawnPos = new Vector3(0, 0, 0);
-                Scene = "Dark Cavern";
-                SceneManager.LoadScene("Dark Cavern");
-            }
-
-            else if (sceneName == "Lab3") {
-                PlayerMovement.labSpawn = 3;
-                Scene = "Exterior Area";
-                SceneManager.LoadScene("Exterior Area");
-            }
-        }
-        if (collision.gameObject.name == ("LeftBorder") && (Input.GetAxisRaw("Horizontal") < 0))
-        {
-            if (sceneName == "Lab1") {
-                PlayerMovement.labSpawn = 1;
-                Scene = "Exterior Area";
-                SceneManager.LoadScene("Exterior Area");
-            }
-
-            else if (sceneName == "Lab2") {
-                PlayerMovement.spawnPos = new Vector3(64, 0, 0);
-                Scene = "Cavern1";
-                SceneManager.LoadScene("Cavern1");
-            }
-
-            else if (sceneName == "Lab3") {
-                PlayerMovement.spawnPos = new Vector3(0, -51, 0);
-                Scene = "Dark Area";
-                SceneManager.LoadScene("Dark Cavern");
-            }
-        }
-    }
+    }  
 }
