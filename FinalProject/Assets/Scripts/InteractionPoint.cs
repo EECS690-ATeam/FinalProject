@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InteractionPoint : MonoBehaviour, IDataPersistence
 {
@@ -35,7 +36,12 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
         a = GetComponent<AudioSource>();
         a.volume = 0.18F;
         beenSeen = false;
-        distance = 5;
+        if (SceneManager.GetActiveScene().name == "Lab2") {
+            distance = 10;
+        }
+        else {
+            distance = 5;
+        }
         this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 150);
         this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
     }

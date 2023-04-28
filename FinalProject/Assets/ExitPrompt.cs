@@ -19,7 +19,12 @@ public class ExitPrompt : MonoBehaviour
     void Start()
     {
         transitioning = false;
-        distance = 5;
+        if (SceneManager.GetActiveScene().name == "Lab2") {
+            distance = 10;
+        }
+        else {
+            distance = 5;
+        }
         popup = GetComponent<TextMeshPro>();
     }
 

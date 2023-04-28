@@ -54,8 +54,8 @@ public class Elevator : MonoBehaviour
         secondCamera.enabled = true;
 
         // Pan towards top
-        var targetCamPos = new Vector3(21.9f, 10.6f, -10f);
-        var targetZoom = 10f;
+        var targetCamPos = new Vector3(19.9f, 11.6f, -10f);
+        var targetZoom = 13f;
 
         while (Vector3.Distance(secondCamera.transform.position, targetCamPos) > 0.2)
         {
