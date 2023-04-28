@@ -338,7 +338,9 @@ MonoBehaviour:
   message3: 
   message4: 
   thought: {fileID: 1142125677}
-  isStory: 1
+  noteText: {fileID: 0}
+  noteOverlay: {fileID: 0}
+  isNote: 0
   p: {fileID: 1727874511}
   beenSeen: 0
 --- !u!1 &227779523
@@ -1760,7 +1762,9 @@ MonoBehaviour:
   message4: ~static~ Please get to safety, remember to returrn this radio at the
     conclusion of the emergency. ~static~
   thought: {fileID: 1142125677}
-  isStory: 1
+  noteText: {fileID: 0}
+  noteOverlay: {fileID: 0}
+  isNote: 0
   p: {fileID: 1727874511}
   beenSeen: 0
 --- !u!1 &1336061660
@@ -2052,7 +2056,9 @@ MonoBehaviour:
   message3: 
   message4: 
   thought: {fileID: 1142125677}
-  isStory: 0
+  noteText: {fileID: 0}
+  noteOverlay: {fileID: 0}
+  isNote: 0
   p: {fileID: 1727874511}
   beenSeen: 0
 --- !u!1 &1514598622
@@ -2454,7 +2460,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1727874510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.08, y: 0.2, z: -0.1}
+  m_LocalPosition: {x: 8.08, y: 0, z: -0.1}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
