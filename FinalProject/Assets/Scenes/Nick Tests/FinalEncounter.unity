@@ -299,7 +299,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e60e075b83942e2b9cfbacb73252c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  batteryData: {fileID: 0}
+  tourniquetData: {fileID: 0}
+  syringeData: {fileID: 0}
+  KeycardDataLvl1: {fileID: 0}
+  KeycardDataLvl2: {fileID: 0}
+  KeycardDataLvl3: {fileID: 0}
+  KeycardDataLvl4: {fileID: 0}
+  KeycardDataLvl5: {fileID: 0}
   inventory: []
+  newCount: 0
+  itemName: 
 --- !u!4 &299039957
 Transform:
   m_ObjectHideFlags: 0
