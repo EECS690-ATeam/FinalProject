@@ -228,8 +228,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        string sceneName = currentScene.name;
+        Debug.Log(collision.gameObject.name);
         // if(collision.gameObject.name == "EcholocationFish")
         // {
         //     PlayerTakeDmg(25);
@@ -237,71 +236,6 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         //     spawnPos = new Vector3(-26, 0, 0);
         //     if(GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
         // }
-
-        if (collision.gameObject.name == "RightBorder" && (Input.GetAxisRaw("Horizontal") > 0))
-        {
-            if (sceneName == "Exterior Area") {
-                float newX = lBorder.transform.position[0] + lBorder.GetComponent<SpriteRenderer>().bounds.size.x/2 - playerCollider.bounds.size.x/2;
-                Vector3 temp = new Vector3(this.transform.position.x - newX, 0f, 0f);
-                this.transform.position -= temp;
-            }
-
-            else if (sceneName == "Cavern1") {
-                BaseMovement.spawnPos = new Vector3(0, 0, 0);
-                Scene = "Lab2";
-                SceneManager.LoadScene("Lab2");
-            }
-            
-            else if (sceneName == "Dark Cavern") {
-                BaseMovement.spawnPos = new Vector3(0, 0, 0);
-                Scene = "Lab3";
-                SceneManager.LoadScene("Lab3");
-            }
-            
-            //leaving here until we have another lab
-        }
-        if (collision.gameObject.name == ("LeftBorder") && (Input.GetAxisRaw("Horizontal") < 0))
-        {
-            if (sceneName == "Exterior Area") {
-                float newX = rBorder.transform.position[0] - rBorder.GetComponent<SpriteRenderer>().bounds.size.x/2 + playerCollider.bounds.size.x/2;
-                Vector3 temp = new Vector3(newX - this.transform.position.x, 0f, 0f);
-                this.transform.position += temp;
-            }
-
-            else if (sceneName == "Cavern1") {
-                BaseMovement.spawnPos = new Vector3(6, 0, 0);
-                Scene = "Lab1";
-                SceneManager.LoadScene("Lab1");
-            }
-
-            else if (sceneName == "Dark Cavern") {
-                BaseMovement.spawnPos = new Vector3(70, 0, 0);
-                Scene = "Lab2";
-                SceneManager.LoadScene("Lab2");
-            }
-        }
-        //exterior area lab entrance colliders
-        if (collision.gameObject.name == "Lab1")
-        {
-            BaseMovement.spawnPos = new Vector3(-17, 0, 0);
-            Scene = "Lab1";
-            SceneManager.LoadScene("Lab1");
-        }
-        if (collision.gameObject.name == "Lab2")
-        {
-            BaseMovement.spawnPos = new Vector3(28, 0, 0);
-            Scene = "Lab2";
-            SceneManager.LoadScene("Lab2");
-        }
-        /*
-        if (collision.gameObject.name == "Lab3")
-        {
-            BaseMovement.spawnPos = new Vector3(0, 0, 0);
-            SceneManager.LoadScene("Lab3");
-        }
-        */
-        //currently disabled
-
     }
 
     private void spawnAtLab() {
