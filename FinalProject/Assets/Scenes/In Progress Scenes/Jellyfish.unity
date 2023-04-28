@@ -1414,12 +1414,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1147612199726747820, guid: 439ba25b8ca33834e9d05a96d10f3162, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147612199726747820, guid: 439ba25b8ca33834e9d05a96d10f3162, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 73207281}
     - target: {fileID: 1147612199726747823, guid: 439ba25b8ca33834e9d05a96d10f3162, type: 3}
       propertyPath: m_Name
       value: EcholocationFish
+      objectReference: {fileID: 0}
+    - target: {fileID: 1147612199726747856, guid: 439ba25b8ca33834e9d05a96d10f3162, type: 3}
+      propertyPath: patrolSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1147612199726747856, guid: 439ba25b8ca33834e9d05a96d10f3162, type: 3}
       propertyPath: path.Array.size
@@ -3141,7 +3149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 467940068}
-  parallaxEffect: -0.08
+  parallaxEffect: 0
 --- !u!212 &2120550493
 SpriteRenderer:
   m_ObjectHideFlags: 0

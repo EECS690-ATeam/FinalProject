@@ -168,6 +168,10 @@ public class EcholocationChase : MonoBehaviour
     void ChasePlayer()
     {
         anim.SetBool("IsChase", true);
+
+        // Play stinger
+        SoundManagerScript.PlaySound("stinger");
+
         // Get angle towards player
         Vector3 playerDirection = (player.position - transform.position).normalized;
         float playerAngle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;

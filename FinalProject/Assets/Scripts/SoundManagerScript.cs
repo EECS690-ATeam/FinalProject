@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
     public static AudioClip clickSound;
+    public static AudioClip stingerSound;
 
     static AudioSource audioSrc;
 
@@ -12,6 +13,7 @@ public class SoundManagerScript : MonoBehaviour
     {
         audioSrc = GetComponent<AudioSource>();
         clickSound = Resources.Load<AudioClip>("click_2_");
+        stingerSound = Resources.Load<AudioClip>("stinger");
     }
 
     void Update()
@@ -24,7 +26,11 @@ public class SoundManagerScript : MonoBehaviour
         switch (clip)
         {
             case "click_2_":
-                audioSrc.PlayOneShot(clickSound);
+                audioSrc.PlayOneShot(clickSound, 0.2f);
+                break;
+
+            case "stinger":
+                audioSrc.PlayOneShot(stingerSound, 0.1f);
                 break;
         }
     }

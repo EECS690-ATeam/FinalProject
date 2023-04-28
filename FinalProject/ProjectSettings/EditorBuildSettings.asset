@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/In Progress Scenes/Lab2.unity
     guid: 9d240db026bcd5c42b8d261dcd434230
+  - enabled: 1
+    path: Assets/Scenes/In Progress Scenes/Cavern1.unity
+    guid: 26082406e419a34428df05c876c45fff
+  - enabled: 1
+    path: Assets/Scenes/In Progress Scenes/Jellyfish.unity
+    guid: 57cfdf28c9e49fc41a46d0dd332cbc03
   m_configObjects: {}
