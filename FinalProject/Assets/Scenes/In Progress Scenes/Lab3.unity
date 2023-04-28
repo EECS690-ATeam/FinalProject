@@ -213,8 +213,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297371092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.6, y: 30.2, z: -0.6428274}
-  m_LocalScale: {x: 1.8368858, y: 1.8368858, z: 1.8368858}
+  m_LocalPosition: {x: 20.5, y: 27.7, z: -0.6428274}
+  m_LocalScale: {x: 1.9974296, y: 1.9974296, z: 1.9974296}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -351,6 +351,8 @@ GameObject:
   - component: {fileID: 299453410}
   - component: {fileID: 299453409}
   - component: {fileID: 299453408}
+  - component: {fileID: 299453411}
+  - component: {fileID: 299453412}
   m_Layer: 0
   m_Name: Second Camera
   m_TagString: Untagged
@@ -418,7 +420,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 40
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -442,13 +444,55 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299453407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.9, y: 10.6, z: -10}
+  m_LocalPosition: {x: 84, y: 7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &299453411
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299453407}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.5, y: 0}
+  - {x: 0.5, y: 0}
+  - {x: 0.5, y: 0}
+  - {x: 0.5, y: 0}
+  - {x: 0.5, y: 0}
+  - {x: 0.5, y: 0}
+  - {x: 0.5, y: 0}
+  - {x: 0.5, y: 0}
+  - {x: 0.5, y: 0}
+  - {x: 0.5, y: 0}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &299453412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299453407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0f363a8d9b0ba468b116106be54041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &313016557
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +596,7 @@ Camera:
   far clip plane: 995.17
   field of view: 21.9
   orthographic: 1
-  orthographic size: 10.6
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -724,9 +768,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1308840094}
+  playerSR: {fileID: 1308840093}
   mainCamera: {fileID: 313016561}
   secondCamera: {fileID: 299453409}
-  foregroundSR: {fileID: 1043440297}
+  secondCamScript: {fileID: 299453412}
+  panSpeed: 0
+  zoomFactor: 0
+  zoomSpeed: 0
 --- !u!1 &365376140
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,8 +1011,11 @@ MonoBehaviour:
   message4: '"I just wish they could have had the decency to put in a spa to distract
     me from this worry."'
   thought: {fileID: 678644769}
-  isStory: 1
+  noteText: {fileID: 0}
+  noteOverlay: {fileID: 0}
+  isNote: 0
   p: {fileID: 1308840094}
+  beenSeen: 0
 --- !u!1 &492521656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1595,8 +1646,11 @@ MonoBehaviour:
   message3: '"Projected Q4 Investment Returns: 200%"'
   message4: '"Estimated Environmental Cost: Negligible"'
   thought: {fileID: 678644769}
-  isStory: 1
+  noteText: {fileID: 0}
+  noteOverlay: {fileID: 0}
+  isNote: 0
   p: {fileID: 1308840094}
+  beenSeen: 0
 --- !u!1001 &933854307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2113,8 +2167,11 @@ MonoBehaviour:
   message3: 
   message4: 
   thought: {fileID: 678644769}
-  isStory: 0
+  noteText: {fileID: 0}
+  noteOverlay: {fileID: 0}
+  isNote: 0
   p: {fileID: 1308840094}
+  beenSeen: 0
 --- !u!1 &1272023528
 GameObject:
   m_ObjectHideFlags: 0
