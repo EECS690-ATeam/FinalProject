@@ -11,6 +11,7 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
     bool facingRight=true;
 
     public static Vector3 spawnPos;
+    public Animator anim;
 
     
     // For Save
@@ -44,6 +45,8 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
     void Update()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
+        if(moveInput != 0) anim.SetBool("walk", true);
+        else anim.SetBool("walk", false);
 
         float newspeed = speed;
         Scene currentScene = SceneManager.GetActiveScene();
@@ -57,11 +60,11 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
         rb.velocity = new Vector2(moveInput * newspeed, rb.velocity.y);
         if(moveInput<0 && facingRight) {
             facingRight = !facingRight;
-            sr.flipX = false;
+            sr.flipX = true;
         }
         if(moveInput>0 && !facingRight) {
             facingRight = !facingRight;
-            sr.flipX = true;
+            sr.flipX = false;
         }
 
     }
