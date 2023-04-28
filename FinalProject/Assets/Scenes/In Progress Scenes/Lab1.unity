@@ -480,8 +480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 505e83e5-cc69-4d23-b1e3-287177c4be9d
-  message1: There's some gear stashed underneath this bed, their equipment is probably
-    better than mine down here anyways.
+  message1: Hm, whoever left this place must have gone in a hurry, they left almost
+    all their gear here.
   message2: 
   message3: 
   message4: 
@@ -2641,8 +2641,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ecc2c7f40762cd42975f6e67fd9f0eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPos: {fileID: 1727874511}
---- !u!1 &1142125674
+  id: dbe56f6a-274d-44c7-864b-70c099732a24
+  message1: 'Day 547 Todos: Bring down emergency equipment, clear out jellyfish,
+    call nephew to wish him a happy birthday'
+  message2: 
+  message3: 
+  message4: 
+  thought: {fileID: 1142125677}
+  noteText: {fileID: 1416472247}
+  noteOverlay: {fileID: 1713262192}
+  isNote: 1
+  p: {fileID: 1727874511}
+  beenSeen: 0
+--- !u!1 &1336061660
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

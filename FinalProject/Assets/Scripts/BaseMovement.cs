@@ -21,6 +21,12 @@ public class BaseMovement : MonoBehaviour, IDataPersistence
     // Start is called before the first frame update
     void Start()
     {
+        if (SceneManager.GetActiveScene().name == "Lab1") {
+            spawnPos = new Vector3(6, 0, 0);
+        }
+        if (SceneManager.GetActiveScene().name == "FinalEncounter") {
+            spawnPos = new Vector3(16, -7, 0);
+        }
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         this.transform.position = new Vector3(spawnPos[0], spawnPos[1], spawnPos[2]);
