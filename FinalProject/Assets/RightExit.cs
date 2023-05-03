@@ -59,7 +59,7 @@ public class RightExit : MonoBehaviour
         Debug.Log(this.transform.name);
         //lab -> water transitions
         if (sceneName == "Lab1") {
-            PlayerMovement.spawnPos = new Vector3(0, 0, 0);
+            PlayerMovement.spawnPos = new Vector3(-110, 46, 0);
             Scene = "Cavern1";
             SceneManager.LoadScene("Cavern1");
         }
@@ -69,7 +69,7 @@ public class RightExit : MonoBehaviour
             SceneManager.LoadScene("Dark Cavern");
         }
         else if (sceneName == "Lab3") {
-            PlayerMovement.spawnPos = new Vector3(-60, 36, 0);
+            PlayerMovement.spawnPos = new Vector3(-46, 57, 0);
             Scene = "Jellyfish";
             SceneManager.LoadScene("Jellyfish");
         }
