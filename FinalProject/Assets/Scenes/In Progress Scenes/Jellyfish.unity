@@ -1399,7 +1399,7 @@ GameObject:
   - component: {fileID: 567602151}
   - component: {fileID: 567602150}
   - component: {fileID: 567602149}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1571,7 +1571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -96.24, y: 76.71}
+  m_AnchoredPosition: {x: -46, y: 59}
   m_SizeDelta: {x: 4, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &580530138
@@ -1856,7 +1856,7 @@ GameObject:
   - component: {fileID: 943792372}
   - component: {fileID: 943792371}
   - component: {fileID: 943792370}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

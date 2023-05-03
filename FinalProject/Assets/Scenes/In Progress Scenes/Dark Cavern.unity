@@ -8126,7 +8126,7 @@ GameObject:
   - component: {fileID: 1266728556}
   - component: {fileID: 1266728555}
   - component: {fileID: 1266728554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9378,7 +9378,7 @@ GameObject:
   - component: {fileID: 1645140633}
   - component: {fileID: 1645140632}
   - component: {fileID: 1645140631}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

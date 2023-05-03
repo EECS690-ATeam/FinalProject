@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 667102261}
   - component: {fileID: 667102260}
   - component: {fileID: 667102264}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1400,7 +1400,7 @@ GameObject:
   - component: {fileID: 884052638}
   - component: {fileID: 884052637}
   - component: {fileID: 884052641}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
