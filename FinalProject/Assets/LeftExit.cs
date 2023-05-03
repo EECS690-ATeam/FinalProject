@@ -64,7 +64,7 @@ public class LeftExit : MonoBehaviour
             SceneManager.LoadScene("Exterior Area");
         }
         else if (sceneName == "Lab2") {
-            PlayerMovement.spawnPos = new Vector3(64, 0, 0);
+            PlayerMovement.spawnPos = new Vector3(-40, 39, 0);
             Scene = "Cavern1";
             SceneManager.LoadScene("Cavern1");
         }
@@ -75,7 +75,7 @@ public class LeftExit : MonoBehaviour
         }
         //water -> lab transitions
         else if (sceneName == "Cavern1") {
-            BaseMovement.spawnPos = new Vector3(6, 0, 0);
+            BaseMovement.spawnPos = new Vector3(20, 0, 0);
             Scene = "Lab1";
             SceneManager.LoadScene("Lab1");
         }
