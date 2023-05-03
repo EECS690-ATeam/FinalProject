@@ -121,7 +121,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     private void FlipX(float x) {
         if(facingRight && x<0) {
             animator.SetBool("SetTurnL", true);
-            headAnimator.SetBool("HeadTurn", true);
+            //headAnimator.SetBool("HeadTurn", true);
             animator.SetBool("Flip", true);
             facingRight = !facingRight;
             // transform.eulerAngles += new Vector3(0,180,0);
@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         }
         if(!facingRight && x>0) {
             animator.SetBool("SetTurnR", true);
-            headAnimator.SetBool("HeadTurn", true);
+            //headAnimator.SetBool("HeadTurn", true);
             animator.SetBool("Flip", true);
             facingRight = !facingRight;
             // transform.eulerAngles += new Vector3(0,-180,0);
@@ -137,6 +137,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         }
         if(x != 0) 
         {
+            if(animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) headAnimator.SetBool("HeadTurn", true);
             transform.localScale = new Vector3(Mathf.Sign(x), 1, 1);
         }
     }
@@ -200,6 +201,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) headAnimator.SetBool("HeadTurn", true);
         // if((animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) && (animator.GetCurrentAnimatorStateInfo(0).IsName("Swim") || animator.GetCurrentAnimatorStateInfo(0).IsName("stop") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnLeft") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnRight"))) {
         //     head.enabled = false;
         //     Invoke("ShowHead", 0.4f);

@@ -18,7 +18,7 @@ public class ResetTurnHead : StateMachineBehaviour
 
     // override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     // {
-    //    animator.SetBool("HeadTurn", false);
+    //     animator.SetBool("HeadTurn", false);
     // }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
