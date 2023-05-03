@@ -55,11 +55,11 @@ public class JellyfishMove : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Jellyfish");
-        Debug.Log(other.gameObject.name);
-        if (other.gameObject.name == "Player")
-        {
-            player.JellyfishDamage();
-        }
+        //Debug.Log("Jellyfish");
+        //Debug.Log(other.gameObject.name);
+        //if (other.gameObject.name == "Player")
+        //{
+        //    player.JellyfishDamage();
+        //}
     }
 }

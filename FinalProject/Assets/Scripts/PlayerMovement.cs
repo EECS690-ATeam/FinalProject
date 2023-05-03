@@ -102,10 +102,10 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     private void UpdateCollider() {
         if(animator.GetBool("IsIdle") == false) {
-            playerCollider.size = new Vector3(8.5f,4);
+            playerCollider.size = new Vector3(7.4f, 3f);
         }
         else {
-            playerCollider.size = new Vector3(2.34f,8.97f);
+            playerCollider.size = new Vector3(1.42f, 7.4f);
         }
     }
 
@@ -236,10 +236,20 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         {
             PlayerTakeDmg(100);
             oofSound.Play();
-            spawnPos = new Vector3(-26, 0, 0);
-            if(GameManager.gameManager._playerHealth.Health == 0) 
+            if(GameManager.gameManager._playerHealth.Health == 0)
             {
+                spawnPos = new Vector3(-46, 57, 0);
                 Invoke("resetScene", .4f);
+            }
+        }
+        if (collision.gameObject.name == "Jellyfish(Clone)")
+        {
+            PlayerTakeDmg(25);
+            oofSound.Play();
+            if (GameManager.gameManager._playerHealth.Health == 0)
+            {
+                spawnPos = new Vector3(-110, 46, 0);
+                SceneManager.LoadScene("Cavern1");
             }
         }
     }
@@ -258,13 +268,6 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         //     spawnPos = new Vector3(-26, 0, 0);
         //     if(GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
         // }
-        if(collision.gameObject.name == "Jellyfish")
-        {
-            PlayerTakeDmg(25);
-            oofSound.Play();
-            spawnPos = new Vector3(-26, 0, 0);
-            if(GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
-        }
     }
 
     public void JellyfishDamage()

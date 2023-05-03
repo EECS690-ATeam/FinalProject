@@ -1060,6 +1060,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6451730003265565126, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_Size.x
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451730003265565126, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_Size.y
+      value: 7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451730003265565126, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.482884
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451730003265565126, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.6289321
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451730003265565126, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -1067,7 +1083,10 @@ PrefabInstance:
       propertyPath: fieldOfView
       value: 
       objectReference: {fileID: 1848777793}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1289544277, guid: ea64eda728be86646a53673063996199, type: 3}
+    - {fileID: 2758914404964881630, guid: ea64eda728be86646a53673063996199, type: 3}
+    - {fileID: 535887882, guid: ea64eda728be86646a53673063996199, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ea64eda728be86646a53673063996199, type: 3}
 --- !u!1001 &734617532
 PrefabInstance:
