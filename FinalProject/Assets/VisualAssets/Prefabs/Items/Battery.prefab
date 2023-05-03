@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: ad24285ebf36f451899109feaef847ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 87fb845fd119e1f46a06a1428a2d79c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,18 +100,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.0058062077}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28, y: 0.54}
+    oldSize: {x: 0.42, y: 0.81}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.28932106, y: 0.5471164}
   m_EdgeRadius: 0
 --- !u!114 &3937262748455813588
 MonoBehaviour:
@@ -139,4 +139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5998d06da582a4a62a7912a9df38aad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
+  beenCollected: 0
   batteryData: {fileID: 11400000, guid: adde24a84d2c44145b2f6aeea94e7d3f, type: 2}

@@ -75,7 +75,7 @@ public class RightExit : MonoBehaviour
         }
         //water -> lab transitions
         else if (sceneName == "Cavern1") {
-            BaseMovement.spawnPos = new Vector3(-23, -26, 0);
+            BaseMovement.spawnPos = new Vector3(-9, -20, 0);
             Scene = "Lab2";
             SceneManager.LoadScene("Lab2");
         }
