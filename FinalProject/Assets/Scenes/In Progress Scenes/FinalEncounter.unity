@@ -355,74 +355,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &299039955
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 299039957}
-  - component: {fileID: 299039956}
-  - component: {fileID: 299039958}
-  m_Layer: 0
-  m_Name: Inventory
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &299039956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299039955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48e60e075b83942e2b9cfbacb73252c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  batteryData: {fileID: 0}
-  tourniquetData: {fileID: 0}
-  syringeData: {fileID: 0}
-  KeycardDataLvl1: {fileID: 0}
-  KeycardDataLvl2: {fileID: 0}
-  KeycardDataLvl3: {fileID: 0}
-  KeycardDataLvl4: {fileID: 0}
-  KeycardDataLvl5: {fileID: 0}
-  inventory: []
-  newCount: 0
-  itemName: 
---- !u!4 &299039957
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299039955}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.917772, y: -6.20908, z: 0.96336055}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &299039958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299039955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3455b6cacc78146ecab57dd4f499248c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &313016557
 GameObject:
   m_ObjectHideFlags: 0
@@ -5560,7 +5492,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &492521656
 GameObject:
@@ -5684,7 +5616,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &510625823
 GameObject:
@@ -5717,6 +5649,61 @@ Transform:
   - {fileID: 1686613020}
   m_Father: {fileID: 1843712242}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &578313888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 578313890}
+  - component: {fileID: 578313889}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &578313889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578313888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e60e075b83942e2b9cfbacb73252c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batteryData: {fileID: 11400000, guid: adde24a84d2c44145b2f6aeea94e7d3f, type: 2}
+  tourniquetData: {fileID: 11400000, guid: 070f5aebb53864c3ab3c0c28c993ab82, type: 2}
+  syringeData: {fileID: 11400000, guid: ad9c5b87c2fa349b794bc9774636270b, type: 2}
+  KeycardDataLvl1: {fileID: 11400000, guid: cf6a079164366423e9874e61ba73964a, type: 2}
+  KeycardDataLvl2: {fileID: 11400000, guid: 30fccddf831ed45d6ab796b9660827d4, type: 2}
+  KeycardDataLvl3: {fileID: 11400000, guid: 44081c54fb2344a08b3a79507400eeb9, type: 2}
+  KeycardDataLvl4: {fileID: 11400000, guid: b032e85984b2f4f2ea775435600939c3, type: 2}
+  KeycardDataLvl5: {fileID: 11400000, guid: d3f07cd8bfc5c43e7a4076538de97c4b, type: 2}
+  inventory: []
+  newCount: 0
+  itemName: 
+--- !u!4 &578313890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578313888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1061.6957, y: 302.833, z: 6.161143}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &678644766
 GameObject:
@@ -5988,7 +5975,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &933854307
 PrefabInstance:
@@ -6316,7 +6303,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1043440295
 GameObject:
@@ -6449,7 +6436,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1152400404
 PrefabInstance:
@@ -6465,7 +6452,7 @@ PrefabInstance:
     - target: {fileID: 8902422380721378802, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: inventoryMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1016292187}
     - target: {fileID: 8902422380721378803, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6892,7 +6879,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2079222136
 MonoBehaviour:
