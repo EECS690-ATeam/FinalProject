@@ -346,14 +346,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e60e075b83942e2b9cfbacb73252c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  batteryData: {fileID: 0}
-  tourniquetData: {fileID: 0}
-  syringeData: {fileID: 0}
-  KeycardDataLvl1: {fileID: 0}
-  KeycardDataLvl2: {fileID: 0}
-  KeycardDataLvl3: {fileID: 0}
-  KeycardDataLvl4: {fileID: 0}
-  KeycardDataLvl5: {fileID: 0}
+  batteryData: {fileID: 11400000, guid: adde24a84d2c44145b2f6aeea94e7d3f, type: 2}
+  tourniquetData: {fileID: 11400000, guid: 070f5aebb53864c3ab3c0c28c993ab82, type: 2}
+  syringeData: {fileID: 11400000, guid: ad9c5b87c2fa349b794bc9774636270b, type: 2}
+  KeycardDataLvl1: {fileID: 11400000, guid: cf6a079164366423e9874e61ba73964a, type: 2}
+  KeycardDataLvl2: {fileID: 11400000, guid: 30fccddf831ed45d6ab796b9660827d4, type: 2}
+  KeycardDataLvl3: {fileID: 11400000, guid: 44081c54fb2344a08b3a79507400eeb9, type: 2}
+  KeycardDataLvl4: {fileID: 11400000, guid: b032e85984b2f4f2ea775435600939c3, type: 2}
+  KeycardDataLvl5: {fileID: 11400000, guid: d3f07cd8bfc5c43e7a4076538de97c4b, type: 2}
   inventory: []
   newCount: 0
   itemName: 
