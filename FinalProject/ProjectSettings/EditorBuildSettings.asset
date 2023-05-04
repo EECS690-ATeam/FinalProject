@@ -16,14 +16,14 @@ EditorBuildSettings:
     guid: a5506a2a403994e4a91ee43312ebc181
   - enabled: 0
     path: 
-    guid: 99fea768cd3b1a54fa9958805cbd9362
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/In Progress Scenes/Lab1.unity
     guid: ca85676f423b3344b977e1f8845d6a68
   - enabled: 1
     path: Assets/Scenes/In Progress Scenes/Exterior Area.unity
     guid: 10333b3fe2d37814cbb6b425e26856fa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nick Tests/FinalEncounter.unity
     guid: e91c86f3fbced6a498c52f0486d1812c
   - enabled: 1
