@@ -215,7 +215,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         else animator.SetBool("IsIdle", true);
         if(horizontalMovement != 0) headAnimator.SetBool("IsIdle", false);
         else headAnimator.SetBool("IsIdle", true);
-        transform.position += new Vector3(horizontalMovement, verticalMovement, 0) * Time.deltaTime * MovementSpeed;
+        transform.position += new Vector3(horizontalMovement, verticalMovement, 0).normalized * Time.deltaTime * MovementSpeed;
         ChangeRotation();
         LookAtMouse();  
     }
@@ -252,6 +252,16 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
                 SceneManager.LoadScene("Cavern1");
             }
         }
+        if (collision.gameObject.tag == "BasicFish")
+        {
+            PlayerTakeDmg(100);
+            oofSound.Play();
+            if (GameManager.gameManager._playerHealth.Health == 0)
+            {
+                spawnPos = new Vector3(-60, 36, 0);
+                SceneManager.LoadScene("Dark Cavern");
+            }
+        }
     }
 
     private void resetScene() {
@@ -260,7 +270,6 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         // if(collision.gameObject.name == "EcholocationFish")
         // {
         //     PlayerTakeDmg(25);
@@ -268,14 +277,6 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         //     spawnPos = new Vector3(-26, 0, 0);
         //     if(GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
         // }
-    }
-
-    public void JellyfishDamage()
-    {
-        PlayerTakeDmg(25);
-        oofSound.Play();
-        spawnPos = new Vector3(-26, 0, 0);
-        if (GameManager.gameManager._playerHealth.Health == 0) SceneManager.LoadScene("Kelp Cavern");
     }
 
     private void spawnAtLab() {
