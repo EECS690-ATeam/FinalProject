@@ -20,6 +20,8 @@ public class EcholocationChase : MonoBehaviour
     public Transform EchoPingPrefab;
     public Transform PulsePrefab;
     public Animator anim;
+    public AudioSource clickSound;
+    public AudioSource stinger;
 
     public Transform GameObject;
     public SpriteRenderer sr;
@@ -44,12 +46,16 @@ public class EcholocationChase : MonoBehaviour
         // Chase player only if within range
         if (CanSeePlayer(noticeRange))
         {
-            chasing = true;
+            if(chasing == false)
+            {
+                chasing = true;
+                PlayStinger();
+            }
             ChasePlayer();
             float randomNum = Random.Range(0f, 100f);
             if(randomNum < chaseClickProbability)
             {
-                SoundManagerScript.PlaySound("click_2_");
+                clickSound.Play();
                 Instantiate(EchoPingPrefab, transform.position + new Vector3(-0.3f, 0.2f), Quaternion.identity);
                 Instantiate(PulsePrefab, transform.position, transform.rotation);
             }
@@ -71,7 +77,7 @@ public class EcholocationChase : MonoBehaviour
             float randomNum = Random.Range(0f, 100f);
             if (randomNum < chaseClickProbability)
             {
-                SoundManagerScript.PlaySound("click_2_");
+                clickSound.Play();
                 Instantiate(EchoPingPrefab, transform.position + new Vector3(-0.3f, 0.2f), Quaternion.identity);
                 Instantiate(PulsePrefab, transform.position, transform.rotation);
             }
@@ -83,7 +89,7 @@ public class EcholocationChase : MonoBehaviour
             float randomNum = Random.Range(0f, 100f);
             if (randomNum < patrolClickProbability)
             {
-                SoundManagerScript.PlaySound("click_2_");
+                clickSound.Play();
                 Instantiate(EchoPingPrefab, transform.position + new Vector3(-0.3f, 0.2f), Quaternion.identity);
                 Instantiate(PulsePrefab, transform.position, transform.rotation);
             }
@@ -173,9 +179,6 @@ public class EcholocationChase : MonoBehaviour
     {
         anim.SetBool("IsChase", true);
 
-        // Play stinger
-        SoundManagerScript.PlaySound("stinger");
-
         // Get angle towards player
         Vector3 playerDirection = (player.position - transform.position).normalized;
         float playerAngle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
@@ -191,5 +194,11 @@ public class EcholocationChase : MonoBehaviour
     {
         anim.SetBool("IsChase", false);
         rb.velocity = new Vector2(0, 0);
+    }
+
+    void PlayStinger()
+    {
+        // Play stinger
+        stinger.Play();
     }
 }
