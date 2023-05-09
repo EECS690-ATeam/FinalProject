@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using CodeMonkey.Utils;
 
 public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
@@ -24,7 +25,8 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     [SerializeField] private Image redTinge = null;
     [SerializeField] private float hurtTimer = 0.1f;
-    
+    [SerializeField] private FieldOfView fieldOfView;
+
     public Animator animator;
 
     public Animator headAnimator;
@@ -217,7 +219,28 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         else headAnimator.SetBool("IsIdle", true);
         transform.position += new Vector3(horizontalMovement, verticalMovement, 0).normalized * Time.deltaTime * MovementSpeed;
         ChangeRotation();
-        LookAtMouse();  
+        LookAtMouse();
+
+        // Aim flashlight
+
+        Vector3 targetPosition = UtilsClass.GetMouseWorldPosition();
+        Vector3 aimDir = (targetPosition - transform.position).normalized;
+        fieldOfView.SetAimDirection(aimDir);
+        fieldOfView.SetOrigin(transform.position);
+        //if (facingRight)
+        //{
+        //    Vector3 targetPosition = UtilsClass.GetMouseWorldPosition();
+        //    Vector3 aimDir = (targetPosition - transform.position).normalized;
+        //    fieldOfView.SetAimDirection(aimDir);
+        //    fieldOfView.SetOrigin(transform.position);
+        //}
+        //else
+        //{
+        //    Vector3 targetPosition = UtilsClass.GetMouseWorldPosition();
+        //    Vector3 aimDir = (targetPosition - transform.position).normalized;
+        //    fieldOfView.SetAimDirection(new Vector3(-aimDir.x, aimDir.y, aimDir.z));
+        //    fieldOfView.SetOrigin(transform.position);
+        //}
     }
 
         private void OnParticleCollision(GameObject other) { 

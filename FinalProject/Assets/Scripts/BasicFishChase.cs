@@ -10,6 +10,7 @@ public class BasicFishChase : MonoBehaviour
     [SerializeField] private float acceleration;
     [SerializeField] private float returnSpeed;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private AudioSource stinger;
 
     private Rigidbody2D rb;
     private Transform castPoint;
@@ -33,7 +34,11 @@ public class BasicFishChase : MonoBehaviour
     {
         if (CanSeePlayer())
         {
-            isChasing = true;
+            if (isChasing == false)
+            {
+                isChasing = true;
+                PlayStinger();
+            }
             ChasePlayer();
         }
         else
@@ -114,5 +119,11 @@ public class BasicFishChase : MonoBehaviour
     private bool PlayerIsInDistance()
     {
         return (Vector3.Distance(castPoint.position, playerTransform.position) < noticeRange);
+    }
+
+    void PlayStinger()
+    {
+        // Play stinger
+        stinger.Play();
     }
 }
