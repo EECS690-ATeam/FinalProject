@@ -232,7 +232,8 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.gameObject.name == "EcholocationFish")
+        Debug.Log("Trigger Enter " + collision.gameObject.name);
+        if(collision.gameObject.tag == "EcholocationFish")
         {
             PlayerTakeDmg(100);
             oofSound.Play();

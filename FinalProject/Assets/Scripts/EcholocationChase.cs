@@ -18,6 +18,7 @@ public class EcholocationChase : MonoBehaviour
 
     public bool chasing;
     public Transform EchoPingPrefab;
+    public Transform PulsePrefab;
     public Animator anim;
 
     public Transform GameObject;
@@ -49,7 +50,8 @@ public class EcholocationChase : MonoBehaviour
             if(randomNum < chaseClickProbability)
             {
                 SoundManagerScript.PlaySound("click_2_");
-                Instantiate(EchoPingPrefab, transform.position, Quaternion.identity);
+                Instantiate(EchoPingPrefab, transform.position + new Vector3(-0.3f, 0.2f), Quaternion.identity);
+                Instantiate(PulsePrefab, transform.position, transform.rotation);
             }
             for(int i = 0; i < gameObject.transform.childCount; i++)
             {
@@ -70,7 +72,8 @@ public class EcholocationChase : MonoBehaviour
             if (randomNum < chaseClickProbability)
             {
                 SoundManagerScript.PlaySound("click_2_");
-                Instantiate(EchoPingPrefab, transform.position, Quaternion.identity);
+                Instantiate(EchoPingPrefab, transform.position + new Vector3(-0.3f, 0.2f), Quaternion.identity);
+                Instantiate(PulsePrefab, transform.position, transform.rotation);
             }
         }
         else
@@ -81,7 +84,8 @@ public class EcholocationChase : MonoBehaviour
             if (randomNum < patrolClickProbability)
             {
                 SoundManagerScript.PlaySound("click_2_");
-                Instantiate(EchoPingPrefab, transform.position, Quaternion.identity);
+                Instantiate(EchoPingPrefab, transform.position + new Vector3(-0.3f, 0.2f), Quaternion.identity);
+                Instantiate(PulsePrefab, transform.position, transform.rotation);
             }
             for (int i = 0; i < gameObject.transform.childCount; i++)
             {
