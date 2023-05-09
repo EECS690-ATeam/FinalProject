@@ -1,28 +1,15 @@
 ﻿<Properties StartupConfiguration="{E1456745-ED92-4EB6-8905-E64DC1E47277}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BaseMovement.cs">
-    <Files>
-      <File FileName="Assets/Scripts/Inventory/Data Persistence/GameData.cs" Line="26" Column="46" />
-      <File FileName="Assets/Scripts/Inventory/Data Persistence/DataPersistenceManager.cs" />
-      <File FileName="Assets/Scripts/Inventory/Inventory.cs" />
-      <File FileName="Assets/Scripts/Inventory/Data Persistence/SerializableTypes/SerializableDisctionary.cs" />
-      <File FileName="Assets/Scripts/Inventory/Data Persistence/SerializableTypes/SerializableInventory.cs" />
-      <File FileName="Assets/Scripts/Inventory/InventoryManager.cs" />
-      <File FileName="Assets/Scripts/Inventory/Items/Battery.cs" />
-      <File FileName="Assets/Scripts/Inventory/Items/Keycard.cs" />
-      <File FileName="Assets/Scripts/Inventory/InventoryItem.cs" />
-      <File FileName="Assets/Scripts/BaseMovement.cs" Line="38" Column="1" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" />
-      <File FileName="Assets/Scripts/InteractionPoint.cs" Line="63" Column="10" NotebookId="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="FinalProject" expanded="True">
-            <Node name="Assets" expanded="True" selected="True">
+            <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Inventory" expanded="True">
                   <Node name="Data Persistence" expanded="True">
                     <Node name="SerializableTypes" expanded="True" />
+                    <Node name="GameData.cs" selected="True" />
                   </Node>
                   <Node name="Items" expanded="True" />
                 </Node>
@@ -36,7 +23,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="a1d4e4f1-ce9d-4776-bd79-0d704b3f38e9" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="5d96c056-8d1b-4caf-922b-c0a088637fc9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6356a835-5ac4-4d31-bba2-3855b80fa144" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

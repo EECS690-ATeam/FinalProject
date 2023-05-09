@@ -102,6 +102,7 @@
     <Compile Include="Assets/Scripts/PlayerMovement.cs" />
     <Compile Include="Assets/RightExit.cs" />
     <Compile Include="Assets/Scripts/Avoidance.cs" />
+    <Compile Include="Assets/Scripts/BasicFishChase.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/World_Mesh.cs" />
     <Compile Include="Assets/Scripts/Swim.cs" />
     <Compile Include="Assets/Scripts/RightBorder.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="Assets/Scripts/FollowPath.cs" />
     <Compile Include="Assets/Scripts/ElevatorCam.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/UI_Sprite.cs" />
+    <Compile Include="Assets/ResetCancelTurn.cs" />
     <Compile Include="Assets/Scripts/FlockingFish.cs" />
     <Compile Include="Assets/Scripts/Lab1.cs" />
     <Compile Include="Assets/Scripts/Inventory/Items/Tourniquet.cs" />
@@ -148,7 +150,6 @@
     <Compile Include="Assets/Scripts/Inventory/Data Persistence/GameData.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/CMDebug.cs" />
     <Compile Include="Assets/Packages/CodeMonkey/Utils/FunctionPeriodic.cs" />
-    <Compile Include="Assets/ResetCancelTurn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Packages/TextMesh Pro/Shaders/TMPro.cginc" />

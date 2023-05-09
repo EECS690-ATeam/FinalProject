@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class PauseMenu : MonoBehaviour
 {
 
     public GameObject pauseMenu;
+    public GameObject optionsScreen;
     // Use global bool to check if game is paused across all scenes
     public static bool isPaused;
 
@@ -14,6 +17,7 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         pauseMenu.SetActive(false);
+        optionsScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,29 +50,26 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
     }
 
-    public void GoToMainMenu()
+    public void OpenOptions()
     {
-        Debug.Log("Going to main menu...");
-        //Time.timeScale = 1f;
-        //SceneManager.LoadScene("TitleScreen");
+        pauseMenu.SetActive(false);
+        optionsScreen.SetActive(true);
+    }
+    public void CloseOptions()
+    {
+        optionsScreen.SetActive(false);
+        pauseMenu.SetActive(true);
     }
 
     public void SaveGame()
     {
         DataPersistenceManager.instance.SaveGame();
-    }
-
-    public void SaveAndExitGame()
-    {
-        DataPersistenceManager.instance.SaveGame();
-        Debug.Log("Quitting....");
-        //Application.Quit();
+        Debug.Log("Game saved!");
     }
 
     public void QuitGame()
     {
         Debug.Log("Quitting....");
         //Application.Quit();
-
     }
 }
