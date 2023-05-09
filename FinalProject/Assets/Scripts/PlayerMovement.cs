@@ -241,7 +241,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
             if(GameManager.gameManager._playerHealth.Health == 0)
             {
                 spawnPos = new Vector3(-46, 57, 0);
-                Invoke("resetScene", .4f);
+                SceneManager.LoadScene("Jellyfish");
             }
         }
         if (collision.gameObject.name == "Jellyfish(Clone)")

@@ -62,7 +62,7 @@ public class EcholocationChase : MonoBehaviour
             }
             if(material != null)
             {
-                material.SetColor("_Color", new Color(36f, 0f, 0f, 1f));
+                //material.SetColor("_Color", new Color(1.2f, 0.8f, 0.8f, 1f));
             }
         }
         else if (chasing && CanStillSeePlayer(chaseRange))
@@ -96,7 +96,7 @@ public class EcholocationChase : MonoBehaviour
             }
             if(material != null)
             {
-                material.SetColor("_Color", new Color(0.5f, 0f, 0f, 0f));
+                //material.SetColor("_Color", new Color(1f, 1f, 1f, 1f));
             }
         }
     }
