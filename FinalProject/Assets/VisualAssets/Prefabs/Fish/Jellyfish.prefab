@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3688000244505364122}
   m_Layer: 0
   m_Name: Jellyfish
-  m_TagString: Untagged
+  m_TagString: Jellyfish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

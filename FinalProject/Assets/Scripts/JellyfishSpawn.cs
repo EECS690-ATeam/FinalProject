@@ -12,10 +12,10 @@ public class JellyfishSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < numberOfJellies; i++)
-        {
-            Instantiate(movingJellyPrefab, new Vector3(Random.Range(transform.position.x - spawnRangeX, transform.position.x + spawnRangeX), Random.Range(transform.position.y - spawnRangeY, transform.position.y + spawnRangeY), 0), Quaternion.identity);
-        }
+        //for (int i = 0; i < numberOfJellies; i++)
+        //{
+        //    Instantiate(movingJellyPrefab, new Vector3(Random.Range(transform.position.x - spawnRangeX, transform.position.x + spawnRangeX), Random.Range(transform.position.y - spawnRangeY, transform.position.y + spawnRangeY), 0), Quaternion.identity);
+        //}
     }
 
     // Update is called once per frame

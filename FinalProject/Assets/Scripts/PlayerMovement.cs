@@ -267,7 +267,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
                 SceneManager.LoadScene("Jellyfish");
             }
         }
-        if (collision.gameObject.name == "Jellyfish(Clone)")
+        if (collision.gameObject.tag == "Jellyfish")
         {
             PlayerTakeDmg(25);
             oofSound.Play();

@@ -10,6 +10,7 @@ TagManager:
   - ip
   - BasicFish
   - EcholocationFish
+  - Jellyfish
   layers:
   - Default
   - TransparentFX
