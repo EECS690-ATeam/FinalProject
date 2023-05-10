@@ -43,7 +43,7 @@ public class RightExit : MonoBehaviour, IDataPersistence
         float diff = Vector3.Distance(this.transform.position, p.position);
         if (diff < distance && !transitioning)
         {
-            popup.SetText("Press 'F' to enter");
+            //popup.SetText("Press 'F' to enter");
             if (Input.GetKeyDown("f")) {
                 transitioning = true;
                 FadeIn.direction = true;
@@ -55,7 +55,7 @@ public class RightExit : MonoBehaviour, IDataPersistence
         }
         else
         {
-            popup.SetText("");
+            //popup.SetText("");
         }
         
     }

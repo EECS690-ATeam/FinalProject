@@ -23,7 +23,7 @@ public class DataPersistenceManager : MonoBehaviour
         Debug.Log("DPM HAS WOKEN");
         if(instance != null)
         {
-            Debug.LogError("Found more than one Data Persistence Manager in the scene.");
+            Debug.Log("Found more than one Data Persistence Manager in the scene.");
             Destroy(this.gameObject); 
         }
         instance = this;
