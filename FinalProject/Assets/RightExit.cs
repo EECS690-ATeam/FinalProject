@@ -4,12 +4,21 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class RightExit : MonoBehaviour
+public class RightExit : MonoBehaviour, IDataPersistence
 {
     public Transform p;
     private int distance;
     private TextMeshPro popup;
     private bool transitioning;
+
+    public bool kc1Found;
+    public bool kc2Found;
+    public bool kc3Found;
+    public bool kc4Found;
+    public bool kc5Found;
+    public GameObject playerInventory;
+
+
 
     // For Save
     public string Scene = "";
@@ -27,6 +36,7 @@ public class RightExit : MonoBehaviour
         popup = GetComponent<TextMeshPro>();
     }
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -39,7 +49,8 @@ public class RightExit : MonoBehaviour
                 FadeIn.direction = true;
                 FadeIn.current = 0f;
                 FadeIn.goal = 1f;
-                popup.SetText("");
+
+                // popup.SetText("");
             }
         }
         else
@@ -47,6 +58,38 @@ public class RightExit : MonoBehaviour
             popup.SetText("");
         }
         
+    }
+
+    public void LoadData(GameData data)
+    {
+        foreach (KeyValuePair<string, int> pair in data.simpleDictionary)
+        {
+            if (pair.Key == "Keycard LVL 1")
+            {
+                kc1Found = true;
+            }
+            if (pair.Key == "Keycard LVL 2")
+            {
+                kc2Found = true;
+            }
+            if (pair.Key == "Keycard LVL 3")
+            {
+                kc3Found = true;
+            }
+            if (pair.Key == "Keycard LVL 4")
+            {
+                kc4Found = true;
+            }
+            if (pair.Key == "Keycard LVL 5")
+            {
+                kc5Found = true;
+            }
+        }
+    }
+
+    public void SaveData(GameData data)
+    {
+
     }
 
     public void Transition() {
@@ -61,29 +104,44 @@ public class RightExit : MonoBehaviour
         if (sceneName == "Lab1") {
             PlayerMovement.spawnPos = new Vector3(-110, 46, 0);
             Scene = "Cavern1";
-            SceneManager.LoadScene("Cavern1");
+            // Check if KeyCard LVL 1 has been collected
+            if (kc1Found)
+            {
+                SceneManager.LoadScene("Cavern1");
+            }
         }
         else if (sceneName == "Lab2") {
             PlayerMovement.spawnPos = new Vector3(-60, 36, 0);
             Scene = "Dark Cavern";
+            
             SceneManager.LoadScene("Dark Cavern");
+            
         }
         else if (sceneName == "Lab3") {
             PlayerMovement.spawnPos = new Vector3(-46, 57, 0);
             Scene = "Jellyfish";
-            SceneManager.LoadScene("Jellyfish");
+            if (kc4Found) 
+            {
+                SceneManager.LoadScene("Jellyfish");
+            }
         }
         //water -> lab transitions
         else if (sceneName == "Cavern1") {
             BaseMovement.spawnPos = new Vector3(-9, -20, 0);
             Scene = "Lab2";
-            SceneManager.LoadScene("Lab2");
+            if (kc2Found)
+            {
+                SceneManager.LoadScene("Lab2");
+            }
         }
         
         else if (sceneName == "Dark Cavern") {
             BaseMovement.spawnPos = new Vector3(-6, -19, 0);
             Scene = "Lab3";
-            SceneManager.LoadScene("Lab3");
+            if (kc3Found)
+            {
+                SceneManager.LoadScene("Lab3");
+            }
         }
 
         else if (sceneName == "Jellyfish") {
@@ -92,6 +150,7 @@ public class RightExit : MonoBehaviour
             SceneManager.LoadScene("FinalEncounter");
         }
         
-
     }
+
+    
 }

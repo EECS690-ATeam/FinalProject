@@ -27,8 +27,7 @@ public class Inventory : MonoBehaviour, IDataPersistence
 
     // Dictionary to convert complex dictionary to a simple one for saving data, i.e., one with simple types
     public Dictionary<string, int> simpleDictionary = new Dictionary<string, int>();
-    //public List<TKey> itemNames = new List<TKey>();
-    //public List<TValue> itemCounts = new List<TValue>();
+
     public int newCount;
     public string itemName;
 

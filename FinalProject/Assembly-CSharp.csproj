@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets/Packages/CodeMonkey/Utils/Button_UI.cs" />
     <Compile Include="Assets/Scripts/Inventory/ICollectible.cs" />
+    <Compile Include="Assets/OpeningSequence.cs" />
     <Compile Include="Assets/Scripts/FlashlightAnimation.cs" />
     <Compile Include="Assets/Scripts/CutScene.cs" />
     <Compile Include="Assets/Scripts/Inventory/Data Persistence/DataPersistenceManager.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets/Scripts/CameraFollow.cs" />
     <Compile Include="Assets/Scripts/Inventory/InventoryManager.cs" />
     <Compile Include="Assets/Scripts/Parallax.cs" />
+    <Compile Include="Assets/Scripts/PulseEffect.cs" />
     <Compile Include="Assets/Scripts/Inventory/InventoryItem.cs" />
     <Compile Include="Assets/Scripts/Inventory/InventoryMenu.cs" />
     <Compile Include="Assets/Scripts/Inventory/Data Persistence/IDataPersistence.cs" />

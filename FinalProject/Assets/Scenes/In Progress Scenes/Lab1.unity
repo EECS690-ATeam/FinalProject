@@ -1098,6 +1098,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 1727874511}
+  kc1Found: 0
+  kc2Found: 0
+  kc3Found: 0
+  kc4Found: 0
+  kc5Found: 0
+  playerInventory: {fileID: 1370954581}
   Scene: 
 --- !u!1 &483375070
 GameObject:
@@ -6160,13 +6166,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Keycard LVL1
       objectReference: {fileID: 0}
+    - target: {fileID: 8508233160435553010, guid: 0c50fc6e414da0d40a4dc1d68cd9bb5d, type: 3}
+      propertyPath: m_TagString
+      value: Keycard
+      objectReference: {fileID: 0}
     - target: {fileID: 8508233160435553012, guid: 0c50fc6e414da0d40a4dc1d68cd9bb5d, type: 3}
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8508233160435553012, guid: 0c50fc6e414da0d40a4dc1d68cd9bb5d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.47
+      value: -24.53
       objectReference: {fileID: 0}
     - target: {fileID: 8508233160435553012, guid: 0c50fc6e414da0d40a4dc1d68cd9bb5d, type: 3}
       propertyPath: m_LocalPosition.y
