@@ -12,6 +12,7 @@ TagManager:
   - EcholocationFish
   - Jellyfish
   - Keycard
+  - DPM
   layers:
   - Default
   - TransparentFX
