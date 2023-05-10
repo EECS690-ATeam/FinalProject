@@ -24,6 +24,7 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
     public TMP_Text thought;
     public TMP_Text noteText;
     public Image noteOverlay;
+    public GameObject closeNoteBtn;
     public bool isNote;
     public Transform p;
     public bool beenSeen;
@@ -44,6 +45,7 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
         }
         this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 150);
         this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
+        closeNoteBtn.SetActive(false);
     }
 
     // Update is called once per frame
@@ -74,13 +76,15 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
                 a.Play(0);
                 this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
                 this.gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, 0);
-                Destroy(GetComponent<BoxCollider2D>());
-                beenSeen = true;
                 if (isNote) {
-                    StartCoroutine(noteMessage());
+                    // StartCoroutine(noteMessage());
+                    DisplayNote();
                 }
                 else {
+                    beenSeen = true;
+                    Destroy(GetComponent<BoxCollider2D>());
                     StartCoroutine(subtitleMessage());
+
                 }
             }
         }
@@ -131,11 +135,25 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
         thought.text = "";
     }
 
-    IEnumerator noteMessage() {
+    // IEnumerator noteMessage() {
+    //     noteOverlay.color = new Color(1f, 1f, 1f, 1f);
+    //     noteText.text = message1;
+    //     // yield return new WaitForSeconds(10);
+    //     noteText.text = "";
+    //     noteOverlay.color = new Color(1f, 1f, 1f, 0f);
+    // }
+
+    public void DisplayNote()
+    {
         noteOverlay.color = new Color(1f, 1f, 1f, 1f);
         noteText.text = message1;
-        yield return new WaitForSeconds(10);
+        closeNoteBtn.SetActive(true);
+    }
+
+    public void CloseNote()
+    {
         noteText.text = "";
         noteOverlay.color = new Color(1f, 1f, 1f, 0f);
+        closeNoteBtn.SetActive(false);
     }
 }

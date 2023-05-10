@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{E1456745-ED92-4EB6-8905-E64DC1E47277}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FadeIn.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Inventory/Data Persistence/DataPersistenceManager.cs">
     <Files>
-      <File FileName="Assets/FadeIn.cs" Line="36" Column="1" />
+      <File FileName="Assets/FadeIn.cs" Line="34" Column="1" />
+      <File FileName="Assets/Scripts/Inventory/Data Persistence/DataPersistenceManager.cs" Line="26" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,7 +26,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor PreferredExecutionTarget="a1d4e4f1-ce9d-4776-bd79-0d704b3f38e9" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="45874b4c-4b85-414e-aa1b-cacb8306348b" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3a34e7e1-3665-4ef3-8cf0-14b095d42706" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
