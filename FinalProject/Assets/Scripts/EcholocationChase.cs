@@ -37,6 +37,9 @@ public class EcholocationChase : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetKeyDown("p")) {
+            Destroy(this);
+        }
         if(GameObject.eulerAngles.z>0 && GameObject.eulerAngles.z < 160) {
             sr.flipY = true;
         }

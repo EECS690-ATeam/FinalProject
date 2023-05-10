@@ -37,6 +37,9 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     public float bottomAngleLimit = -20f;
     public Vector2 mouseWorldPos;
     bool facingRight = true;
+
+    private bool resetSet;
+    private Vector3 resetPos;
     
     //controlled for each scene transition
     public static Vector3 spawnPos;
@@ -87,6 +90,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     void Start()
     {
+        resetSet = false;
         sr = GetComponent<SpriteRenderer>();
         animator.SetBool("IsIdle", true);
         lBorder = FindObjectOfType<LeftBorder>();
@@ -208,6 +212,10 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         //     head.enabled = false;
         //     Invoke("ShowHead", 0.4f);
         // }
+        if (!resetSet) {
+            resetPos = this.transform.position;
+            resetSet = true;
+        }
         UpdateCollider();
         var horizontalMovement = Input.GetAxis("Horizontal");
         var verticalMovement = Input.GetAxis("Vertical");
@@ -290,7 +298,9 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     }
 
     private void resetScene() {
-        SceneManager.LoadScene("Cavern1");
+        labSpawn = 0;
+        spawnPos = resetPos;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
