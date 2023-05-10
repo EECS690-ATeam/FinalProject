@@ -26,7 +26,7 @@ public class BasicFishChase : MonoBehaviour
         isChasing = false;
         post = transform.position;
         castPoint = transform.GetChild(0);
-        currentSpeed = 3f;
+        currentSpeed = 5f;
     }
 
     // Update is called once per frame

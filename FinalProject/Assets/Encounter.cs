@@ -104,7 +104,6 @@ public class Encounter : MonoBehaviour
         yield return new WaitForSeconds(2);
         PlayerMovement.labSpawn = 3;
         Scene = "Exterior Area";
-        FadeIn.finalFade = true;
         SceneManager.LoadScene("Exterior Area");
     }
 
@@ -112,10 +111,10 @@ public class Encounter : MonoBehaviour
         SylasText.text= "I can't say I don't admire your courage. It was rather nice meeting you, what's your name again?";
         yield return new WaitForSeconds(waitCount);
         SylasText.text="";
-        thought.text= "It's Trevor, you --------";
+        thought.text= "...It's Trevor, what's it matter to you anyhow?";
         yield return new WaitForSeconds(waitCount);
         thought.text="";
-        SylasText.text= "*Sylas laughs* If you do manage to make it past the Mother, I give you my word I will not pursue you. She's outside, please be on your way now.";
+        SylasText.text= "*Sylas laughs* If you do manage to make it past the Mother, Trevor, I give you my word I will not pursue you. She's outside, please be on your way now.";
         yield return new WaitForSeconds(waitCount);
         SylasText.text="";
         FadeIn.current = 0f;
