@@ -10,11 +10,11 @@ public class OpeningSequence : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        videoPlayer = gameObject.AddComponent<VideoPlayer>();
+        videoPlayer = gameObject.GetComponent<VideoPlayer>();
         videoPlayer.playOnAwake = false;
 
         videoPlayer.source = VideoSource.Url;
-        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Opening Sequence No Title Screen.mp4");
+        videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "Opening Reworked.mp4");
 
         videoPlayer.Play();
     }

@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192726036}
   - component: {fileID: 192726035}
+  - component: {fileID: 192726037}
   m_Layer: 5
   m_Name: Video Player
   m_TagString: Untagged
@@ -165,8 +166,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: file://C:/Users/Jamie Edwards/Documents/GitHub/FinalProject/FinalProject/Assets/StreamingAssets/Opening
-    Reworked.mp4
+  m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -196,6 +196,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &192726037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192726034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a5a84cc96182543be340d6fd0d953d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &525759249
 GameObject:
   m_ObjectHideFlags: 0
