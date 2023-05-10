@@ -107,6 +107,7 @@ public class RightExit : MonoBehaviour, IDataPersistence
             // Check if KeyCard LVL 1 has been collected
             if (kc1Found)
             {
+                Debug.Log("Before scene load");
                 SceneManager.LoadScene("Cavern1");
             }
         }
