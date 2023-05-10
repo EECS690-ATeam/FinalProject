@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2770746069234007239}
   - component: {fileID: 3764514868443305212}
   - component: {fileID: 4260956342501913608}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: FlockingFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,9 +109,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1769583485
+  m_SortingLayer: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1393345244, guid: ddce98f5824e9b14683878c653a7c378, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

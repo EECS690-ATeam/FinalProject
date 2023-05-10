@@ -17,10 +17,14 @@ public class Murmurations : MonoBehaviour
     public int numberOfFish;
     public List<FlockingFish> flockingFish;
     public List<Avoidance> enemies;
-    public float boundsX;
-    public float boundsY;
-    public float spawnRadiusX;
-    public float spawnRadiusY;
+    public float minBoundsX;
+    public float maxBoundsX;
+    public float minBoundsY;
+    public float maxBoundsY;
+    public float minSpawnX;
+    public float maxSpawnX;
+    public float minSpawnY;
+    public float maxSpawnY;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +49,7 @@ public class Murmurations : MonoBehaviour
     {
         for(int i = 0; i < count; i++)
         {
-            Instantiate(prefab, new Vector3(Random.Range(-spawnRadiusX, spawnRadiusX), Random.Range(-spawnRadiusY, spawnRadiusY), 0), Quaternion.identity);
+            Instantiate(prefab, new Vector3(Random.Range(minSpawnX, maxSpawnX), Random.Range(minSpawnY, maxSpawnY), 0), Quaternion.identity);
         }
     }
 

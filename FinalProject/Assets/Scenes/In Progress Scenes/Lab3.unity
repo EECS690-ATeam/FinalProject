@@ -250,6 +250,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CloseNoteBtn
       objectReference: {fileID: 0}
+    - target: {fileID: 3065127082386486975, guid: 38fe56b57944f2748a50a4c05a7e557b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1844735921}
+    - target: {fileID: 3065127082386486975, guid: 38fe56b57944f2748a50a4c05a7e557b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseNote
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38fe56b57944f2748a50a4c05a7e557b, type: 3}
 --- !u!224 &87479524 stripped
@@ -359,6 +367,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1317953121969364349, guid: b3d1855285179d54283013a3b16d9720, type: 3}
   m_PrefabInstance: {fileID: 217374258}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &217374260 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1317953122908866294, guid: b3d1855285179d54283013a3b16d9720, type: 3}
+  m_PrefabInstance: {fileID: 217374258}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &246351778
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +511,7 @@ MonoBehaviour:
   message3: 
   message4: 
   thought: {fileID: 678644769}
-  noteText: {fileID: 0}
+  noteText: {fileID: 217374260}
   noteOverlay: {fileID: 1142004994}
   closeNoteBtn: {fileID: 1120287857}
   isNote: 1
@@ -1391,7 +1410,7 @@ MonoBehaviour:
   message3: 
   message4: 
   thought: {fileID: 678644769}
-  noteText: {fileID: 0}
+  noteText: {fileID: 217374260}
   noteOverlay: {fileID: 1142004994}
   closeNoteBtn: {fileID: 1120287857}
   isNote: 1
@@ -1547,7 +1566,7 @@ MonoBehaviour:
   message3: 
   message4: 
   thought: {fileID: 678644769}
-  noteText: {fileID: 0}
+  noteText: {fileID: 217374260}
   noteOverlay: {fileID: 1142004994}
   closeNoteBtn: {fileID: 1120287857}
   isNote: 1
@@ -2079,6 +2098,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1843712242}
     m_Modifications:
+    - target: {fileID: 4638533058048846619, guid: 52b585f6042683d4cb9775f6f5ada9bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1308840088}
+    - target: {fileID: 4638533058048846619, guid: 52b585f6042683d4cb9775f6f5ada9bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638533058190003462, guid: 52b585f6042683d4cb9775f6f5ada9bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1308840088}
+    - target: {fileID: 4638533058190003462, guid: 52b585f6042683d4cb9775f6f5ada9bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenOptions
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638533058222971778, guid: 52b585f6042683d4cb9775f6f5ada9bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1308840088}
+    - target: {fileID: 4638533058222971778, guid: 52b585f6042683d4cb9775f6f5ada9bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4638533058966628750, guid: 52b585f6042683d4cb9775f6f5ada9bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1308840088}
+    - target: {fileID: 4638533058966628750, guid: 52b585f6042683d4cb9775f6f5ada9bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveGame
+      objectReference: {fileID: 0}
     - target: {fileID: 4638533059243780331, guid: 52b585f6042683d4cb9775f6f5ada9bc, type: 3}
       propertyPath: m_Name
       value: PauseMenuPanel
@@ -2680,7 +2731,7 @@ MonoBehaviour:
   message3: 
   message4: 
   thought: {fileID: 678644769}
-  noteText: {fileID: 0}
+  noteText: {fileID: 217374260}
   noteOverlay: {fileID: 1142004994}
   closeNoteBtn: {fileID: 1120287857}
   isNote: 0
@@ -3235,7 +3286,7 @@ MonoBehaviour:
   message3: 
   message4: 
   thought: {fileID: 678644769}
-  noteText: {fileID: 0}
+  noteText: {fileID: 217374260}
   noteOverlay: {fileID: 1142004994}
   closeNoteBtn: {fileID: 1120287857}
   isNote: 1
@@ -4461,7 +4512,7 @@ MonoBehaviour:
   message3: 
   message4: 
   thought: {fileID: 678644769}
-  noteText: {fileID: 0}
+  noteText: {fileID: 217374260}
   noteOverlay: {fileID: 1142004994}
   closeNoteBtn: {fileID: 1120287857}
   isNote: 1
@@ -4761,6 +4812,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1843712242}
     m_Modifications:
+    - target: {fileID: 5425144648499097742, guid: 68b8168938def474c8759be57127a8f8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1308840088}
+    - target: {fileID: 5425144648499097742, guid: 68b8168938def474c8759be57127a8f8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseOptions
+      objectReference: {fileID: 0}
     - target: {fileID: 5425144648510516088, guid: 68b8168938def474c8759be57127a8f8, type: 3}
       propertyPath: m_Name
       value: Options Screen

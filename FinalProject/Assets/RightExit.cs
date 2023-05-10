@@ -119,6 +119,13 @@ public class RightExit : MonoBehaviour, IDataPersistence
                 Debug.Log("Before scene load");
                 SceneManager.LoadScene("Cavern1");
             }
+            else
+            {
+                FadeIn.current = 1f;
+                FadeIn.goal = 0f;
+                transitioning = false;
+                FadeIn.direction = false;
+            }
         }
         else if (sceneName == "Lab2") {
             PlayerMovement.spawnPos = new Vector3(-60, 36, 0);
@@ -134,6 +141,13 @@ public class RightExit : MonoBehaviour, IDataPersistence
             {
                 SceneManager.LoadScene("Jellyfish");
             }
+            else
+            {
+                FadeIn.current = 1f;
+                FadeIn.goal = 0f;
+                transitioning = false;
+                FadeIn.direction = false;
+            }
         }
         //water -> lab transitions
         else if (sceneName == "Cavern1") {
@@ -143,6 +157,13 @@ public class RightExit : MonoBehaviour, IDataPersistence
             {
                 SceneManager.LoadScene("Lab2");
             }
+            else
+            {
+                FadeIn.current = 1f;
+                FadeIn.goal = 0f;
+                transitioning = false;
+                FadeIn.direction = false;
+            }
         }
         
         else if (sceneName == "Dark Cavern") {
@@ -151,6 +172,13 @@ public class RightExit : MonoBehaviour, IDataPersistence
             if (kc3Found)
             {
                 SceneManager.LoadScene("Lab3");
+            }
+            else
+            {
+                FadeIn.current = 1f;
+                FadeIn.goal = 0f;
+                transitioning = false;
+                FadeIn.direction = false;
             }
         }
 

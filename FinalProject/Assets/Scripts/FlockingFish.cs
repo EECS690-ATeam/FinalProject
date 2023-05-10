@@ -75,7 +75,7 @@ public class FlockingFish : MonoBehaviour
         position = position + velocity * Time.deltaTime;
 
         // If fish crosses boundary range, wrap to other side
-        WrapAround(ref position, -level.boundsX, level.boundsX, -level.boundsY, level.boundsY);
+        WrapAround(ref position, level.minBoundsX, level.maxBoundsX, level.minBoundsY, level.maxBoundsY);
 
         // Set current position to the position variable
         transform.position = position;
