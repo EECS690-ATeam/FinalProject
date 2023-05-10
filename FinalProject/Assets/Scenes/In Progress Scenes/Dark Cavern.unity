@@ -15185,6 +15185,10 @@ PrefabInstance:
       propertyPath: redTinge
       value: 
       objectReference: {fileID: 1801760038}
+    - target: {fileID: 6451730003265565124, guid: ea64eda728be86646a53673063996199, type: 3}
+      propertyPath: fieldOfView
+      value: 
+      objectReference: {fileID: 1040219277}
     - target: {fileID: 6451730003265565125, guid: ea64eda728be86646a53673063996199, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
