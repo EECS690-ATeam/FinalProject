@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     public Animator animator;
 
-    public Animator headAnimator;
+    //public Animator headAnimator;
     public Transform headWrapper;
     public SpriteRenderer head;
 
@@ -139,7 +139,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         }
         if(x != 0) 
         {
-            if(animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) headAnimator.SetBool("HeadTurn", true);
+            //if(animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) headAnimator.SetBool("HeadTurn", true);
             transform.localScale = new Vector3(Mathf.Sign(x), 1, 1);
         }
     }
@@ -203,7 +203,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) headAnimator.SetBool("HeadTurn", true);
+        //if(animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) headAnimator.SetBool("HeadTurn", true);
         // if((animator.GetBool("SetTurnL") == true || animator.GetBool("SetTurnR") == true) && (animator.GetCurrentAnimatorStateInfo(0).IsName("Swim") || animator.GetCurrentAnimatorStateInfo(0).IsName("stop") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnLeft") || animator.GetCurrentAnimatorStateInfo(0).IsName("turnRight"))) {
         //     head.enabled = false;
         //     Invoke("ShowHead", 0.4f);
@@ -215,8 +215,8 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         FlipX(horizontalMovement);
         if(horizontalMovement != 0) animator.SetBool("IsIdle", false);
         else animator.SetBool("IsIdle", true);
-        if(horizontalMovement != 0) headAnimator.SetBool("IsIdle", false);
-        else headAnimator.SetBool("IsIdle", true);
+        //if(horizontalMovement != 0) headAnimator.SetBool("IsIdle", false);
+        //else headAnimator.SetBool("IsIdle", true);
         transform.position += new Vector3(horizontalMovement, verticalMovement, 0).normalized * Time.deltaTime * MovementSpeed;
         ChangeRotation();
         LookAtMouse();
