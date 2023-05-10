@@ -14,6 +14,10 @@ public class Elevator : MonoBehaviour
     public float zoomSpeed;
     public float zoomSpeedDown;
 
+    private SpriteRenderer sr;
+    private Color onColor;
+    private Color offColor;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,22 +26,47 @@ public class Elevator : MonoBehaviour
         zoomFactor = 1f;
         zoomSpeed = 0.35f;
         zoomSpeedDown = 0.45f;
+        sr = transform.GetComponent<SpriteRenderer>();
+        onColor = new Color(1f, 1f, 1f, 1f);
+        offColor = new Color(1f, 1f, 1f, 0f);
+        sr.color = offColor;
 }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if (Vector3.Distance(transform.position, playerTransform.position) < 4f)
         {
-            if (Vector3.Distance(transform.position, playerTransform.position) < 4f)
+            sr.color = onColor;
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 StartCoroutine(ElevatorRideUp());
             }
-            else if(playerTransform.position.y > -5)
+        }
+        else if (playerTransform.position.y > -5)
+        {
+            sr.color = offColor;
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 StartCoroutine(ElevatorRideDown());
             }
         }
+        else
+        {
+            sr.color = offColor;
+        }
+
+        //if(Input.GetKeyDown(KeyCode.F))
+        //{
+        //    if (Vector3.Distance(transform.position, playerTransform.position) < 4f)
+        //    {
+        //        StartCoroutine(ElevatorRideUp());
+        //    }
+        //    else if(playerTransform.position.y > -5)
+        //    {
+        //        StartCoroutine(ElevatorRideDown());
+        //    }
+        //}
     }
 
     private IEnumerator ElevatorRideUp()

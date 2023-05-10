@@ -78,7 +78,7 @@ public class LeftExit : MonoBehaviour
             SceneManager.LoadScene("Cavern1");
         }
         else if (sceneName == "Lab3") {
-            PlayerMovement.spawnPos = new Vector3(52, -10, 0);
+            PlayerMovement.spawnPos = new Vector3(56, -18, 0);
             Scene = "Dark Cavern";
             SceneManager.LoadScene("Dark Cavern");
         }
