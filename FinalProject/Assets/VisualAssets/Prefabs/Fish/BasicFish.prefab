@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004579905336020436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -192.14621, y: -50.09332, z: -2.7677228}
+  m_LocalPosition: {x: 0, y: 0, z: -2.7677228}
   m_LocalScale: {x: 2.4601982, y: 2.4601982, z: 0.8546113}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -246,7 +246,7 @@ MonoBehaviour:
   noticeRange: 10
   chaseRange: 15
   maxSpeed: 12
-  acceleration: 5
+  acceleration: 4
   returnSpeed: 3
   playerTransform: {fileID: 0}
   stinger: {fileID: 8934726884221126008}
