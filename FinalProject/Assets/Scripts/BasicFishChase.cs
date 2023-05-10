@@ -16,6 +16,7 @@ public class BasicFishChase : MonoBehaviour
     private Transform castPoint;
     private Vector3 post;
     private float currentSpeed;
+    private SpriteRenderer sr;
 
     public bool isChasing;
 
@@ -23,6 +24,7 @@ public class BasicFishChase : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
         isChasing = false;
         post = transform.position;
         castPoint = transform.GetChild(0);
@@ -32,6 +34,12 @@ public class BasicFishChase : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (transform.eulerAngles.z > 0 && transform.eulerAngles.z < 175)
+        {
+            sr.flipY = true;
+        }
+        else sr.flipY = false;
+
         if (CanSeePlayer())
         {
             if (isChasing == false)
@@ -83,7 +91,7 @@ public class BasicFishChase : MonoBehaviour
         float playerAngle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
 
         // Set rotation towards player
-        rb.rotation = playerAngle - 90;
+        rb.rotation = playerAngle - 180;
 
         currentSpeed += acceleration * Time.deltaTime;
 
@@ -103,7 +111,7 @@ public class BasicFishChase : MonoBehaviour
             float playerAngle = Mathf.Atan2(playerDirection.y, playerDirection.x) * Mathf.Rad2Deg;
 
             // Set rotation towards player
-            rb.rotation = playerAngle - 90;
+            rb.rotation = playerAngle - 180;
 
             currentSpeed = 3f;
 

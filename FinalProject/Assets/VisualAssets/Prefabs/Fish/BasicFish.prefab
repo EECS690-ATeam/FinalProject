@@ -154,6 +154,7 @@ GameObject:
   - component: {fileID: 2846260780251150724}
   - component: {fileID: 329291896}
   - component: {fileID: 8934726884221126008}
+  - component: {fileID: 6976996008731796027}
   m_Layer: 6
   m_Name: BasicFish
   m_TagString: BasicFish
@@ -170,7 +171,7 @@ Transform:
   m_GameObject: {fileID: 2846260780251150747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -26.24, y: 23.56, z: -0.1}
-  m_LocalScale: {x: 0.32517704, y: 0.32517704, z: 0.32517704}
+  m_LocalScale: {x: 1, y: 1, z: 0.32517704}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2724693834369637263}
@@ -221,10 +222,10 @@ SpriteRenderer:
   m_SortingLayerID: 1769583485
   m_SortingLayer: 3
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: c9de28673d06ec84bb2943000906ba68, type: 3}
+  m_Sprite: {fileID: -1280509113, guid: b17d2f164348fd043a53a91c123f456a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 4.2, y: 11.3}
   m_AdaptiveModeThreshold: 0.5
@@ -369,6 +370,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &6976996008731796027
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2846260780251150747}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4124d18b766e4754ea48d2119d3571b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &5433590097520226187
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +414,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5433590097520226187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 3.9, z: 0}
+  m_LocalPosition: {x: -1.85265, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

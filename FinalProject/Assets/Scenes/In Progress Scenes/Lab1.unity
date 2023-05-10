@@ -1779,7 +1779,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1727874511}
-  mainCamera: {fileID: 0}
 --- !u!1 &745549309 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8902422380721378800, guid: de51990c4a72e46e58a914d97e9e4ac2, type: 3}
@@ -4001,7 +4000,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ca15a342e8158e64498871739fb2a614, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac17e2ba8dff20741a870f23c679531e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.299
   m_Pitch: 1
