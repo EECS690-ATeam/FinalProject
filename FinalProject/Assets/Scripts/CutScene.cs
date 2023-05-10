@@ -18,12 +18,12 @@ public class CutScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene("Lab1");
+            SceneManager.LoadScene("Lab1", LoadSceneMode.Single);
         }
     }
 
     public void TransitionToGame()
     {
-        SceneManager.LoadScene("Lab1");
+        SceneManager.LoadScene("Lab1", LoadSceneMode.Single);
     }
 }

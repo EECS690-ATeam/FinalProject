@@ -11,6 +11,8 @@ public class LeftExit : MonoBehaviour
     private TextMeshPro popup;
     private bool transitioning;
     private SpriteRenderer sr;
+    private Color onColor;
+    private Color offColor;
 
     // For Save
     public string Scene = "";
@@ -27,7 +29,9 @@ public class LeftExit : MonoBehaviour
         }
         popup = GetComponent<TextMeshPro>();
         sr = GetComponent<SpriteRenderer>();
-        //sr.color = new Color(1f, 1f, 1f, 0f);
+        onColor = new Color(1f, 1f, 1f, 1f);
+        offColor = new Color(1f, 1f, 1f, 0f);
+        sr.color = offColor;
     }
 
     // Update is called once per frame
@@ -36,7 +40,7 @@ public class LeftExit : MonoBehaviour
         float diff = Vector3.Distance(this.transform.position, p.position);
         if (diff < distance && !transitioning)
         {
-            //sr.color = new Color(1f, 1f, 1f, 1f);
+            sr.color = onColor;
             //popup.SetText("Press 'F' to enter");
             if (Input.GetKeyDown("f")) {
                 transitioning = true;
@@ -48,7 +52,7 @@ public class LeftExit : MonoBehaviour
         }
         else
         {
-            //sr.color = new Color(1f, 1f, 1f, 0f);
+            sr.color = offColor;
             // popup.SetText("");
         }
         

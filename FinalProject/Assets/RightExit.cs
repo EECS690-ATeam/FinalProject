@@ -10,6 +10,9 @@ public class RightExit : MonoBehaviour, IDataPersistence
     private int distance;
     private TextMeshPro popup;
     private bool transitioning;
+    private SpriteRenderer sr;
+    private Color onColor;
+    private Color offColor;
 
     public bool kc1Found;
     public bool kc2Found;
@@ -34,6 +37,10 @@ public class RightExit : MonoBehaviour, IDataPersistence
             distance = 5;
         }
         popup = GetComponent<TextMeshPro>();
+        sr = GetComponent<SpriteRenderer>();
+        onColor = new Color(1f, 1f, 1f, 1f);
+        offColor = new Color(1f, 1f, 1f, 0f);
+        sr.color = offColor;
     }
 
     
@@ -43,6 +50,7 @@ public class RightExit : MonoBehaviour, IDataPersistence
         float diff = Vector3.Distance(this.transform.position, p.position);
         if (diff < distance && !transitioning)
         {
+            sr.color = onColor;
             //popup.SetText("Press 'F' to enter");
             if (Input.GetKeyDown("f")) {
                 transitioning = true;
@@ -55,6 +63,7 @@ public class RightExit : MonoBehaviour, IDataPersistence
         }
         else
         {
+            sr.color = offColor;
             //popup.SetText("");
         }
         

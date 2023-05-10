@@ -20,10 +20,10 @@ public class DataPersistenceManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("DPM HAS WOKEN");
+        //Debug.Log("DPM HAS WOKEN");
         if(instance != null)
         {
-            Debug.Log("Found more than one Data Persistence Manager in the scene.");
+            //Debug.Log("Found more than one Data Persistence Manager in the scene.");
             Destroy(this.gameObject); 
         }
         instance = this;
@@ -46,14 +46,14 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("OnSceneLoaded Called");
+        //Debug.Log("OnSceneLoaded Called");
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
     }
 
     public void OnSceneUnloaded(Scene scene)
     {
-        Debug.Log("OnSceneUnloaded Called");
+        //Debug.Log("OnSceneUnloaded Called");
         SaveGame();
     }
 
@@ -72,7 +72,7 @@ public class DataPersistenceManager : MonoBehaviour
         // if no data can be loaded, initialize to a new game
         if (this.gameData == null)
         {
-            Debug.Log("No data was found. Initializing data to defaults.");
+            //Debug.Log("No data was found. Initializing data to defaults.");
             NewGame();
         }
 

@@ -115,7 +115,7 @@ public class Inventory : MonoBehaviour, IDataPersistence
         // Check if item exists
         if (itemDictionary.TryGetValue(itemData, out InventoryItem item))
         {
-            Debug.Log("Item exists");
+            //Debug.Log("Item exists");
             newCount = item.stackSize;
             itemName = item.itemData.displayName;
 
@@ -125,15 +125,15 @@ public class Inventory : MonoBehaviour, IDataPersistence
 
             simpleDictionary[itemName] = newCount;
 
-            Debug.Log($"{item.itemData.displayName} total stack is now {item.stackSize}");
+            //Debug.Log($"{item.itemData.displayName} total stack is now {item.stackSize}");
             OnInventoryChange?.Invoke(inventory);
         }
         else
         {
-            Debug.Log("Item doesn't exist");
+            //Debug.Log("Item doesn't exist");
             // create new inventory item
             InventoryItem newItem = new InventoryItem(itemData);
-            Debug.Log($"{newItem.itemData.displayName}");
+            //Debug.Log($"{newItem.itemData.displayName}");
             // store in list
             inventory.Add(newItem);
 
@@ -142,7 +142,7 @@ public class Inventory : MonoBehaviour, IDataPersistence
 
             simpleDictionary.Add(itemName, 1);
 
-            Debug.Log($"Added {itemData.displayName} to the inventory for the first time.");
+            //Debug.Log($"Added {itemData.displayName} to the inventory for the first time.");
             OnInventoryChange?.Invoke(inventory);
         }
     }
