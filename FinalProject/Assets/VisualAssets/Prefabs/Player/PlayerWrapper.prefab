@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &280599792
 Transform:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ PrefabInstance:
     - target: {fileID: 6849676741706647825, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1110280276, guid: 10c9b8b1f277f7b4385a51a2e0d29aae, type: 3}
+      objectReference: {fileID: 2119385785, guid: 311228582e0b3694ab230e62ae71042e, type: 3}
     - target: {fileID: 6849676741706647827, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_Name
       value: Player
@@ -259,11 +259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647829, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 7.27
+      value: 3.0099998
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647829, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 8.6827
+      value: 9.263551
       objectReference: {fileID: 0}
     - target: {fileID: 6849676741706647830, guid: 4e61b1ccdb616a54fafb6f31e4bfb690, type: 3}
       propertyPath: m_RootOrder
@@ -372,7 +372,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f11235ee28fcd654ebc27010216ce971, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1e5094b792aa19f4dafbfe52197fd70b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -582,6 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
+  optionsScreen: {fileID: 0}
 --- !u!114 &5196136800945658292
 MonoBehaviour:
   m_ObjectHideFlags: 0
