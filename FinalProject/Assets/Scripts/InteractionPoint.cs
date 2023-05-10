@@ -38,7 +38,7 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
         a.volume = 0.18F;
         beenSeen = false;
         if (SceneManager.GetActiveScene().name == "Lab2") {
-            distance = 10;
+            distance = 7;
         }
         else {
             distance = 5;
@@ -51,6 +51,12 @@ public class InteractionPoint : MonoBehaviour, IDataPersistence
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            noteText.text = "";
+            noteOverlay.color = new Color(1f, 1f, 1f, 0f);
+        }
+
         float diff = Vector3.Distance(this.transform.position, p.position);
         if (!beenSeen)
         {
